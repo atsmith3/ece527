@@ -1,0 +1,29 @@
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     1|
+|3     |FDRE |    24|
+|4     |IBUF |    10|
+|5     |OBUF |     8|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    44|
++------+---------+-------+------+
+
+Report Power:
+Total:             0.128   W
+  Dynamic:         0.007   W
+    Clocks         0.001   W
+    Signals       <0.001   W
+    Logic         <0.001   W
+    I/O            0.006   W
+  Static:          0.122   W
+
+Tj:                26.5    C
+

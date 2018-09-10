@@ -32,18 +32,19 @@ reg [7:0] buffer2;
 reg [7:0] buffer3;
 wire reset;
 
-assign reset = ~reset_n;
+assign reset = reset_n;
 
 assign led = buffer3;
 
+
 always @ (posedge clk) begin
     if(reset) begin
-        buffer3 <= 7'b0;
+        buffer3 <= 8'h0;
     end
     else begin
-        buffer3 <= buffer2;
-        buffer2 <= buffer1;
         buffer1 <= switch;
+        buffer2 <= buffer1;
+        buffer3 <= buffer2;
     end
 end
 
