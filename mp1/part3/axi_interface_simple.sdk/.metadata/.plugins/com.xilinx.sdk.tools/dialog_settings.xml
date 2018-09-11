@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Auto Detect" key="axi_switch_wrapper_hw_platform_0-device"/>
+	<item value="axi_switch_wrapper_hw_platform_0" key="programflash.hwplatform"/>
+	<item value="" key="axi_switch_wrapper_hw_platform_0-offSet"/>
+	<item value="false" key="axi_switch_wrapper_hw_platform_0-blankCheck"/>
+	<item value="Local" key="axi_switch_wrapper_hw_platform_0-target"/>
+	<item value="false" key="axi_switch_wrapper_hw_platform_0-verifyFlash"/>
+	<item value="qspi_single" key="axi_switch_wrapper_hw_platform_0-flashType"/>
+	<item value="" key="axi_switch_wrapper_hw_platform_0-fsblFile"/>
+	<item value="" key="axi_switch_wrapper_hw_platform_0-imgFile"/>
+</section>
