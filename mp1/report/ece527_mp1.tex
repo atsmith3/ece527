@@ -94,6 +94,7 @@ When designing we only considered one solution. Using a pipeline to transfer swi
 \subsection{Performance}
 This was a very small design and it took up very little resources on the Zinq 7000. The usage is shown in the table below. Figure 2 shows how the design was implemented on the device.
 \begin{table}[H]
+\centering
 \caption{Resource Usage Part A}
 \label{table_example}
 \begin{tabular}{|l|r|r|r|}
@@ -125,7 +126,7 @@ Because this design used minimal logic most of the power consumed by the device 
 Type    & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}Power} \\ \hline
 Static  & 0.122 W                                            \\ \hline
 Dynamic & 0.007 W                                            \\ \hline
-Total   & 0.129 W                                            \\ \hline
+\textbf{Total} & \textbf{0.129 W}                            \\ \hline
 \end{tabular}
 \end{table}
 
