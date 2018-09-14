@@ -46,7 +46,7 @@
 %         {\tt\small pmisra@cs.wright.edu}}
 %}
 
-\author{Andrew Smith and Thomas Furlong}% <-this % stops a space
+\author{Andrew Smith(atsmith3) and Thomas Furlong(tfurlon2)}% <-this % stops a space
 \begin{document}
 
 
@@ -150,6 +150,105 @@ Worst Negative Slack & 8.442 ns \\ \hline
 The only difficulty encountered in this section was just being unfamiliar with the Xilinx design suite.
 
 
+\section{Part B}
+\subsection{Description}
+For this part of the MP, we added four more push buttons to the design. These push buttons effect the output to the LED's based on simple logic operations. We also had to create a finite state machine that used the push buttons to control what was output to the LEDs. 
+
+\subsection{Assumptions}
+In Part B, we assume that when a mode button is pressed, the system stays in that mode until another button is pressed. This is justified because the user should not have to hold down the mode button to see the desired LED output. Also, we assumed when the reset button is pressed, the LEDs will all turn off and when the reset button is released, the system returns to Mode 0. This is justified because the user should just have to press the reset button once to reset the system. 
+
+
+\subsection{System Configuration}
+Part B of this MP was  not too complicated. Our implementation required a new module for the finite state machine as well as a new top level module. The new top level module connected the input switches and buttons to the finite state machine and control logic. 
+
+\begin{figure}[thpb]
+   \centering
+   \parbox{3in}{\centering\includegraphics[scale=0.25]{img/partB.png}}
+   \caption{Block Diagram for Part B}
+   \label{figurelabel}
+\end{figure}
+
+\subsection{Entities}
+\begin{table}[H]
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{EFEFEF} 
+Entity      & Description                           \\ \hline
+top & This is the hardware top level that \\ &connects the finite state machine to basic\_i\_o. \\ \hline
+fsm\_controller &  This is the finite state machine that keeps track \\ &of the current state,  holds next state logic,  and \\& sends control signals to the basic\_i\_o module. \\ \hline
+basic\_i\_o & This module takes in the control logic \\& from the state machine and selects the correct \\& altered  switch data to send to the LEDs. \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Design}
+When designing this part of the MP, we first considered a design where the mode would only be selected when the push button was held down. We realized this was not the best approach. We then switched to a design were a mode was locked in when we pressed the push button. This lead to a more extensive state machine but the state control logic was still the same. 
+
+\subsection{Performance}
+This was a very small design and it took up very little resources on the Zinq 7000. The usage is shown in the table below. Figure 4 shows how the design was implemented on the device.
+\begin{table}[H]
+\centering
+\caption{Resource Usage Part B}
+\label{table_example}
+\begin{tabular}{|l|r|r|r|}
+\hline
+\rowcolor[HTML]{EFEFEF} 
+Resource & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}Utilization} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}Available} & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}Utilization \%} \\ \hline
+LUT      & 22                                                        & 53200                                                  & 0.04                                                        \\ \hline
+FF       & 11                                                       & 106400                                                 & 0.01                                                        \\ \hline
+IO       & 22                                                       & 200                                                    & 11.00                                                        \\ \hline
+BUFG     & 1                                                        & 32                                                     & 3.13                                                        \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[thpb]
+   \centering
+   \parbox{3in}{\centering\includegraphics[scale=0.35]{img/partb_chip.png}}
+   \caption{Device Mapping for Part B}
+   \label{figurelabel}
+\end{figure}
+
+Because this design was also small,  most of the power consumed by the device was static power. 
+\begin{table}[]
+\centering
+\caption{Resource Usage Part B}
+\label{table_example}
+\begin{tabular}{|l|r|}
+\hline
+\rowcolor[HTML]{EFEFEF} 
+Type    & \multicolumn{1}{l|}{\cellcolor[HTML]{EFEFEF}Power} \\ \hline
+Static  & 0.122 W                                            \\ \hline
+Dynamic & 0.009 W                                            \\ \hline
+\textbf{Total} & \textbf{0.131 W}                            \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[]
+\centering
+\caption{Timing Report Part B}
+\label{table_example}
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{EFEFEF} 
+Type    & Time \\ \hline
+Worst Hold Slack  &  0.253ns  \\ \hline
+Worst Negative Slack & 0.7.47ns \\ \hline
+Worst Pulse Width Slack & 4.5 ns \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+\subsection{Difficulites/Bugs}
+For this part of the MP, the biggest difficulty was using the Verilog syntax of a finite state machine. After finding some resources online, the rest of this part was straightforward. 
+
+
+
+
+
 
 \section{Part C}
 \subsection{Description}
@@ -189,7 +288,7 @@ AXI Interconnect & Interconnect fabric for \\
 \end{table}
 
 \subsection{Design}
-The other than instantiating a GPIO AXI module, the entire MP was done in software. The program looped through four distinct states spending about 1 second in each state. Within a state, the program sampled the state of the switches through DiscreteRead of the switch channel (channel 0) and then applied the operation for that state to the switch data. The data was then displayed on the LEDs though a DiscreteWrite to the LED channel (channel 1). The modes performed the same functions as Part B and the software flow chart is shown in figure .
+The other than instantiating a GPIO AXI module, the entire MP was done in software. The program looped through four distinct states spending about 1 second in each state. Within a state, the program sampled the state of the switches through DiscreteRead of the switch channel (channel 0) and then applied the operation for that state to the switch data. The data was then displayed on the LEDs though a DiscreteWrite to the LED channel (channel 1). The modes performed the same functions as Part B and the software flow chart is shown in figure 6.
 
 \begin{figure}[thpb]
    \centering
@@ -201,7 +300,7 @@ The other than instantiating a GPIO AXI module, the entire MP was done in softwa
 We settled on the delay iterations number just by trial and error.
 
 \subsection{Performance}
-This a comparably larger design than the other two parts. The AXI GPIO module resided on the Programmable Logic fabric and that contained a lot of logic and registers. The AXI interface is a complex module so it occupied a lot of space after place and route (Figure ).
+This a comparably larger design than the other two parts. The AXI GPIO module resided on the Programmable Logic fabric and that contained a lot of logic and registers. The AXI interface is a complex module so it occupied a lot of space after place and route (Figure 7).
 
 \begin{table}[H]
 \centering
@@ -262,6 +361,11 @@ Worst Pulse Width Slack & 4.020 ns \\ \hline
 \subsection{Difficulties/Bugs}
 The only difficulty encountered in this section was generating board support packages and making sure the package was up to date with the hardware. We had ran into issues where the BSP did not match the hardware that was loaded on the FPGA. 
 
+\section{What We Learned}
+At the start of this machine problem, we were introduced to the Xilinix program Vivado. After developing a simple design which dealt with basic input and output devices on the board, we moved onto a slightly larger design that used a finite state machine. Finally, we implemented a simple SoC using the Zynq system. This system taught us about block design automatons, AXI interfaces, and how to work with embedded software. 
+
+\section{Environment}
+We used Lubuntu 17.04 and 18.04 in a virtualbox virtual machine to do all of the work for this MP.
 
 
 \end{document}
