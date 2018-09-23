@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Mon Sep 10 21:38:24 2018">
+<application name="pa" timeStamp="Thu Sep 13 21:33:34 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="d098b6aa6046414cbe129ca737c1541b" type="ProjectID"/>
 <property name="ProjectIteration" value="6" type="ProjectIteration"/>
@@ -39,7 +39,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="TimingConstraintsWizard" value="1" type="JavaHandler"/>
 <property name="ToolsSettings" value="2" type="JavaHandler"/>
 <property name="ToolsTemplates" value="1" type="JavaHandler"/>
-<property name="ViewTaskImplementation" value="2" type="JavaHandler"/>
+<property name="ViewTaskImplementation" value="3" type="JavaHandler"/>
 <property name="XdcCreateClock" value="3" type="JavaHandler"/>
 </item>
 <item name="Gui Resources Info">
@@ -71,17 +71,19 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="HExceptionDialog_CONTINUE" value="1" type="GuiResourceData"/>
 <property name="HPopupTitle_CLOSE" value="1" type="GuiResourceData"/>
 <property name="HardwareTreePanel_HARDWARE_TREE_TABLE" value="2" type="GuiResourceData"/>
+<property name="IntraClocksSectionPanel_INTRA_CLOCKS_SECTION_TABLE" value="1" type="GuiResourceData"/>
 <property name="LogMonitor_COPY" value="1" type="GuiResourceData"/>
 <property name="LogMonitor_MONITOR" value="8" type="GuiResourceData"/>
-<property name="MainMenuMgr_FILE" value="4" type="GuiResourceData"/>
+<property name="MainMenuMgr_FILE" value="6" type="GuiResourceData"/>
 <property name="MainMenuMgr_OPEN_RECENT_FILE" value="1" type="GuiResourceData"/>
-<property name="MainMenuMgr_OPEN_RECENT_PROJECT" value="7" type="GuiResourceData"/>
+<property name="MainMenuMgr_OPEN_RECENT_PROJECT" value="9" type="GuiResourceData"/>
 <property name="MainMenuMgr_VIEW" value="2" type="GuiResourceData"/>
 <property name="MainMenuMgr_WINDOW" value="2" type="GuiResourceData"/>
 <property name="MainToolbarMgr_OPEN" value="4" type="GuiResourceData"/>
 <property name="MainToolbarMgr_RUN" value="2" type="GuiResourceData"/>
 <property name="MainWinMenuMgr_LAYOUT" value="2" type="GuiResourceData"/>
 <property name="MsgTreePanel_MESSAGE_VIEW_TREE" value="1" type="GuiResourceData"/>
+<property name="NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE" value="22" type="GuiResourceData"/>
 <property name="NetlistSchematicView_SHOW_IO_PORTS_IN_THIS_SCHEMATIC" value="3" type="GuiResourceData"/>
 <property name="NewProjectWizard_DO_NOT_SPECIFY_SOURCES_AT_THIS_TIME" value="2" type="GuiResourceData"/>
 <property name="PACommandNames_AUTO_CONNECT_TARGET" value="5" type="GuiResourceData"/>
@@ -95,7 +97,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PACommandNames_RUN_BITGEN" value="2" type="GuiResourceData"/>
 <property name="PACommandNames_RUN_SYNTHESIS" value="2" type="GuiResourceData"/>
 <property name="PAViews_CODE" value="1" type="GuiResourceData"/>
-<property name="PAViews_DEVICE" value="1" type="GuiResourceData"/>
+<property name="PAViews_DEVICE" value="6" type="GuiResourceData"/>
 <property name="PAViews_SCHEMATIC" value="1" type="GuiResourceData"/>
 <property name="PartChooser_BOARDS" value="2" type="GuiResourceData"/>
 <property name="PartChooser_BOARD_DISPLAY_NAME_CHOOSER" value="1" type="GuiResourceData"/>
@@ -108,6 +110,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ProjectNameChooser_CHOOSE_PROJECT_LOCATION" value="2" type="GuiResourceData"/>
 <property name="ProjectNameChooser_CREATE_PROJECT_SUBDIRECTORY" value="2" type="GuiResourceData"/>
 <property name="ProjectNameChooser_PROJECT_NAME" value="1" type="GuiResourceData"/>
+<property name="ProjectSummaryPowerPanel_TABBED_PANE" value="3" type="GuiResourceData"/>
+<property name="ProjectSummaryTimingPanel_OPEN_TIMING_SUMMARY_REPORT" value="1" type="GuiResourceData"/>
+<property name="ProjectSummaryUtilizationPanel_PROJECT_SUMMARY_UTILIZATION_PANEL_TABBED" value="1" type="GuiResourceData"/>
 <property name="ProjectTab_RELOAD" value="3" type="GuiResourceData"/>
 <property name="SdcGetObjectsPanel_SPECIFY_CLOCK_SOURCE_OBJECTS" value="4" type="GuiResourceData"/>
 <property name="SignalTablePanel_SIGNAL_TABLE" value="46" type="GuiResourceData"/>
