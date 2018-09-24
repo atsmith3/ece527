@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1537745453">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1537756288">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="PmodOLEDCtrl.drc"/>
   <File Type="BG-BGN" Name="PmodOLEDCtrl.bgn"/>
@@ -23,43 +23,43 @@
   <File Type="ROUTE-TIMINGSUMMARY" Name="PmodOLEDCtrl_timing_summary_routed.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="PmodOLEDCtrl_route_status.pb"/>
   <File Type="ROUTE-STATUS" Name="PmodOLEDCtrl_route_status.rpt"/>
-  <File Type="PLACE-CTRL" Name="PmodOLEDCtrl_control_sets_placed.rpt"/>
-  <File Type="PLACE-IO" Name="PmodOLEDCtrl_io_placed.rpt"/>
-  <File Type="PWROPT-TIMING" Name="PmodOLEDCtrl_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="PmodOLEDCtrl_placed.dcp"/>
-  <File Type="PLACE-UTIL-PB" Name="PmodOLEDCtrl_utilization_placed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="PmodOLEDCtrl_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="PmodOLEDCtrl_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="PmodOLEDCtrl_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="PmodOLEDCtrl_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="PmodOLEDCtrl_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="PmodOLEDCtrl_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="PmodOLEDCtrl_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="PmodOLEDCtrl_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="PmodOLEDCtrl_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="PmodOLEDCtrl_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="PmodOLEDCtrl_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="PmodOLEDCtrl_routed_error.dcp"/>
   <File Type="PHYSOPT-TIMING" Name="PmodOLEDCtrl_timing_summary_physopted.rpt"/>
-  <File Type="PWROPT-DRC" Name="PmodOLEDCtrl_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="PmodOLEDCtrl_pwropt.dcp"/>
-  <File Type="PLACE-UTIL" Name="PmodOLEDCtrl_utilization_placed.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="PmodOLEDCtrl_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="PmodOLEDCtrl_physopt.dcp"/>
   <File Type="POSTPLACE-PWROPT-TIMING" Name="PmodOLEDCtrl_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="OPT-TIMING" Name="PmodOLEDCtrl_timing_summary_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="PmodOLEDCtrl.hwdef"/>
-  <File Type="PLACE-CLK" Name="PmodOLEDCtrl_clock_utilization_placed.rpt"/>
   <File Type="RDI-RDI" Name="PmodOLEDCtrl.vdi"/>
   <File Type="PLACE-TIMING" Name="PmodOLEDCtrl_timing_summary_placed.rpt"/>
-  <File Type="INIT-TIMING" Name="PmodOLEDCtrl_timing_summary_init.rpt"/>
-  <File Type="OPT-DRC" Name="PmodOLEDCtrl_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="PmodOLEDCtrl_opt.dcp"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="PmodOLEDCtrl_methodology_drc_opted.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="PmodOLEDCtrl_incremental_reuse_pre_placed.rpt"/>
   <File Type="PLACE-SIMILARITY" Name="PmodOLEDCtrl_incremental_reuse_placed.rpt"/>
-  <File Type="PA-TCL" Name="PmodOLEDCtrl.tcl"/>
+  <File Type="PLACE-CTRL" Name="PmodOLEDCtrl_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="PmodOLEDCtrl_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="PmodOLEDCtrl_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="PmodOLEDCtrl_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="PmodOLEDCtrl_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="PmodOLEDCtrl_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="PmodOLEDCtrl_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="PmodOLEDCtrl_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="PmodOLEDCtrl_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="PmodOLEDCtrl_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="PmodOLEDCtrl.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="PmodOLEDCtrl_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="PmodOLEDCtrl_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="PmodOLEDCtrl_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="PmodOLEDCtrl_timing_summary_init.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="PmodOLEDCtrl_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="PmodOLEDCtrl_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="PmodOLEDCtrl_drc_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="PmodOLEDCtrl_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="PmodOLEDCtrl_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="PmodOLEDCtrl_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="PmodOLEDCtrl_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="PmodOLEDCtrl_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="PmodOLEDCtrl_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="PmodOLEDCtrl_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="PmodOLEDCtrl_drc_routed.rpx"/>
-  <File Type="ROUTE-PWR" Name="PmodOLEDCtrl_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="PmodOLEDCtrl_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="PmodOLEDCtrl_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="PmodOLEDCtrl_power_routed.rpx"/>
+  <File Type="PA-TCL" Name="PmodOLEDCtrl.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/charLib.coe">

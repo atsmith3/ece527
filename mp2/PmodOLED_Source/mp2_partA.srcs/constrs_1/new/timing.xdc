@@ -15,3 +15,5 @@ set_property IOSTANDARD LVCMOS33 [get_ports SCLK]
 set_property IOSTANDARD LVCMOS33 [get_ports VBAT]
 set_property IOSTANDARD LVCMOS33 [get_ports CS]
 create_clock -period 10.000 -name CLK -waveform {0.000 5.000} [get_ports -filter { NAME =~  "*CLK*" && DIRECTION == "IN" }]
+
+set_property PACKAGE_PIN P16 [get_ports RST]

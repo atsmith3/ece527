@@ -18,7 +18,7 @@ module OledInit(
     CLK,
     EN,
     RST,
-    CS,
+//    CS,
     DC,
     FIN,
     RES,
@@ -34,7 +34,7 @@ module OledInit(
     input CLK;
     input EN;
     input RST;
-    output CS;
+//    output CS;
     output DC;
     output FIN;
     output RES;

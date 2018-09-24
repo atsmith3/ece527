@@ -13,3 +13,7 @@ set_property src_info {type:XDC file:1 line:9 export:INPUT save:INPUT read:READ}
 set_property PACKAGE_PIN AB12 [get_ports SCLK]
 set_property src_info {type:XDC file:1 line:10 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN U11 [get_ports VBAT]
+set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS33 [get_ports CS]
+set_property src_info {type:XDC file:1 line:19 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN P16 [get_ports RST]

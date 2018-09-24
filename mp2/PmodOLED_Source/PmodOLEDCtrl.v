@@ -17,7 +17,7 @@
 module PmodOLEDCtrl(
 		CLK,
 		RST,
-		CS,
+//		CS,
 		SDIN,
 		SCLK,
 		DC,
@@ -31,7 +31,7 @@ module PmodOLEDCtrl(
 	// ===========================================================================
 	input CLK;
 	input RST;
-	output CS;
+//	output CS;
 	output SDIN;
 	output SCLK;
 	output DC;
@@ -67,7 +67,7 @@ module PmodOLEDCtrl(
 			.CLK(CLK),
 			.RST(RST),
 			.EN(init_en),
-			.CS(init_cs),
+//  		.CS(init_cs),
 			.SDO(init_sdo),
 			.SCLK(init_sclk),
 			.DC(init_dc),
@@ -81,7 +81,7 @@ module PmodOLEDCtrl(
 			.CLK(CLK),
 			.RST(RST),
 			.EN(example_en),
-			.CS(example_cs),
+//			.CS(example_cs),
 			.SDO(example_sdo),
 			.SCLK(example_sclk),
 			.DC(example_dc),

@@ -20,12 +20,12 @@ module OledEX(
     CLK,
     RST,
     EN,
-    CS,
+//    CS,
     SDO,
     SCLK,
     DC,
     FIN
-    );
+);
 
 	// ===========================================================================
 	//										Port Declarations
@@ -33,7 +33,7 @@ module OledEX(
     input CLK;
     input RST;
     input EN;
-    output CS;
+//    output CS;
     output SDO;
     output SCLK;
     output DC;
