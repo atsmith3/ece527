@@ -17,6 +17,9 @@
 module PmodOLEDCtrl(
 		CLK,
 		RST,
+        LED_INIT,
+        LED_EXAMPLE,
+        LED_DONE,
 //		CS,
 		SDIN,
 		SCLK,
@@ -38,12 +41,16 @@ module PmodOLEDCtrl(
 	output RES;
 	output VBAT;
 	output VDD;
+    output LED_INIT;
+    output LED_EXAMPLE;
+    output LED_DONE;
 
 	// ===========================================================================
 	// 							  Parameters, Regsiters, and Wires
 	// ===========================================================================
 	wire CS, SDIN, SCLK, DC;
 	wire VDD, VBAT, RES;
+    wire LED_DONE, LED_EXAMPLE, LED_INIT;
 
 	reg [110:0] current_state = "Idle";
 
@@ -67,7 +74,7 @@ module PmodOLEDCtrl(
 			.CLK(CLK),
 			.RST(RST),
 			.EN(init_en),
-//  		.CS(init_cs),
+	  		.CS(init_cs),
 			.SDO(init_sdo),
 			.SCLK(init_sclk),
 			.DC(init_dc),
@@ -81,7 +88,7 @@ module PmodOLEDCtrl(
 			.CLK(CLK),
 			.RST(RST),
 			.EN(example_en),
-//			.CS(example_cs),
+			.CS(example_cs),
 			.SDO(example_sdo),
 			.SCLK(example_sclk),
 			.DC(example_dc),
@@ -98,6 +105,9 @@ module PmodOLEDCtrl(
 
 	
 	//MUXes that enable blocks when in the proper states
+	assign LED_INIT = (current_state == "OledInitialize") ? 1'b1 : 1'b0;
+	assign LED_EXAMPLE = (current_state == "OledExample") ? 1'b1 : 1'b0;
+	assign LED_DONE = (current_state == "Done") ? 1'b1 : 1'b0;
 	assign init_en = (current_state == "OledInitialize") ? 1'b1 : 1'b0;
 	assign example_en = (current_state == "OledExample") ? 1'b1 : 1'b0;
 	//END enable MUXes

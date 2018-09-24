@@ -17,3 +17,15 @@ set_property IOSTANDARD LVCMOS33 [get_ports CS]
 create_clock -period 10.000 -name CLK -waveform {0.000 5.000} [get_ports -filter { NAME =~  "*CLK*" && DIRECTION == "IN" }]
 
 set_property PACKAGE_PIN P16 [get_ports RST]
+
+set_property PACKAGE_PIN T22 [get_ports LED_EX_DONE]
+set_property PACKAGE_PIN T21 [get_ports LED_IN_DONE]
+set_property IOSTANDARD LVCMOS33 [get_ports LED_EX_DONE]
+set_property IOSTANDARD LVCMOS33 [get_ports LED_IN_DONE]
+
+set_property IOSTANDARD LVCMOS33 [get_ports LED_DONE]
+set_property IOSTANDARD LVCMOS33 [get_ports LED_INIT]
+set_property IOSTANDARD LVCMOS33 [get_ports LED_EXAMPLE]
+set_property PACKAGE_PIN T22 [get_ports LED_DONE]
+set_property PACKAGE_PIN T21 [get_ports LED_INIT]
+set_property PACKAGE_PIN U22 [get_ports LED_EXAMPLE]
