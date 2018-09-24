@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/andrew/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/constrs_1/new/timing.xdc rfile:../../../mp2_partA.srcs/constrs_1/new/timing.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/thomas/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/constrs_1/new/timing.xdc rfile:../../../mp2_partA.srcs/constrs_1/new/timing.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN AA12 [get_ports SDIN]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]

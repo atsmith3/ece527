@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
--- Date        : Sun Sep 23 03:03:48 2018
+-- Date        : Sun Sep 23 03:03:47 2018
 -- Host        : andrew-vm running 64-bit Ubuntu 17.10
--- Command     : write_vhdl -force -mode synth_stub
---               /home/andrew/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/sources_1/ip/charLib/charLib_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top charLib -prefix
+--               charLib_ charLib_stub.vhdl
 -- Design      : charLib
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

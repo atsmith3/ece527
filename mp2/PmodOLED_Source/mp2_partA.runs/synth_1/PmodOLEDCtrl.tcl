@@ -9,25 +9,33 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/andrew/ece527/mp2/PmodOLED_Source/mp2_partA.cache/wt [current_project]
-set_property parent.project_path /home/andrew/ece527/mp2/PmodOLED_Source/mp2_partA.xpr [current_project]
+set_property webtalk.parent_dir /home/thomas/ece527/mp2/PmodOLED_Source/mp2_partA.cache/wt [current_project]
+set_property parent.project_path /home/thomas/ece527/mp2/PmodOLED_Source/mp2_partA.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
-set_property ip_output_repo /home/andrew/ece527/mp2/PmodOLED_Source/mp2_partA.cache/ip [current_project]
+set_property ip_output_repo /home/thomas/ece527/mp2/PmodOLED_Source/mp2_partA.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files /home/andrew/ece527/mp2/PmodOLED_Source/charLib.coe
+add_files /home/thomas/ece527/mp2/PmodOLED_Source/charLib.coe
 read_verilog -library xil_defaultlib {
-  /home/andrew/ece527/mp2/PmodOLED_Source/SpiCtrl.v
-  /home/andrew/ece527/mp2/PmodOLED_Source/Delay.v
-  /home/andrew/ece527/mp2/PmodOLED_Source/OledInit.v
-  /home/andrew/ece527/mp2/PmodOLED_Source/OledEX.v
-  /home/andrew/ece527/mp2/PmodOLED_Source/PmodOLEDCtrl.v
+  /home/thomas/ece527/mp2/PmodOLED_Source/SpiCtrl.v
+  /home/thomas/ece527/mp2/PmodOLED_Source/Delay.v
+  /home/thomas/ece527/mp2/PmodOLED_Source/OledInit.v
+  /home/thomas/ece527/mp2/PmodOLED_Source/OledEX.v
+  /home/thomas/ece527/mp2/PmodOLED_Source/PmodOLEDCtrl.v
 }
-read_ip -quiet /home/andrew/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/sources_1/ip/charLib/charLib.xci
-set_property used_in_implementation false [get_files -all /home/andrew/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/sources_1/ip/charLib/charLib_ooc.xdc]
-set_property is_locked true [get_files /home/andrew/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/sources_1/ip/charLib/charLib.xci]
+read_ip -quiet /home/thomas/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/sources_1/ip/charLib/charLib.xci
+set_property used_in_implementation false [get_files -all /home/thomas/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/sources_1/ip/charLib/charLib_ooc.xdc]
+set_property is_locked true [get_files /home/thomas/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/sources_1/ip/charLib/charLib.xci]
+
+read_ip -quiet /home/thomas/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all /home/thomas/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+set_property is_locked true [get_files /home/thomas/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+
+read_ip -quiet /home/thomas/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/sources_1/ip/block_49/block_49.xci
+set_property used_in_implementation false [get_files -all /home/thomas/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/sources_1/ip/block_49/block_49_ooc.xdc]
+set_property is_locked true [get_files /home/thomas/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/sources_1/ip/block_49/block_49.xci]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -37,8 +45,8 @@ set_property is_locked true [get_files /home/andrew/ece527/mp2/PmodOLED_Source/m
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/andrew/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/constrs_1/new/timing.xdc
-set_property used_in_implementation false [get_files /home/andrew/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/constrs_1/new/timing.xdc]
+read_xdc /home/thomas/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/constrs_1/new/timing.xdc
+set_property used_in_implementation false [get_files /home/thomas/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/constrs_1/new/timing.xdc]
 
 
 synth_design -top PmodOLEDCtrl -part xc7z020clg484-1

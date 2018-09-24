@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-// Date        : Sun Sep 23 03:03:48 2018
+// Date        : Sun Sep 23 03:03:47 2018
 // Host        : andrew-vm running 64-bit Ubuntu 17.10
-// Command     : write_verilog -force -mode funcsim
-//               /home/andrew/ece527/mp2/PmodOLED_Source/mp2_partA.srcs/sources_1/ip/charLib/charLib_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top charLib -prefix
+//               charLib_ charLib_sim_netlist.v
 // Design      : charLib
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -186,7 +186,6 @@ module charLib
         .web(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module charLib_blk_mem_gen_generic_cstr
    (douta,
     clka,
@@ -205,7 +204,6 @@ module charLib_blk_mem_gen_generic_cstr
         .douta(douta));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module charLib_blk_mem_gen_prim_width
    (douta,
     clka,
@@ -224,7 +222,6 @@ module charLib_blk_mem_gen_prim_width
         .douta(douta));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module charLib_blk_mem_gen_prim_wrapper
    (douta,
     clka,
@@ -368,7 +365,6 @@ module charLib_blk_mem_gen_prim_wrapper
         .WEBWE({1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module charLib_blk_mem_gen_top
    (douta,
     clka,
@@ -411,7 +407,7 @@ endmodule
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) 
 (* C_WRITE_DEPTH_A = "2048" *) (* C_WRITE_DEPTH_B = "2048" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) 
 (* C_WRITE_MODE_B = "WRITE_FIRST" *) (* C_WRITE_WIDTH_A = "8" *) (* C_WRITE_WIDTH_B = "8" *) 
-(* C_XDEVICEFAMILY = "zynq" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_3_6" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* C_XDEVICEFAMILY = "zynq" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module charLib_blk_mem_gen_v8_3_6
    (clka,
     rsta,
@@ -615,7 +611,6 @@ module charLib_blk_mem_gen_v8_3_6
         .douta(douta));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_3_6_synth" *) 
 module charLib_blk_mem_gen_v8_3_6_synth
    (douta,
     clka,

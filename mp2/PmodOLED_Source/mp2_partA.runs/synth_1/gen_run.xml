@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1537765351">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1537772051">
   <File Type="VDS-TIMING-PB" Name="PmodOLEDCtrl_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="PmodOLEDCtrl_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="PmodOLEDCtrl.dcp"/>
@@ -80,5 +80,7 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="block_49"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
   <BlockFileSet Type="BlockSrcs" Name="charLib"/>
 </GenRun>
