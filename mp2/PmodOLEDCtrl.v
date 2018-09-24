@@ -15,22 +15,25 @@
 // Revision 0.01 - File Created
 //////////////////////////////////////////////////////////////////////////////////
 module oled_ip(
-        CLK,
-        RST,
-        LED_INIT,
-        LED_READY,
-        SDIN,
-        SCLK,
-        DC,
-        RES,
-        VBAT,
-        VDD,
+    CLK,
+    RST,
+    LED_INIT,
+    LED_READY,
+    SDIN,
+    SCLK,
+    DC,
+    RES,
+    VBAT,
+    VDD,
 
-        [3:0]  ADDRESS,
-        [31:0] DATA,
-        BUTTON_STATE,
-        WRITE
-    );
+    ADDRESS,
+    DATA,
+    WRITE,
+
+    BRAM_ADDR,
+    BRAM_DATA,
+    BRAM_CLK
+);
 
     // ===========================================================================
     //                                      Port Declarations
@@ -49,8 +52,12 @@ module oled_ip(
     // AXI Interface
     input  [3:0]  ADDRESS;
     input  [31:0] DATA;
-    output        BUTTON_STATE;
     input         WRITE;
+
+    // BRAM Interface
+    output [9:0]  BRAM_ADDR;
+    input  [7:0]  BRAM_DATA;
+    output        BRAM_CLK;
 
     // ===========================================================================
     //                            Parameters, Regsiters, and Wires
@@ -59,7 +66,17 @@ module oled_ip(
     wire VDD, VBAT, RES;
     wire LED_DONE, LED_EXAMPLE, LED_INIT;
 
+    wire [3:0]  ADDRESS;
+    wire [31:0] DATA;
+    wire BUTTON_STATE, WRITE;
+
+    wire [9:0] BRAM_ADDR;
+    wire [7:0] BRAM_DATA;
+    wire BRAM_CLK;    
+
     reg [110:0] current_state = "Idle";
+
+    reg [512:0] input_vector;
 
     wire init_en;
     wire init_done;
@@ -77,6 +94,13 @@ module oled_ip(
     // ===========================================================================
     //                                      Implementation
     // ===========================================================================
+
+    // 16 bit Registers:
+    always @(posedge WRITE) begin
+        input_vector[32*ADDRESS -: 32] <= DATA;
+    end
+
+    // Oled Init:
     OledInit Init(
             .CLK(CLK),
             .RST(RST),
@@ -99,7 +123,13 @@ module oled_ip(
             .SDO(example_sdo),
             .SCLK(example_sclk),
             .DC(example_dc),
-            .FIN(example_done)
+            .FIN(example_done),
+
+            .DATA_STRING(input_vector),
+
+            .BRAM_DATA(BRAM_DATA),
+            .BRAM_ADDR(BRAM_ADDR),
+            .BRAM_CLK(BRAM_CLK)
     );
 
 
@@ -122,34 +152,33 @@ module oled_ip(
     
     //  State Machine
     always @(posedge CLK) begin
-            if(RST == 1'b1) begin
-                    current_state <= "Idle";
-            end
-            else begin
-                    case(current_state)
-                        "Idle" : begin
-                            current_state <= "OledInitialize";
-                        end
-                       // Go through the initialization sequence
-                        "OledInitialize" : begin
-                                if(init_done == 1'b1) begin
-                                        current_state <= "OledExample";
-                                end
-                        end
-                        // Do example and Do nothing when finished
-                        "OledExample" : begin
-                                if(example_done == 1'b1) begin
-                                        current_state <= "Done";
-                                end
-                        end
-                        // Do Nothing
-                        "Done" : begin
+        if(RST == 1'b1) begin
+                current_state <= "Idle";
+        end
+        else begin
+            case(current_state)
+                "Idle" : begin
+                    current_state <= "OledInitialize";
+                end
+               // Go through the initialization sequence
+                "OledInitialize" : begin
+                    if(init_done == 1'b1) begin
+                            current_state <= "OledExample";
+                    end
+                end
+                // Do example and Do nothing when finished
+                "OledExample" : begin
+                    if(example_done == 1'b1) begin
                             current_state <= "Done";
-                        end
-                        
-                        default : current_state <= "Idle";
-                    endcase
-            end
+                    end
+                end
+                // Do Nothing
+                "Done" : begin
+                    current_state <= "Done";
+                end
+                
+                default : current_state <= "Idle";
+            endcase
+        end
     end
-
 endmodule
