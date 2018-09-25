@@ -97,7 +97,7 @@ module OledEX(
 
    // BRAM ASSIGNMENTS:
    assign BRAM_ADDR = temp_addr;
-   assign temp_dout = BRAM_DATA;
+   assign temp_dout = {BRAM_DATA[0], BRAM_DATA[1], BRAM_DATA[2], BRAM_DATA[3], BRAM_DATA[4], BRAM_DATA[5], BRAM_DATA[6], BRAM_DATA[7]};
    assign BRAM_CLK = CLK;
 
    assign DC = temp_dc;

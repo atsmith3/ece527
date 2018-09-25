@@ -109,7 +109,7 @@ module oled_ip(
     // 16 bit Registers:
     always @(posedge WRITE) begin
         if(RST == 1'b1) begin
-            input_vector[511:0] <= {64{6'h20}};
+            input_vector[511:0] <= {64{8'h20}};
         end
         case(ADDRESS)
             8'h0 : begin
@@ -243,13 +243,18 @@ module oled_ip(
                 end
                 "OledClear" : begin
                     if(example_done == 1'b1) begin
-                        current_state <= "Idle";
+                        current_state <= "Wait";
                     end
                 end
                 // Do example and Do nothing when finished
                 "OledExample" : begin
                     if(example_done == 1'b1) begin
-                            current_state <= "Idle";
+                            current_state <= "Wait";
+                    end
+                end
+                "Wait" : begin
+                    if(ADDRESS == 8'h00 && WRITE == 1'b0) begin
+                        current_state <= "Idle";
                     end
                 end
                 default : current_state <= "OledInitialize";

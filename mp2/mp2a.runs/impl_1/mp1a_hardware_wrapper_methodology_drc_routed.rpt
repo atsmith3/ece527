@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-| Date         : Tue Sep 25 14:36:42 2018
-| Host         : andrew-vm running 64-bit unknown
+| Date         : Tue Sep 25 15:58:21 2018
+| Host         : andrew-vm running 64-bit Ubuntu 17.10
 | Command      : report_methodology -file mp1a_hardware_wrapper_methodology_drc_routed.rpt -rpx mp1a_hardware_wrapper_methodology_drc_routed.rpx
 | Design       : mp1a_hardware_wrapper
 | Device       : xc7z020clg484-1

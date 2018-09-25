@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Tue Sep 25 14:27:47 2018
-# Process ID: 4863
+# Start of session at: Tue Sep 25 15:48:59 2018
+# Process ID: 14250
 # Current directory: /home/andrew/ece527/mp2/mp2a.runs/mp1a_hardware_oled_ip_0_0_synth_1
 # Command line: vivado -log mp1a_hardware_oled_ip_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mp1a_hardware_oled_ip_0_0.tcl
 # Log file: /home/andrew/ece527/mp2/mp2a.runs/mp1a_hardware_oled_ip_0_0_synth_1/mp1a_hardware_oled_ip_0_0.vds

@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-| Date             : Tue Sep 25 14:36:49 2018
-| Host             : andrew-vm running 64-bit unknown
+| Date             : Tue Sep 25 15:58:29 2018
+| Host             : andrew-vm running 64-bit Ubuntu 17.10
 | Command          : report_power -file mp1a_hardware_wrapper_power_routed.rpt -pb mp1a_hardware_wrapper_power_summary_routed.pb -rpx mp1a_hardware_wrapper_power_routed.rpx
 | Design           : mp1a_hardware_wrapper
 | Device           : xc7z020clg484-1
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 1.700  |
-| Dynamic (W)              | 1.545  |
+| Total On-Chip Power (W)  | 1.697  |
+| Dynamic (W)              | 1.543  |
 | Device Static (W)        | 0.154  |
 | Effective TJA (C/W)      | 11.5   |
 | Max Ambient (C)          | 65.4   |
@@ -50,19 +50,19 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.008 |        5 |       --- |             --- |
-| Slice Logic             |     0.002 |     5378 |       --- |             --- |
-|   LUT as Logic          |     0.002 |     2172 |     53200 |            4.08 |
-|   Register              |    <0.001 |     2189 |    106400 |            2.06 |
+| Slice Logic             |     0.001 |     4993 |       --- |             --- |
+|   LUT as Logic          |     0.001 |     1950 |     53200 |            3.67 |
+|   Register              |    <0.001 |     2190 |    106400 |            2.06 |
 |   CARRY4                |    <0.001 |       42 |     13300 |            0.32 |
 |   LUT as Shift Register |    <0.001 |       62 |     17400 |            0.36 |
-|   F7/F8 Muxes           |    <0.001 |        2 |     53200 |           <0.01 |
+|   F7/F8 Muxes           |    <0.001 |       34 |     53200 |            0.06 |
 |   Others                |     0.000 |      225 |       --- |             --- |
-| Signals                 |     0.003 |     4221 |       --- |             --- |
+| Signals                 |     0.002 |     4069 |       --- |             --- |
 | Block RAM               |     0.000 |      0.5 |       140 |            0.36 |
 | I/O                     |     0.003 |       11 |       200 |            5.50 |
 | PS7                     |     1.529 |        1 |       --- |             --- |
 | Static Power            |     0.154 |          |           |                 |
-| Total                   |     1.700 |          |           |                 |
+| Total                   |     1.697 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.028 |       0.013 |      0.015 |
+| Vccint    |       1.000 |     0.026 |       0.011 |      0.015 |
 | Vccaux    |       1.800 |     0.021 |       0.000 |      0.021 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -150,8 +150,8 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| mp1a_hardware_wrapper                            |     1.545 |
-|   mp1a_hardware_i                                |     1.542 |
+| mp1a_hardware_wrapper                            |     1.543 |
+|   mp1a_hardware_i                                |     1.540 |
 |     axi_gpio_0                                   |    <0.001 |
 |       U0                                         |    <0.001 |
 |         AXI_LITE_IPIF_I                          |    <0.001 |
@@ -172,12 +172,12 @@ Table of Contents
 |             valid.cstr                           |    <0.001 |
 |               ramloop[0].ram.r                   |    <0.001 |
 |                 prim_init.ram                    |    <0.001 |
-|     oled_ip_0                                    |     0.007 |
-|       inst                                       |     0.007 |
-|         Example                                  |     0.003 |
+|     oled_ip_0                                    |     0.005 |
+|       inst                                       |     0.005 |
+|         Example                                  |     0.004 |
 |           DELAY_COMP                             |    <0.001 |
 |           SPI_COMP                               |    <0.001 |
-|         Init                                     |     0.003 |
+|         Init                                     |     0.001 |
 |           DELAY_COMP                             |    <0.001 |
 |           SPI_COMP                               |    <0.001 |
 |     processing_system7_0                         |     1.530 |

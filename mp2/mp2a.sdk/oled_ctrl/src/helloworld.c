@@ -124,6 +124,8 @@ int main()
 	int test_vector_index = 0;
     init_platform();
 
+	xil_printf("Hardware Initialized!\n\r");
+
     // Init GPIOs
     XGpio_Initialize(&addr_data, XPAR_GPIO_0_DEVICE_ID);
     XGpio_Initialize(&misc_sig, XPAR_GPIO_1_DEVICE_ID);
@@ -132,12 +134,24 @@ int main()
     XGpio_DiscreteWrite(&addr_data, DATA_CH, 0);
     XGpio_DiscreteWrite(&misc_sig, WRITE_CH, 0);
 
+    for(int i = 0; i < 10000000; i++) {
+    	// Delay
+    }
+
+    print_to_oled(" ");
+
+    for(int i = 0; i < 10000000; i++) {
+    	// Delay
+    }
+
     while(1) {
         XGpio_DiscreteWrite(&addr_data, ADDRESS_CH, 0);
         XGpio_DiscreteWrite(&misc_sig, WRITE_CH, 0);
     	while(XGpio_DiscreteRead(&misc_sig, SEND_DATA_CH) == 0) {
     		// Wait
     	}
+
+		xil_printf("Printing Test Vector %i\n\r", test_vector_index);
 
         if(test_vector_index < num_test_vectors) {
         	print_to_oled(testvector[test_vector_index]);

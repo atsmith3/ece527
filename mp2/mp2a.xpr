@@ -93,6 +93,9 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="mp1a_hardware.bd" FileRelPathName="ip/mp1a_hardware_processing_system7_0_0/mp1a_hardware_processing_system7_0_0.xci">
+          <Proxy FileSetName="mp1a_hardware_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mp1a_hardware.bd" FileRelPathName="ip/mp1a_hardware_axi_gpio_0_0/mp1a_hardware_axi_gpio_0_0.xci">
           <Proxy FileSetName="mp1a_hardware_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
@@ -105,14 +108,11 @@
         <CompFileExtendedInfo CompFileName="mp1a_hardware.bd" FileRelPathName="ip/mp1a_hardware_xbar_0/mp1a_hardware_xbar_0.xci">
           <Proxy FileSetName="mp1a_hardware_xbar_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mp1a_hardware.bd" FileRelPathName="ip/mp1a_hardware_processing_system7_0_0/mp1a_hardware_processing_system7_0_0.xci">
-          <Proxy FileSetName="mp1a_hardware_processing_system7_0_0"/>
+        <CompFileExtendedInfo CompFileName="mp1a_hardware.bd" FileRelPathName="ip/mp1a_hardware_oled_ip_0_0/mp1a_hardware_oled_ip_0_0.xci">
+          <Proxy FileSetName="mp1a_hardware_oled_ip_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mp1a_hardware.bd" FileRelPathName="ip/mp1a_hardware_blk_mem_gen_0_0/mp1a_hardware_blk_mem_gen_0_0.xci">
           <Proxy FileSetName="mp1a_hardware_blk_mem_gen_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mp1a_hardware.bd" FileRelPathName="ip/mp1a_hardware_oled_ip_0_0/mp1a_hardware_oled_ip_0_0.xci">
-          <Proxy FileSetName="mp1a_hardware_oled_ip_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware_wrapper.v">
@@ -235,9 +235,7 @@
     </Run>
     <Run Id="mp1a_hardware_axi_gpio_0_0_synth_1" Type="Ft3:Synth" SrcSet="mp1a_hardware_axi_gpio_0_0" Part="xc7z020clg484-1" ConstrsSet="mp1a_hardware_axi_gpio_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/mp1a_hardware_axi_gpio_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -246,9 +244,7 @@
     </Run>
     <Run Id="mp1a_hardware_rst_ps7_0_100M_0_synth_1" Type="Ft3:Synth" SrcSet="mp1a_hardware_rst_ps7_0_100M_0" Part="xc7z020clg484-1" ConstrsSet="mp1a_hardware_rst_ps7_0_100M_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/mp1a_hardware_rst_ps7_0_100M_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -257,9 +253,7 @@
     </Run>
     <Run Id="mp1a_hardware_axi_gpio_1_0_synth_1" Type="Ft3:Synth" SrcSet="mp1a_hardware_axi_gpio_1_0" Part="xc7z020clg484-1" ConstrsSet="mp1a_hardware_axi_gpio_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/mp1a_hardware_axi_gpio_1_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -268,9 +262,7 @@
     </Run>
     <Run Id="mp1a_hardware_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="mp1a_hardware_xbar_0" Part="xc7z020clg484-1" ConstrsSet="mp1a_hardware_xbar_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/mp1a_hardware_xbar_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -279,9 +271,7 @@
     </Run>
     <Run Id="mp1a_hardware_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="mp1a_hardware_processing_system7_0_0" Part="xc7z020clg484-1" ConstrsSet="mp1a_hardware_processing_system7_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/mp1a_hardware_processing_system7_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -290,9 +280,7 @@
     </Run>
     <Run Id="mp1a_hardware_blk_mem_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="mp1a_hardware_blk_mem_gen_0_0" Part="xc7z020clg484-1" ConstrsSet="mp1a_hardware_blk_mem_gen_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/mp1a_hardware_blk_mem_gen_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -329,9 +317,7 @@
     </Run>
     <Run Id="mp1a_hardware_axi_gpio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="mp1a_hardware_axi_gpio_0_0" Description="Default settings for Implementation." SynthRun="mp1a_hardware_axi_gpio_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -347,9 +333,7 @@
     </Run>
     <Run Id="mp1a_hardware_rst_ps7_0_100M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="mp1a_hardware_rst_ps7_0_100M_0" Description="Default settings for Implementation." SynthRun="mp1a_hardware_rst_ps7_0_100M_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -365,9 +349,7 @@
     </Run>
     <Run Id="mp1a_hardware_axi_gpio_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="mp1a_hardware_axi_gpio_1_0" Description="Default settings for Implementation." SynthRun="mp1a_hardware_axi_gpio_1_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -383,9 +365,7 @@
     </Run>
     <Run Id="mp1a_hardware_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="mp1a_hardware_xbar_0" Description="Default settings for Implementation." SynthRun="mp1a_hardware_xbar_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -401,9 +381,7 @@
     </Run>
     <Run Id="mp1a_hardware_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="mp1a_hardware_processing_system7_0_0" Description="Default settings for Implementation." SynthRun="mp1a_hardware_processing_system7_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -419,9 +397,7 @@
     </Run>
     <Run Id="mp1a_hardware_blk_mem_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="mp1a_hardware_blk_mem_gen_0_0" Description="Default settings for Implementation." SynthRun="mp1a_hardware_blk_mem_gen_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
