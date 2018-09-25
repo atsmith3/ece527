@@ -67,6 +67,8 @@ module mp1a_hardware_oled_ip_0_0 (
   ADDRESS,
   DATA,
   WRITE,
+  SEND_DATA,
+  BUTTON_T18,
   BRAM_ADDR,
   BRAM_DATA,
   BRAM_CLK
@@ -84,9 +86,11 @@ output wire DC;
 output wire RES;
 output wire VBAT;
 output wire VDD;
-input wire [3 : 0] ADDRESS;
+input wire [7 : 0] ADDRESS;
 input wire [31 : 0] DATA;
 input wire WRITE;
+output wire SEND_DATA;
+input wire BUTTON_T18;
 output wire [9 : 0] BRAM_ADDR;
 input wire [7 : 0] BRAM_DATA;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 BRAM_CLK CLK" *)
@@ -106,6 +110,8 @@ output wire BRAM_CLK;
     .ADDRESS(ADDRESS),
     .DATA(DATA),
     .WRITE(WRITE),
+    .SEND_DATA(SEND_DATA),
+    .BUTTON_T18(BUTTON_T18),
     .BRAM_ADDR(BRAM_ADDR),
     .BRAM_DATA(BRAM_DATA),
     .BRAM_CLK(BRAM_CLK)

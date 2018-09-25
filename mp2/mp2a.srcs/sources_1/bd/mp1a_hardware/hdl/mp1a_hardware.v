@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-//Date        : Mon Sep 24 17:23:36 2018
+//Date        : Tue Sep 25 00:46:08 2018
 //Host        : andrew-vm running 64-bit Ubuntu 17.10
 //Command     : generate_target mp1a_hardware.bd
 //Design      : mp1a_hardware
@@ -419,7 +419,7 @@ module m02_couplers_imp_UBSPK6
   assign m02_couplers_to_m02_couplers_WVALID = S_AXI_wvalid;
 endmodule
 
-(* CORE_GENERATION_INFO = "mp1a_hardware,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mp1a_hardware,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=8,numNonXlnxBlks=1,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=7,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "mp1a_hardware.hwdef" *) 
+(* CORE_GENERATION_INFO = "mp1a_hardware,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=mp1a_hardware,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=8,numNonXlnxBlks=1,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=7,da_clkrst_cnt=5,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "mp1a_hardware.hwdef" *) 
 module mp1a_hardware
    (DDR_addr,
     DDR_ba,
@@ -451,7 +451,8 @@ module mp1a_hardware
     OLED_SCLK,
     OLED_SDIN,
     OLED_VBAT,
-    OLED_VDD);
+    OLED_VDD,
+    PL_CLK);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -483,11 +484,13 @@ module mp1a_hardware
   output OLED_SDIN;
   output OLED_VBAT;
   output OLED_VDD;
+  input PL_CLK;
 
   wire DISPLAY_BUTTON_1;
   wire OLED_CONT_RST_1;
+  wire PL_CLK_1;
   wire [31:0]axi_gpio_0_gpio2_io_o;
-  wire [3:0]axi_gpio_0_gpio_io_o;
+  wire [7:0]axi_gpio_0_gpio_io_o;
   wire [0:0]axi_gpio_1_gpio2_io_o;
   wire [7:0]blk_mem_gen_0_douta;
   wire [9:0]oled_ip_0_BRAM_ADDR;
@@ -498,6 +501,7 @@ module mp1a_hardware
   wire oled_ip_0_RES;
   wire oled_ip_0_SCLK;
   wire oled_ip_0_SDIN;
+  wire oled_ip_0_SEND_DATA;
   wire oled_ip_0_VBAT;
   wire oled_ip_0_VDD;
   wire [14:0]processing_system7_0_DDR_ADDR;
@@ -608,6 +612,7 @@ module mp1a_hardware
   assign OLED_SDIN = oled_ip_0_SDIN;
   assign OLED_VBAT = oled_ip_0_VBAT;
   assign OLED_VDD = oled_ip_0_VDD;
+  assign PL_CLK_1 = PL_CLK;
   mp1a_hardware_axi_gpio_0_0 axi_gpio_0
        (.gpio2_io_o(axi_gpio_0_gpio2_io_o),
         .gpio_io_o(axi_gpio_0_gpio_io_o),
@@ -632,7 +637,7 @@ module mp1a_hardware
         .s_axi_wvalid(ps7_0_axi_periph_M00_AXI_WVALID));
   mp1a_hardware_axi_gpio_1_0 axi_gpio_1
        (.gpio2_io_o(axi_gpio_1_gpio2_io_o),
-        .gpio_io_i(DISPLAY_BUTTON_1),
+        .gpio_io_i(oled_ip_0_SEND_DATA),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M01_AXI_ARADDR[8:0]),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
@@ -661,7 +666,8 @@ module mp1a_hardware
         .BRAM_ADDR(oled_ip_0_BRAM_ADDR),
         .BRAM_CLK(oled_ip_0_BRAM_CLK),
         .BRAM_DATA(blk_mem_gen_0_douta),
-        .CLK(processing_system7_0_FCLK_CLK0),
+        .BUTTON_T18(DISPLAY_BUTTON_1),
+        .CLK(PL_CLK_1),
         .DATA(axi_gpio_0_gpio2_io_o),
         .DC(oled_ip_0_DC),
         .LED_INIT(oled_ip_0_LED_INIT),
@@ -670,6 +676,7 @@ module mp1a_hardware
         .RST(OLED_CONT_RST_1),
         .SCLK(oled_ip_0_SCLK),
         .SDIN(oled_ip_0_SDIN),
+        .SEND_DATA(oled_ip_0_SEND_DATA),
         .VBAT(oled_ip_0_VBAT),
         .VDD(oled_ip_0_VDD),
         .WRITE(axi_gpio_1_gpio2_io_o));

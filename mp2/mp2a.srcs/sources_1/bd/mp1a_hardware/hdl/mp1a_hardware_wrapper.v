@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-//Date        : Mon Sep 24 17:23:37 2018
+//Date        : Tue Sep 25 00:46:09 2018
 //Host        : andrew-vm running 64-bit Ubuntu 17.10
 //Command     : generate_target mp1a_hardware_wrapper.bd
 //Design      : mp1a_hardware_wrapper
@@ -40,7 +40,8 @@ module mp1a_hardware_wrapper
     OLED_SCLK,
     OLED_SDIN,
     OLED_VBAT,
-    OLED_VDD);
+    OLED_VDD,
+    PL_CLK);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -72,6 +73,7 @@ module mp1a_hardware_wrapper
   output OLED_SDIN;
   output OLED_VBAT;
   output OLED_VDD;
+  input PL_CLK;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -104,6 +106,7 @@ module mp1a_hardware_wrapper
   wire OLED_SDIN;
   wire OLED_VBAT;
   wire OLED_VDD;
+  wire PL_CLK;
 
   mp1a_hardware mp1a_hardware_i
        (.DDR_addr(DDR_addr),
@@ -136,5 +139,6 @@ module mp1a_hardware_wrapper
         .OLED_SCLK(OLED_SCLK),
         .OLED_SDIN(OLED_SDIN),
         .OLED_VBAT(OLED_VBAT),
-        .OLED_VDD(OLED_VDD));
+        .OLED_VDD(OLED_VDD),
+        .PL_CLK(PL_CLK));
 endmodule

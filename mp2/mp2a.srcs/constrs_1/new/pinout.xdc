@@ -18,3 +18,9 @@ set_property PACKAGE_PIN T21 [get_ports LED_INIT]
 set_property IOSTANDARD LVCMOS33 [get_ports LED_INIT]
 set_property PACKAGE_PIN AB12 [get_ports OLED_SCLK]
 set_property IOSTANDARD LVCMOS33 [get_ports OLED_SCLK]
+set_property PACKAGE_PIN Y9 [get_ports PL_CLK]
+set_property IOSTANDARD LVCMOS33 [get_ports PL_CLK]
+
+create_clock -period 10.000 -name BRAM_CLK -waveform {0.000 5.000} [get_nets -hierarchical *BRAM_CLK*]
+
+create_clock -period 10.000 -waveform {0.000 5.000} [get_ports -filter { NAME =~  "*PL_CLK*" && DIRECTION == "IN" }]

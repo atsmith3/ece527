@@ -175,6 +175,7 @@ proc create_root_design { parentCell } {
   set OLED_SDIN [ create_bd_port -dir O OLED_SDIN ]
   set OLED_VBAT [ create_bd_port -dir O OLED_VBAT ]
   set OLED_VDD [ create_bd_port -dir O OLED_VDD ]
+  set PL_CLK [ create_bd_port -dir I -type clk PL_CLK ]
 
   # Create instance: axi_gpio_0, and set properties
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
@@ -182,7 +183,7 @@ proc create_root_design { parentCell } {
 CONFIG.C_ALL_INPUTS {0} \
 CONFIG.C_ALL_OUTPUTS {1} \
 CONFIG.C_ALL_OUTPUTS_2 {1} \
-CONFIG.C_GPIO_WIDTH {4} \
+CONFIG.C_GPIO_WIDTH {8} \
 CONFIG.C_IS_DUAL {1} \
 CONFIG.GPIO2_BOARD_INTERFACE {Custom} \
 CONFIG.GPIO_BOARD_INTERFACE {Custom} \
@@ -259,8 +260,9 @@ CONFIG.NUM_MI {3} \
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins axi_gpio_1/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
 
   # Create port connections
-  connect_bd_net -net DISPLAY_BUTTON_1 [get_bd_ports DISPLAY_BUTTON] [get_bd_pins axi_gpio_1/gpio_io_i]
+  connect_bd_net -net DISPLAY_BUTTON_1 [get_bd_ports DISPLAY_BUTTON] [get_bd_pins oled_ip_0/BUTTON_T18]
   connect_bd_net -net OLED_CONT_RST_1 [get_bd_ports OLED_CONT_RST] [get_bd_pins oled_ip_0/RST]
+  connect_bd_net -net PL_CLK_1 [get_bd_ports PL_CLK] [get_bd_pins oled_ip_0/CLK]
   connect_bd_net -net axi_gpio_0_gpio2_io_o [get_bd_pins axi_gpio_0/gpio2_io_o] [get_bd_pins oled_ip_0/DATA]
   connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins oled_ip_0/ADDRESS]
   connect_bd_net -net axi_gpio_1_gpio2_io_o [get_bd_pins axi_gpio_1/gpio2_io_o] [get_bd_pins oled_ip_0/WRITE]
@@ -273,9 +275,10 @@ CONFIG.NUM_MI {3} \
   connect_bd_net -net oled_ip_0_RES [get_bd_ports OLED_RES] [get_bd_pins oled_ip_0/RES]
   connect_bd_net -net oled_ip_0_SCLK [get_bd_ports OLED_SCLK] [get_bd_pins oled_ip_0/SCLK]
   connect_bd_net -net oled_ip_0_SDIN [get_bd_ports OLED_SDIN] [get_bd_pins oled_ip_0/SDIN]
+  connect_bd_net -net oled_ip_0_SEND_DATA [get_bd_pins axi_gpio_1/gpio_io_i] [get_bd_pins oled_ip_0/SEND_DATA]
   connect_bd_net -net oled_ip_0_VBAT [get_bd_ports OLED_VBAT] [get_bd_pins oled_ip_0/VBAT]
   connect_bd_net -net oled_ip_0_VDD [get_bd_ports OLED_VDD] [get_bd_pins oled_ip_0/VDD]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_gpio_1/s_axi_aclk] [get_bd_pins oled_ip_0/CLK] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_gpio_1/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_100M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_100M/interconnect_aresetn]
   connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_gpio_1/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]

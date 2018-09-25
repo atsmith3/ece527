@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-// Date        : Mon Sep 24 17:27:15 2018
+// Date        : Tue Sep 25 00:51:47 2018
 // Host        : andrew-vm running 64-bit Ubuntu 17.10
 // Command     : write_verilog -force -mode synth_stub
 //               /home/andrew/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/ip/mp1a_hardware_oled_ip_0_0/mp1a_hardware_oled_ip_0_0_stub.v
@@ -15,8 +15,8 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "oled_ip,Vivado 2017.2" *)
 module mp1a_hardware_oled_ip_0_0(CLK, RST, LED_INIT, LED_READY, SDIN, SCLK, DC, RES, VBAT, 
-  VDD, ADDRESS, DATA, WRITE, BRAM_ADDR, BRAM_DATA, BRAM_CLK)
-/* synthesis syn_black_box black_box_pad_pin="CLK,RST,LED_INIT,LED_READY,SDIN,SCLK,DC,RES,VBAT,VDD,ADDRESS[3:0],DATA[31:0],WRITE,BRAM_ADDR[9:0],BRAM_DATA[7:0],BRAM_CLK" */;
+  VDD, ADDRESS, DATA, WRITE, SEND_DATA, BUTTON_T18, BRAM_ADDR, BRAM_DATA, BRAM_CLK)
+/* synthesis syn_black_box black_box_pad_pin="CLK,RST,LED_INIT,LED_READY,SDIN,SCLK,DC,RES,VBAT,VDD,ADDRESS[7:0],DATA[31:0],WRITE,SEND_DATA,BUTTON_T18,BRAM_ADDR[9:0],BRAM_DATA[7:0],BRAM_CLK" */;
   input CLK;
   input RST;
   output LED_INIT;
@@ -27,9 +27,11 @@ module mp1a_hardware_oled_ip_0_0(CLK, RST, LED_INIT, LED_READY, SDIN, SCLK, DC, 
   output RES;
   output VBAT;
   output VDD;
-  input [3:0]ADDRESS;
+  input [7:0]ADDRESS;
   input [31:0]DATA;
   input WRITE;
+  output SEND_DATA;
+  input BUTTON_T18;
   output [9:0]BRAM_ADDR;
   input [7:0]BRAM_DATA;
   output BRAM_CLK;

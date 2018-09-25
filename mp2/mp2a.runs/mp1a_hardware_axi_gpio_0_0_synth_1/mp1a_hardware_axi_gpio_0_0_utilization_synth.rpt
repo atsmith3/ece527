@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-| Date         : Mon Sep 24 17:08:41 2018
+| Date         : Tue Sep 25 00:47:58 2018
 | Host         : andrew-vm running 64-bit Ubuntu 17.10
 | Command      : report_utilization -file mp1a_hardware_axi_gpio_0_0_utilization_synth.rpt -pb mp1a_hardware_axi_gpio_0_0_utilization_synth.pb
 | Design       : mp1a_hardware_axi_gpio_0_0
@@ -33,8 +33,8 @@ Table of Contents
 | Slice LUTs*             |   76 |     0 |     53200 |  0.14 |
 |   LUT as Logic          |   76 |     0 |     53200 |  0.14 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |  193 |     0 |    106400 |  0.18 |
-|   Register as Flip Flop |  193 |     0 |    106400 |  0.18 |
+| Slice Registers         |  205 |     0 |    106400 |  0.19 |
+|   Register as Flip Flop |  205 |     0 |    106400 |  0.19 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 36    |          Yes |         Set |            - |
-| 157   |          Yes |       Reset |            - |
+| 40    |          Yes |         Set |            - |
+| 165   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -146,12 +146,12 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  157 |        Flop & Latch |
-| LUT5     |   37 |                 LUT |
-| FDSE     |   36 |        Flop & Latch |
-| LUT3     |   31 |                 LUT |
-| LUT6     |   13 |                 LUT |
-| LUT4     |    7 |                 LUT |
+| FDRE     |  165 |        Flop & Latch |
+| FDSE     |   40 |        Flop & Latch |
+| LUT5     |   33 |                 LUT |
+| LUT3     |   27 |                 LUT |
+| LUT6     |   17 |                 LUT |
+| LUT4     |   11 |                 LUT |
 | LUT2     |    6 |                 LUT |
 | LUT1     |    2 |                 LUT |
 +----------+------+---------------------+
