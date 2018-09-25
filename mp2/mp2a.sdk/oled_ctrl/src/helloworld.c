@@ -74,32 +74,32 @@ void print_to_oled(char* str) {
     for(int i = 0; i < 64; i+=4) {
     	reg = 0;
         if(eos == 1 || str[i] == '\0') {
-        	reg = reg | (OLED_BLANK << 24);
+        	reg = reg | (OLED_BLANK << 0);
         	eos = 1;
         }
         else {
-        	reg = reg | (str[i] << 24);
+        	reg = reg | (str[i] << 0);
         }
         if(eos == 1 || str[i+1] == '\0') {
-           	reg = reg | (OLED_BLANK << 16);
-           	eos = 1;
-        }
-        else {
-          	reg = reg | (str[i+1] << 16);
-        }
-        if(eos == 1 || str[i+2] == '\0') {
            	reg = reg | (OLED_BLANK << 8);
            	eos = 1;
         }
         else {
-           	reg = reg | (str[i+2] << 8);
+          	reg = reg | (str[i+1] << 8);
         }
-        if(eos == 1 || str[i+3] == '\0') {
-           	reg = reg | (OLED_BLANK << 0);
+        if(eos == 1 || str[i+2] == '\0') {
+           	reg = reg | (OLED_BLANK << 16);
            	eos = 1;
         }
         else {
-           	reg = reg | (str[i+3] << 0);
+           	reg = reg | (str[i+2] << 16);
+        }
+        if(eos == 1 || str[i+3] == '\0') {
+           	reg = reg | (OLED_BLANK << 24);
+           	eos = 1;
+        }
+        else {
+           	reg = reg | (str[i+3] << 24);
         }
         // Send Data
         // Set Address and Data;
@@ -133,6 +133,8 @@ int main()
     XGpio_DiscreteWrite(&misc_sig, WRITE_CH, 0);
 
     while(1) {
+        XGpio_DiscreteWrite(&addr_data, ADDRESS_CH, 0);
+        XGpio_DiscreteWrite(&misc_sig, WRITE_CH, 0);
     	while(XGpio_DiscreteRead(&misc_sig, SEND_DATA_CH) == 0) {
     		// Wait
     	}

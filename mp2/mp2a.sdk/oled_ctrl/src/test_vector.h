@@ -8,7 +8,7 @@
 #ifndef SRC_TEST_VECTOR_H_
 #define SRC_TEST_VECTOR_H_
 
-int num_test_vectors = 2;
-char testvector[2][100]= {"The quick brown fox tried to jump over the fence.","He wasn't very successful, and has the scars to show."};
+int num_test_vectors = 3;
+char testvector[3][100]= {"The quick brown fox tried to jump over the fence.","He wasn't very successful, and has the scars to show.","Hello THomas, This lab is shit"};
 
 #endif /* SRC_TEST_VECTOR_H_ */

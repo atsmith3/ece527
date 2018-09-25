@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# 
+# Start of session at: Tue Sep 25 12:41:53 2018
+# Process ID: 32101
+# Current directory: /home/andrew/ece527/mp2/mp2a.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /home/andrew/ece527/mp2/mp2a.sdk/webtalk/webtalk.log
+# Journal file: /home/andrew/ece527/mp2/mp2a.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

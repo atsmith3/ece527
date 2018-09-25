@@ -80,7 +80,7 @@ module oled_ip(
 
     reg [110:0] current_state = "Start";
 
-    reg [511:0] input_vector = 512'h0;
+    reg [511:0] input_vector = {64{8'h20}};
 
     wire init_en;
     wire init_done;
@@ -99,6 +99,9 @@ module oled_ip(
     wire write_en;
 
     reg oled_init = 1'b0;
+
+   wire clear_en;
+
     // ===========================================================================
     //                                      Implementation
     // ===========================================================================
@@ -106,55 +109,55 @@ module oled_ip(
     // 16 bit Registers:
     always @(posedge WRITE) begin
         if(RST == 1'b1) begin
-            input_vector[511:0] <= 0;
+            input_vector[511:0] <= {64{6'h20}};
         end
         case(ADDRESS)
             8'h0 : begin
                 input_vector[ 31:  0] <= DATA[31:0];
-            end
-            8'h1 : begin
+            end                                   
+            8'h1 : begin                          
                 input_vector[ 63: 32] <= DATA[31:0];
-            end
-            8'h2 : begin
+            end                                   
+            8'h2 : begin                          
                 input_vector[ 95: 64] <= DATA[31:0];
-            end
-            8'h3 : begin
+            end                                   
+            8'h3 : begin                          
                 input_vector[127: 96] <= DATA[31:0];
-            end
-            8'h4 : begin
+            end                                   
+            8'h4 : begin                          
                 input_vector[159:128] <= DATA[31:0];
-            end
-            8'h5 : begin
+            end                                   
+            8'h5 : begin                          
                 input_vector[191:160] <= DATA[31:0];
-            end
-            8'h6 : begin
+            end                                   
+            8'h6 : begin                          
                 input_vector[223:192] <= DATA[31:0];
-            end
-            8'h7 : begin
+            end                                   
+            8'h7 : begin                          
                 input_vector[255:224] <= DATA[31:0];
-            end
-            8'h8 : begin
+            end                                   
+            8'h8 : begin                          
                 input_vector[287:256] <= DATA[31:0];
-            end
-            8'h9 : begin
+            end                                   
+            8'h9 : begin                          
                 input_vector[319:288] <= DATA[31:0];
-            end
-            8'h10 : begin
+            end                                   
+            8'h10 : begin                         
                 input_vector[351:320] <= DATA[31:0];
-            end
-            8'h11 : begin
+            end                                   
+            8'h11 : begin                         
                 input_vector[383:352] <= DATA[31:0];
-            end
-            8'h12 : begin
+            end                                   
+            8'h12 : begin                         
                 input_vector[415:384] <= DATA[31:0];
-            end
-            8'h13 : begin
+            end                                   
+            8'h13 : begin                         
                 input_vector[447:416] <= DATA[31:0];
-            end
-            8'h14 : begin
+            end                                   
+            8'h14 : begin                         
                 input_vector[479:448] <= DATA[31:0];
-            end
-            8'h15 : begin
+            end                                   
+            8'h15 : begin                         
                 input_vector[511:480] <= DATA[31:0];
             end
             default begin
@@ -181,7 +184,7 @@ module oled_ip(
     OledEX Example(
             .CLK(CLK),
             .RST(RST),
-            .EN(example_en),
+            .EN(example_en | clear_en),
             .CS(example_cs),
             .SDO(example_sdo),
             .SCLK(example_sclk),
@@ -195,7 +198,6 @@ module oled_ip(
             .BRAM_CLK(BRAM_CLK)
     );
 
-
     //MUXes to indicate which outputs are routed out depending on which block is enabled
     assign CS = (current_state == "OledInitialize") ? init_cs : example_cs;
     assign SDIN = (current_state == "OledInitialize") ? init_sdo : example_sdo;
@@ -208,9 +210,11 @@ module oled_ip(
     assign LED_INIT = oled_init;
     assign LED_READY = (current_state == "Idle") ? 1'b1 : 1'b0;
     assign write_en = (current_state == "Idle") ? 1'b1 : 1'b0;
-    assign SEND_DATA = write_en & BUTTON_T18;
+    assign addr_en = (ADDRESS == 8'h00) ? 1'b1 : 1'b0;
+    assign SEND_DATA = write_en & BUTTON_T18 & addr_en;
     assign init_en = (current_state == "OledInitialize") ? 1'b1 : 1'b0;
     assign example_en = (current_state == "OledExample") ? 1'b1 : 1'b0;
+    assign clear_en = (current_state == "OledClear") ? 1'b1 : 1'b0;
     //END enable MUXes
 
     
@@ -234,17 +238,20 @@ module oled_ip(
                // Go through the initialization sequence
                 "OledInitialize" : begin
                     if(init_done == 1'b1) begin
-                            current_state <= "Idle";
+                            current_state <= "OledClear";
                     end
                 end
-                
+                "OledClear" : begin
+                    if(example_done == 1'b1) begin
+                        current_state <= "Idle";
+                    end
+                end
                 // Do example and Do nothing when finished
                 "OledExample" : begin
                     if(example_done == 1'b1) begin
                             current_state <= "Idle";
                     end
                 end
-
                 default : current_state <= "OledInitialize";
             endcase
         end
