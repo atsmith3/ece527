@@ -1,0 +1,42 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y 660 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 680 -defaultsOSRD
+preplace inst packet_process_0 -pg 1 -lvl 1 -y 160 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 3 -y 590 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -y 600 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 4 -y 860 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -y 330 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -y 970 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 4 -y 360 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 5 -y 740 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 5 1 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 710 750 NJ 750 NJ 750 1950J 610 2420
+preplace netloc packet_process_0_out_port 1 1 2 NJ 160 1120
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 3 700 700 1070 770 1540
+preplace netloc axi_smc_M00_AXI 1 4 1 1930
+preplace netloc axis_data_fifo_0_m_axis_tdata 1 0 5 20 230 710J 210 NJ 210 NJ 210 1890
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 30J 780 NJ 780 NJ 780 NJ 780 1940J 600 2430
+preplace netloc axi_dma_0_M_AXI_SG 1 3 1 1570
+preplace netloc axi_dma_0_s_axis_s2mm_tready 1 2 3 1100 920 NJ 920 1910
+preplace netloc axi_dma_0_s2mm_introut 1 3 1 1520
+preplace netloc axi_dma_0_M_AXI_MM2S 1 3 1 1560
+preplace netloc xlconcat_0_dout 1 4 1 1960
+preplace netloc processing_system7_0_FIXED_IO 1 5 1 NJ
+preplace netloc axis_data_fifo_0_m_axis_tkeep 1 2 3 1090 930 NJ 930 1900
+preplace netloc axis_data_fifo_0_m_axis_tlast 1 2 3 1110 790 NJ 790 1890
+preplace netloc axi_dma_0_mm2s_introut 1 3 1 1530
+preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 1530
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 20 620 690 620 1080 760 1550 690 1960 590 2440
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 3 1 1520
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 1070
+preplace netloc axis_data_fifo_0_m_axis_tvalid 1 2 3 1120 800 NJ 800 1920
+preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 1 1 680
+levelinfo -pg 1 0 510 920 1320 1730 2190 2460 -top 0 -bot 1060
+",
+}
+{
+   da_axi4_cnt: "4",
+   da_ps7_cnt: "1",
+}
