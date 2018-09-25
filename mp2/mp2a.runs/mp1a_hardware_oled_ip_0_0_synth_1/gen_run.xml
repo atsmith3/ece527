@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="mp1a_hardware_oled_ip_0_0_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1537854381">
+<GenRun Id="mp1a_hardware_oled_ip_0_0_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1537858456">
   <File Type="VDS-TIMING-PB" Name="mp1a_hardware_oled_ip_0_0_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="mp1a_hardware_oled_ip_0_0_timing_summary_synth.rpt"/>
   <File Type="RDS-RDS" Name="mp1a_hardware_oled_ip_0_0.vds"/>

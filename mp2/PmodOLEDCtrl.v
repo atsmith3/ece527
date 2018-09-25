@@ -223,7 +223,7 @@ module oled_ip(
         else begin
             case(current_state)
                 "start" : begin
-                    current_state <= "OledInitilize"
+                    current_state <= "OledInitilize";
                 end
                 "Idle" : begin
                     oled_init <= 1'b1;

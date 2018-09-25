@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Tue Sep 25 00:47:59 2018
-# Process ID: 26471
+# Start of session at: Tue Sep 25 01:54:24 2018
+# Process ID: 28137
 # Current directory: /home/andrew/ece527/mp2/mp2a.runs/mp1a_hardware_oled_ip_0_0_synth_1
 # Command line: vivado -log mp1a_hardware_oled_ip_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mp1a_hardware_oled_ip_0_0.tcl
 # Log file: /home/andrew/ece527/mp2/mp2a.runs/mp1a_hardware_oled_ip_0_0_synth_1/mp1a_hardware_oled_ip_0_0.vds
@@ -16,9 +16,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg484'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg484'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 26480 
+INFO: Helper process launched with PID 28149 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1154.164 ; gain = 53.996 ; free physical = 659 ; free virtual = 2322
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1154.164 ; gain = 53.996 ; free physical = 854 ; free virtual = 2234
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'mp1a_hardware_oled_ip_0_0' [/home/andrew/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/ip/mp1a_hardware_oled_ip_0_0/synth/mp1a_hardware_oled_ip_0_0.v:56]
 INFO: [Synth 8-638] synthesizing module 'oled_ip' [/home/andrew/ece527/mp2/PmodOLEDCtrl.v:17]
@@ -30,178 +30,12 @@ INFO: [Synth 8-256] done synthesizing module 'Delay' (2#1) [/home/andrew/ece527/
 INFO: [Synth 8-256] done synthesizing module 'OledInit' (3#1) [/home/andrew/ece527/mp2/OledInit.v:17]
 INFO: [Synth 8-638] synthesizing module 'OledEX' [/home/andrew/ece527/mp2/OledEX.v:19]
 WARNING: [Synth 8-5856] 3D RAM current_screen_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[0][0] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[0][1] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[0][2] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[0][3] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[0][4] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[0][5] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[0][6] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[0][7] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[0][8] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[0][9] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[0][10] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[0][11] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[0][12] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[0][13] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[0][14] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[0][15] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[1][0] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[1][1] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[1][2] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[1][3] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[1][4] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[1][5] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[1][6] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[1][7] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[1][8] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[1][9] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[1][10] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[1][11] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[1][12] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[1][13] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[1][14] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[1][15] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[2][0] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[2][1] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[2][2] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[2][3] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[2][4] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[2][5] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[2][6] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[2][7] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[2][8] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[2][9] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[2][10] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[2][11] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[2][12] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[2][13] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[2][14] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[2][15] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[3][0] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[3][1] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[3][2] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[3][3] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[3][4] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[3][5] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[3][6] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[3][7] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[3][8] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[3][9] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[3][10] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[3][11] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[3][12] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[3][13] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[3][14] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
-WARNING: [Synth 8-6014] Unused sequential element current_screen_reg[3][15] was removed.  [/home/andrew/ece527/mp2/OledEX.v:131]
 WARNING: [Synth 8-3848] Net temp_delay_ms in module/entity OledEX does not have driver. [/home/andrew/ece527/mp2/OledEX.v:79]
 INFO: [Synth 8-256] done synthesizing module 'OledEX' (4#1) [/home/andrew/ece527/mp2/OledEX.v:19]
-WARNING: [Synth 8-689] width (512) of port connection 'DATA_STRING' does not match port width (513) of module 'OledEX' [/home/andrew/ece527/mp2/PmodOLEDCtrl.v:191]
 INFO: [Synth 8-256] done synthesizing module 'oled_ip' (5#1) [/home/andrew/ece527/mp2/PmodOLEDCtrl.v:17]
 INFO: [Synth 8-256] done synthesizing module 'mp1a_hardware_oled_ip_0_0' (6#1) [/home/andrew/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/ip/mp1a_hardware_oled_ip_0_0/synth/mp1a_hardware_oled_ip_0_0.v:56]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[512]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[511]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[510]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[509]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[508]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[507]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[506]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[505]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[504]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[503]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[502]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[501]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[500]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[499]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[498]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[497]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[496]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[495]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[494]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[493]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[492]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[491]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[490]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[489]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[488]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[487]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[486]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[485]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[484]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[483]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[482]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[481]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[480]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[479]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[478]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[477]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[476]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[475]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[474]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[473]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[472]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[471]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[470]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[469]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[468]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[467]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[466]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[465]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[464]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[463]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[462]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[461]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[460]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[459]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[458]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[457]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[456]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[455]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[454]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[453]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[452]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[451]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[450]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[449]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[448]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[447]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[446]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[445]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[444]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[443]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[442]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[441]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[440]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[439]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[438]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[437]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[436]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[435]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[434]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[433]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[432]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[431]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[430]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[429]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[428]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[427]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[426]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[425]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[424]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[423]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[422]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[421]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[420]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[419]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[418]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[417]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[416]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[415]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[414]
-WARNING: [Synth 8-3331] design OledEX has unconnected port DATA_STRING[413]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1197.664 ; gain = 97.496 ; free physical = 661 ; free virtual = 2326
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1204.664 ; gain = 104.496 ; free physical = 850 ; free virtual = 2232
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -223,7 +57,7 @@ WARNING: [Synth 8-3295] tying undriven pin DELAY_COMP:DELAY_MS[2] to constant 0 
 WARNING: [Synth 8-3295] tying undriven pin DELAY_COMP:DELAY_MS[1] to constant 0 [/home/andrew/ece527/mp2/OledEX.v:121]
 WARNING: [Synth 8-3295] tying undriven pin DELAY_COMP:DELAY_MS[0] to constant 0 [/home/andrew/ece527/mp2/OledEX.v:121]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1197.664 ; gain = 97.496 ; free physical = 664 ; free virtual = 2328
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1204.664 ; gain = 104.496 ; free physical = 853 ; free virtual = 2235
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -235,22 +69,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.30 . Memory (MB): peak = 1519.676 ; gain = 2.000 ; free physical = 394 ; free virtual = 2058
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.34 . Memory (MB): peak = 1527.668 ; gain = 3.000 ; free physical = 542 ; free virtual = 1961
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1519.676 ; gain = 419.508 ; free physical = 482 ; free virtual = 2147
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1527.668 ; gain = 427.500 ; free physical = 636 ; free virtual = 2055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1519.676 ; gain = 419.508 ; free physical = 482 ; free virtual = 2147
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1527.668 ; gain = 427.500 ; free physical = 636 ; free virtual = 2055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1519.676 ; gain = 419.508 ; free physical = 484 ; free virtual = 2149
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1527.668 ; gain = 427.500 ; free physical = 638 ; free virtual = 2057
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'SpiCtrl'
 WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [/home/andrew/ece527/mp2/SpiCtrl.v:64]
@@ -272,8 +106,8 @@ INFO: [Synth 8-5545] ROM "temp_vbat" won't be mapped to RAM because address size
 INFO: [Synth 8-5545] ROM "temp_fin" won't be mapped to RAM because address size (104) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "temp_spi_en" won't be mapped to RAM because address size (104) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "temp_delay_en" won't be mapped to RAM because address size (104) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "current_screen" won't be mapped to RAM because address size (144) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "after_page_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "after_update_state" won't be mapped to RAM because address size (144) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "temp_char" won't be mapped to RAM because address size (144) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "after_char_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "temp_dc" won't be mapped to RAM because address size (144) is larger than maximum supported(25)
@@ -282,8 +116,10 @@ INFO: [Synth 8-5545] ROM "after_state" won't be mapped to RAM because address si
 INFO: [Synth 8-5545] ROM "temp_addr" won't be mapped to RAM because address size (144) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "temp_spi_en" won't be mapped to RAM because address size (144) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "temp_delay_en" won't be mapped to RAM because address size (144) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "current_state" won't be mapped to RAM because address size (111) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'oled_ip'
+WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [/home/andrew/ece527/mp2/PmodOLEDCtrl.v:200]
 INFO: [Synth 8-5545] ROM "oled_init" won't be mapped to RAM because address size (111) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "current_state" won't be mapped to RAM because address size (111) is larger than maximum supported(25)
 WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [/home/andrew/ece527/mp2/SpiCtrl.v:64]
 WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [/home/andrew/ece527/mp2/SpiCtrl.v:64]
 ---------------------------------------------------------------------------------------------------
@@ -299,16 +135,31 @@ WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'SpiCtrl'
 WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [/home/andrew/ece527/mp2/SpiCtrl.v:64]
+WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [/home/andrew/ece527/mp2/PmodOLEDCtrl.v:200]
+WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [/home/andrew/ece527/mp2/PmodOLEDCtrl.v:200]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE3 |                              000 | 000000000000000000000000000000000000000000000000000000000000000000000000101001101110100011000010111001001110100
+                  iSTATE |                              001 | 000000000000000000000000000000000000000000000000000000000000000000000000111001101110100011000010111001001110100
+                 iSTATE4 |                              010 | 000000001001111011011000110010101100100010010010110111001101001011101000110100101101100011010010111101001100101
+*
+                 iSTATE1 |                              011 | 100111101101100011001010110010001001001011011100110100101110100011010010110000101101100011010010111101001100101
+                 iSTATE0 |                              100 | 000000000000000000000000000000000000000000000000000000000000000000000000000000001001001011001000110110001100101
+                 iSTATE2 |                              101 | 000000000000000000000000100111101101100011001010110010001000101011110000110000101101101011100000110110001100101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'oled_ip'
+WARNING: [Synth 8-6014] Unused sequential element current_state_reg was removed.  [/home/andrew/ece527/mp2/PmodOLEDCtrl.v:200]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:04 ; elapsed = 00:01:16 . Memory (MB): peak = 1519.676 ; gain = 419.508 ; free physical = 425 ; free virtual = 2095
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:02 ; elapsed = 00:01:13 . Memory (MB): peak = 1527.668 ; gain = 427.500 ; free physical = 594 ; free virtual = 2014
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |OledEX        |           1|     52188|
-|2     |oled_ip__GB1  |           1|     20872|
+|1     |OledEX        |           1|     54303|
+|2     |oled_ip__GB1  |           1|     19301|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -323,15 +174,13 @@ Detailed RTL Component Info :
 	              512 Bit    Registers := 1     
 	              143 Bit    Registers := 1     
 	              112 Bit    Registers := 1     
-	              111 Bit    Registers := 1     
 	              104 Bit    Registers := 2     
 	               96 Bit    Registers := 1     
 	               40 Bit    Registers := 1     
 	               32 Bit    Registers := 2     
 	               17 Bit    Registers := 2     
 	               11 Bit    Registers := 1     
-	                8 Bit    Registers := 4     
-	                7 Bit    Registers := 1     
+	                8 Bit    Registers := 69    
 	                5 Bit    Registers := 2     
 	                4 Bit    Registers := 3     
 	                2 Bit    Registers := 1     
@@ -342,7 +191,6 @@ Detailed RTL Component Info :
 	  13 Input    143 Bit        Muxes := 1     
 	   2 Input    143 Bit        Muxes := 1     
 	  26 Input    112 Bit        Muxes := 1     
-	   3 Input    111 Bit        Muxes := 1     
 	  28 Input    104 Bit        Muxes := 1     
 	  11 Input    104 Bit        Muxes := 1     
 	   2 Input    104 Bit        Muxes := 1     
@@ -352,20 +200,21 @@ Detailed RTL Component Info :
 	   2 Input     17 Bit        Muxes := 2     
 	  26 Input     11 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 16    
 	  28 Input      8 Bit        Muxes := 1     
-	   4 Input      7 Bit        Muxes := 15    
 	   2 Input      7 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
 	  26 Input      4 Bit        Muxes := 1     
 	  28 Input      4 Bit        Muxes := 1     
 	   7 Input      3 Bit        Muxes := 2     
-	   4 Input      2 Bit        Muxes := 3     
+	   5 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 2     
 	   3 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 51    
+	   2 Input      1 Bit        Muxes := 54    
 	   7 Input      1 Bit        Muxes := 2     
 	  26 Input      1 Bit        Muxes := 7     
 	  28 Input      1 Bit        Muxes := 5     
-	   4 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -413,8 +262,7 @@ Detailed RTL Component Info :
 	               96 Bit    Registers := 1     
 	               40 Bit    Registers := 1     
 	               11 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
-	                7 Bit    Registers := 1     
+	                8 Bit    Registers := 66    
 	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 3     
@@ -424,7 +272,7 @@ Detailed RTL Component Info :
 	  26 Input    112 Bit        Muxes := 1     
 	   2 Input     95 Bit        Muxes := 2     
 	  26 Input     11 Bit        Muxes := 1     
-	   4 Input      7 Bit        Muxes := 15    
+	   4 Input      8 Bit        Muxes := 16    
 	   2 Input      4 Bit        Muxes := 1     
 	  26 Input      4 Bit        Muxes := 1     
 	  26 Input      1 Bit        Muxes := 7     
@@ -477,15 +325,13 @@ Module oled_ip
 Detailed RTL Component Info : 
 +---Registers : 
 	              512 Bit    Registers := 1     
-	              111 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input    512 Bit        Muxes := 1     
 	  17 Input    512 Bit        Muxes := 1     
-	   3 Input    111 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
+	   5 Input      3 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -509,9 +355,9 @@ INFO: [Synth 8-5544] ROM "after_char_state" won't be mapped to Block RAM because
 INFO: [Synth 8-5545] ROM "temp_dc" won't be mapped to RAM because address size (95) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "temp_addr" won't be mapped to RAM because address size (95) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "temp_char" won't be mapped to RAM because address size (95) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "current_screen" won't be mapped to RAM because address size (95) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "temp_spi_en" won't be mapped to RAM because address size (95) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "temp_spi_data" won't be mapped to RAM because address size (95) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "after_update_state" won't be mapped to RAM because address size (95) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "after_state" won't be mapped to RAM because address size (95) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "temp_delay_en" won't be mapped to RAM because address size (95) is larger than maximum supported(25)
 WARNING: [Synth 8-6014] Unused sequential element SPI_COMP/counter_reg was removed.  [/home/andrew/ece527/mp2/SpiCtrl.v:60]
@@ -530,8 +376,6 @@ INFO: [Synth 8-5545] ROM "temp_delay_en" won't be mapped to RAM because address 
 WARNING: [Synth 8-6014] Unused sequential element SPI_COMP/counter_reg was removed.  [/home/andrew/ece527/mp2/SpiCtrl.v:60]
 WARNING: [Synth 8-6014] Unused sequential element SPI_COMP/shift_counter_reg was removed.  [/home/andrew/ece527/mp2/SpiCtrl.v:142]
 WARNING: [Synth 8-6014] Unused sequential element DELAY_COMP/ms_counter_reg was removed.  [/home/andrew/ece527/mp2/Delay.v:93]
-INFO: [Synth 8-5545] ROM "current_state" won't be mapped to RAM because address size (111) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "oled_init" won't be mapped to RAM because address size (111) is larger than maximum supported(25)
 INFO: [Synth 8-3886] merging instance 'inst/Example/after_update_state_reg[2]' (FDE) to 'inst/Example/after_update_state_reg[30]'
 INFO: [Synth 8-3886] merging instance 'inst/Example/after_char_state_reg[2]' (FDE) to 'inst/Example/after_char_state_reg[94]'
 INFO: [Synth 8-3886] merging instance 'inst/Example/after_update_state_reg[1]' (FDE) to 'inst/Example/after_update_state_reg[39]'
@@ -639,7 +483,7 @@ INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instan
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/Example /\after_char_state_reg[93] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/Example /\after_state_reg[111] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/Example /\after_page_state_reg[142] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/Example /\DELAY_COMP/current_state_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/Example /DELAY_COMP/\current_state_reg[12] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/Example /\current_state_reg[143] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst/Example /\after_page_state_reg[30] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst/Example /\after_state_reg[38] )
@@ -648,9 +492,74 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/Exa
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/Example /\current_state_reg[142] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst/Example /\current_state_reg[30] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/Example /\current_state_reg[93] )
-WARNING: [Synth 8-3332] Sequential element (DELAY_COMP/current_state_reg[12]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_state_reg[12]) is unused and will be removed from module Delay__1.
 WARNING: [Synth 8-3332] Sequential element (current_state_reg[93]) is unused and will be removed from module OledEX.
 WARNING: [Synth 8-3332] Sequential element (current_state_reg[30]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[3][0][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[2][0][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[1][0][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[0][0][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[3][1][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[2][1][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[1][1][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[0][1][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[3][2][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[2][2][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[1][2][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[0][2][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[3][3][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[2][3][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[1][3][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[0][3][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[3][4][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[2][4][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[1][4][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[0][4][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[3][5][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[2][5][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[1][5][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[0][5][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[3][6][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[2][6][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[1][6][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[0][6][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[3][7][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[2][7][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[1][7][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[0][7][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[3][8][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[2][8][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[1][8][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[0][8][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[3][9][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[2][9][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[1][9][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[0][9][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[3][10][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[2][10][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[1][10][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[0][10][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[3][11][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[2][11][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[1][11][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[0][11][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[3][12][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[2][12][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[1][12][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[0][12][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[3][13][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[2][13][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[1][13][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[0][13][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[3][14][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[2][14][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[1][14][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[0][14][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[3][15][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[2][15][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[1][15][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (current_screen_reg[0][15][7]) is unused and will be removed from module OledEX.
+WARNING: [Synth 8-3332] Sequential element (temp_char_reg[7]) is unused and will be removed from module OledEX.
 WARNING: [Synth 8-3332] Sequential element (temp_addr_reg[10]) is unused and will be removed from module OledEX.
 WARNING: [Synth 8-3332] Sequential element (after_update_state_reg[39]) is unused and will be removed from module OledEX.
 WARNING: [Synth 8-3332] Sequential element (after_update_state_reg[30]) is unused and will be removed from module OledEX.
@@ -664,7 +573,6 @@ INFO: [Synth 8-3333] propagating constant 1 across sequential element (insti_0/I
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (insti_0/Init/\after_state_reg[101] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (insti_0/Init/\DELAY_COMP/current_state_reg[12] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (insti_0/Init/temp_dc_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (insti_0/\current_state_reg[109] )
 WARNING: [Synth 8-3332] Sequential element (after_state_reg[101]) is unused and will be removed from module OledInit.
 WARNING: [Synth 8-3332] Sequential element (after_state_reg[30]) is unused and will be removed from module OledInit.
 WARNING: [Synth 8-3332] Sequential element (current_state_reg[103]) is unused and will be removed from module OledInit.
@@ -688,53 +596,45 @@ WARNING: [Synth 8-3332] Sequential element (current_state_reg[31]) is unused and
 WARNING: [Synth 8-3332] Sequential element (current_state_reg[30]) is unused and will be removed from module OledInit.
 WARNING: [Synth 8-3332] Sequential element (current_state_reg[23]) is unused and will be removed from module OledInit.
 WARNING: [Synth 8-3332] Sequential element (current_state_reg[22]) is unused and will be removed from module OledInit.
-WARNING: [Synth 8-3332] Sequential element (current_state_reg[15]) is unused and will be removed from module OledInit.
-WARNING: [Synth 8-3332] Sequential element (current_state_reg[14]) is unused and will be removed from module OledInit.
-WARNING: [Synth 8-3332] Sequential element (current_state_reg[7]) is unused and will be removed from module OledInit.
-WARNING: [Synth 8-3332] Sequential element (current_state_reg[5]) is unused and will be removed from module OledInit.
-WARNING: [Synth 8-3332] Sequential element (DELAY_COMP/current_state_reg[12]) is unused and will be removed from module OledInit.
-WARNING: [Synth 8-3332] Sequential element (temp_dc_reg) is unused and will be removed from module OledInit.
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst/Example /\DELAY_COMP/current_state_reg[30] )
-WARNING: [Synth 8-3332] Sequential element (DELAY_COMP/current_state_reg[30]) is unused and will be removed from module OledEX.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst/Example /DELAY_COMP/\current_state_reg[30] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (insti_0/Init/\DELAY_COMP/current_state_reg[30] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (insti_0/\current_state_reg[30] )
-WARNING: [Synth 8-3332] Sequential element (DELAY_COMP/current_state_reg[30]) is unused and will be removed from module OledInit.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:25 ; elapsed = 00:02:53 . Memory (MB): peak = 1551.699 ; gain = 451.531 ; free physical = 375 ; free virtual = 2050
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:16 ; elapsed = 00:02:37 . Memory (MB): peak = 1551.684 ; gain = 451.516 ; free physical = 557 ; free virtual = 1980
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |OledEX        |           1|      2524|
-|2     |oled_ip__GB1  |           1|      2981|
+|1     |OledEX        |           1|      3928|
+|2     |oled_ip__GB1  |           1|      4400|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:42 ; elapsed = 00:03:13 . Memory (MB): peak = 1551.699 ; gain = 451.531 ; free physical = 253 ; free virtual = 1928
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:31 ; elapsed = 00:02:55 . Memory (MB): peak = 1551.684 ; gain = 451.516 ; free physical = 430 ; free virtual = 1860
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:42 ; elapsed = 00:03:13 . Memory (MB): peak = 1551.699 ; gain = 451.531 ; free physical = 253 ; free virtual = 1928
+Finished Timing Optimization : Time (s): cpu = 00:02:31 ; elapsed = 00:02:55 . Memory (MB): peak = 1551.684 ; gain = 451.516 ; free physical = 430 ; free virtual = 1860
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------+------------+----------+
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
-|1     |OledEX        |           1|      2524|
-|2     |oled_ip__GB1  |           1|      2981|
+|1     |OledEX        |           1|      3928|
+|2     |oled_ip__GB1  |           1|      4400|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:44 ; elapsed = 00:03:16 . Memory (MB): peak = 1560.738 ; gain = 460.570 ; free physical = 271 ; free virtual = 1947
+Finished Technology Mapping : Time (s): cpu = 00:02:35 ; elapsed = 00:02:59 . Memory (MB): peak = 1571.426 ; gain = 471.258 ; free physical = 445 ; free virtual = 1876
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -758,7 +658,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:46 ; elapsed = 00:03:18 . Memory (MB): peak = 1560.738 ; gain = 460.570 ; free physical = 271 ; free virtual = 1947
+Finished IO Insertion : Time (s): cpu = 00:02:36 ; elapsed = 00:03:01 . Memory (MB): peak = 1571.426 ; gain = 471.258 ; free physical = 446 ; free virtual = 1876
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -771,7 +671,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:46 ; elapsed = 00:03:18 . Memory (MB): peak = 1560.738 ; gain = 460.570 ; free physical = 271 ; free virtual = 1947
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:36 ; elapsed = 00:03:01 . Memory (MB): peak = 1571.426 ; gain = 471.258 ; free physical = 446 ; free virtual = 1876
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -783,25 +683,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:47 ; elapsed = 00:03:18 . Memory (MB): peak = 1560.738 ; gain = 460.570 ; free physical = 271 ; free virtual = 1947
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:37 ; elapsed = 00:03:01 . Memory (MB): peak = 1571.426 ; gain = 471.258 ; free physical = 448 ; free virtual = 1879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:47 ; elapsed = 00:03:18 . Memory (MB): peak = 1560.738 ; gain = 460.570 ; free physical = 271 ; free virtual = 1947
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:37 ; elapsed = 00:03:01 . Memory (MB): peak = 1571.426 ; gain = 471.258 ; free physical = 448 ; free virtual = 1879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:47 ; elapsed = 00:03:19 . Memory (MB): peak = 1560.738 ; gain = 460.570 ; free physical = 271 ; free virtual = 1947
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:37 ; elapsed = 00:03:02 . Memory (MB): peak = 1571.426 ; gain = 471.258 ; free physical = 448 ; free virtual = 1879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:47 ; elapsed = 00:03:19 . Memory (MB): peak = 1560.738 ; gain = 460.570 ; free physical = 271 ; free virtual = 1947
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:37 ; elapsed = 00:03:02 . Memory (MB): peak = 1571.426 ; gain = 471.258 ; free physical = 448 ; free virtual = 1879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -817,50 +717,51 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |CARRY4 |    48|
-|2     |LUT1   |   123|
-|3     |LUT2   |   273|
-|4     |LUT3   |   114|
-|5     |LUT4   |   165|
-|6     |LUT5   |   247|
-|7     |LUT6   |   726|
-|8     |MUXF7  |     4|
-|9     |FDRE   |   365|
-|10    |FDSE   |    20|
+|1     |CARRY4 |    24|
+|2     |LUT1   |    69|
+|3     |LUT2   |   269|
+|4     |LUT3   |   240|
+|5     |LUT4   |   344|
+|6     |LUT5   |   313|
+|7     |LUT6   |   905|
+|8     |MUXF7  |    30|
+|9     |MUXF8  |     4|
+|10    |FDRE   |  1260|
+|11    |FDSE   |    19|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+-----------------+----------+------+
 |      |Instance         |Module    |Cells |
 +------+-----------------+----------+------+
-|1     |top              |          |  2085|
-|2     |  inst           |oled_ip   |  2085|
-|3     |    Example      |OledEX    |   962|
-|4     |      DELAY_COMP |Delay_0   |   101|
-|5     |      SPI_COMP   |SpiCtrl_1 |    47|
-|6     |    Init         |OledInit  |  1061|
+|1     |top              |          |  3477|
+|2     |  inst           |oled_ip   |  3477|
+|3     |    Example      |OledEX    |  1550|
+|4     |      DELAY_COMP |Delay_0   |   104|
+|5     |      SPI_COMP   |SpiCtrl_1 |    38|
+|6     |    Init         |OledInit  |  1026|
 |7     |      DELAY_COMP |Delay     |   121|
 |8     |      SPI_COMP   |SpiCtrl   |    53|
 +------+-----------------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:47 ; elapsed = 00:03:19 . Memory (MB): peak = 1560.738 ; gain = 460.570 ; free physical = 271 ; free virtual = 1947
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:37 ; elapsed = 00:03:02 . Memory (MB): peak = 1571.426 ; gain = 471.258 ; free physical = 448 ; free virtual = 1879
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 56 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:35 ; elapsed = 00:03:04 . Memory (MB): peak = 1560.738 ; gain = 138.559 ; free physical = 332 ; free virtual = 2008
-Synthesis Optimization Complete : Time (s): cpu = 00:02:47 ; elapsed = 00:03:19 . Memory (MB): peak = 1560.746 ; gain = 460.570 ; free physical = 335 ; free virtual = 2011
+Synthesis finished with 0 errors, 0 critical warnings and 125 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:24 ; elapsed = 00:02:46 . Memory (MB): peak = 1571.426 ; gain = 148.254 ; free physical = 508 ; free virtual = 1938
+Synthesis Optimization Complete : Time (s): cpu = 00:02:37 ; elapsed = 00:03:02 . Memory (MB): peak = 1571.434 ; gain = 471.258 ; free physical = 511 ; free virtual = 1941
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-201 Infos, 235 Warnings, 0 Critical Warnings and 0 Errors encountered.
+199 Infos, 131 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:51 ; elapsed = 00:03:23 . Memory (MB): peak = 1560.746 ; gain = 473.160 ; free physical = 309 ; free virtual = 1984
+synth_design: Time (s): cpu = 00:02:40 ; elapsed = 00:03:05 . Memory (MB): peak = 1571.434 ; gain = 483.848 ; free physical = 485 ; free virtual = 1916
 INFO: [Common 17-1381] The checkpoint '/home/andrew/ece527/mp2/mp2a.runs/mp1a_hardware_oled_ip_0_0_synth_1/mp1a_hardware_oled_ip_0_0.dcp' has been generated.
 INFO: [Coretcl 2-1174] Renamed 7 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/andrew/ece527/mp2/mp2a.runs/mp1a_hardware_oled_ip_0_0_synth_1/mp1a_hardware_oled_ip_0_0.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.20 . Memory (MB): peak = 1560.746 ; gain = 0.000 ; free physical = 307 ; free virtual = 1984
-INFO: [Common 17-206] Exiting Vivado at Tue Sep 25 00:51:48 2018...
+report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.19 . Memory (MB): peak = 1571.434 ; gain = 0.000 ; free physical = 483 ; free virtual = 1916
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 25 01:57:57 2018...
