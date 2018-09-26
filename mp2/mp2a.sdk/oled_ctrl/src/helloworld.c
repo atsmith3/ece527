@@ -134,15 +134,11 @@ int main()
     XGpio_DiscreteWrite(&addr_data, DATA_CH, 0);
     XGpio_DiscreteWrite(&misc_sig, WRITE_CH, 0);
 
-    for(int i = 0; i < 10000000; i++) {
-    	// Delay
-    }
+
 
     print_to_oled(" ");
 
-    for(int i = 0; i < 10000000; i++) {
-    	// Delay
-    }
+
 
     while(1) {
         XGpio_DiscreteWrite(&addr_data, ADDRESS_CH, 0);
@@ -150,18 +146,28 @@ int main()
     	while(XGpio_DiscreteRead(&misc_sig, SEND_DATA_CH) == 0) {
     		// Wait
     	}
+    	while(XGpio_DiscreteRead(&misc_sig, SEND_DATA_CH) == 1) {
+    	    		// Wait
+    	    	}
 
-		xil_printf("Printing Test Vector %i\n\r", test_vector_index);
+
+    	 for(int i = 0; i < 10000000; i++) {
+    	    	// Delay
+    	    }
+
 
         if(test_vector_index < num_test_vectors) {
         	print_to_oled(testvector[test_vector_index]);
         	test_vector_index++;
+        	xil_printf("Printing Test Vector %i\n\r", test_vector_index);
         }
+        for(int i = 0; i < 10000000; i++) {
+           	// Delay
+           }
 
-        while(XGpio_DiscreteRead(&misc_sig, SEND_DATA_CH) == 1) {
-        	// Wait
-        }
-    }
+
+     }
+
     cleanup_platform();
     return 0;
 }

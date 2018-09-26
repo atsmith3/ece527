@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
--- Date        : Tue Sep 25 15:52:47 2018
--- Host        : andrew-vm running 64-bit Ubuntu 17.10
+-- Date        : Tue Sep 25 18:05:29 2018
+-- Host        : ubuntu running 64-bit Ubuntu 18.04 LTS
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/andrew/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/ip/mp1a_hardware_oled_ip_0_0/mp1a_hardware_oled_ip_0_0_stub.vhdl
+--               /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/ip/mp1a_hardware_oled_ip_0_0/mp1a_hardware_oled_ip_0_0_stub.vhdl
 -- Design      : mp1a_hardware_oled_ip_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

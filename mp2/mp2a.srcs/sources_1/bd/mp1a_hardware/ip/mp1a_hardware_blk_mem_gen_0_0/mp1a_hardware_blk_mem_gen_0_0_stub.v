@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
 // Date        : Mon Sep 24 17:18:18 2018
 // Host        : andrew-vm running 64-bit Ubuntu 17.10
-// Command     : write_verilog -force -mode synth_stub
-//               /home/andrew/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/ip/mp1a_hardware_blk_mem_gen_0_0/mp1a_hardware_blk_mem_gen_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top mp1a_hardware_blk_mem_gen_0_0 -prefix
+//               mp1a_hardware_blk_mem_gen_0_0_ mp1a_hardware_blk_mem_gen_0_0_stub.v
 // Design      : mp1a_hardware_blk_mem_gen_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

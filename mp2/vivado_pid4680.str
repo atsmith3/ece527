@@ -1,0 +1,1314 @@
+/*
+
+Vivado v2017.2 (64-bit)
+SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+
+Process ID: 4680
+License: Customer
+
+Current time: 	9/25/18 5:08:30 PM CDT
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: NAME="Ubuntu"
+OS Version: 4.15.0-20-generic
+OS Architecture: amd64
+Available processors (cores): 1
+
+Display: :0.0
+Screen size: 1920x1080
+Screen resolution (DPI): 97
+Available screens: 1
+Available disk space: 38 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/Desktop/Xilinx/Vivado/2017.2/tps/lnx64/jre
+JVM executable location: 	/Desktop/Xilinx/Vivado/2017.2/tps/lnx64/jre/bin/java
+Java library paths: /Desktop/Xilinx/Vivado/2017.2/tps/lnx64/libxslt/lib:/Desktop/Xilinx/Vivado/2017.2/lib/lnx64.o:/Desktop/Xilinx/Vivado/2017.2/tps/lnx64/jre/lib/amd64:/Desktop/Xilinx/Vivado/2017.2/tps/lnx64/jre/lib/amd64/server:/Desktop/Xilinx/Vivado/2017.2/lnx64/tools/dot/lib:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+
+User name: 	thomas
+User home directory: /home/thomas
+User working directory: /home/thomas/ece527/mp2
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /Desktop/Xilinx/Vivado
+HDI_APPROOT: /Desktop/Xilinx/Vivado/2017.2
+RDI_DATADIR: /Desktop/Xilinx/Vivado/2017.2/data
+RDI_BINDIR: /Desktop/Xilinx/Vivado/2017.2/bin
+
+User preferences location: /home/thomas/.Xilinx/Vivado
+Vivado preferences directory: /home/thomas/.Xilinx/Vivado/2017.2/vivado.xml
+Vivado layouts directory: /home/thomas/.Xilinx/Vivado/2017.2/layouts
+PlanAhead jar location: 	/Desktop/Xilinx/Vivado/2017.2/lib/classes/planAhead.jar
+Vivado Look & Feel: 	[Synthetica - the extended Synth Look and Feel. - ui.g.i.H]
+Engine tmp dir: 	./.Xil/Vivado-4680-ubuntu
+
+GUI allocated memory:	122 MB
+GUI max memory:		3,066 MB
+Engine allocated memory: 628 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 78 MB (+79149kb) [00:00:12]
+// [Engine Memory]: 627 MB (+506280kb) [00:00:12]
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // x:h (JPanel:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// HMemoryUtils.trashcanNow. Engine heap size: 645 MB. GUI used memory: 32 MB. Current time: 9/25/18 5:08:32 PM CDT
+// Elapsed time: 10 seconds
+setFileChooser("/home/thomas/ece527/mp2/mp2a.xpr");
+// Opening Vivado Project: /home/thomas/ece527/mp2/mp2a.xpr. Version: Vivado v2017.2 
+// bs:g (cg:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// Tcl Message: open_project /home/thomas/ece527/mp2/mp2a.xpr 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 737 MB (+81675kb) [00:00:32]
+// Tcl Message: open_project /home/thomas/ece527/mp2/mp2a.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/andrew/ece527/mp2' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/Desktop/Xilinx/Vivado/2017.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 765 MB. GUI used memory: 41 MB. Current time: 9/25/18 5:08:55 PM CDT
+// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 5897.223 ; gain = 102.441 ; free physical = 1271 ; free virtual = 4924 
+// Project name: mp2a; location: /home/thomas/ece527/mp2; part: xc7z020clg484-1
+// 'i' command handler elapsed time: 26 seconds
+// [Engine Memory]: 775 MB (+1738kb) [00:00:42]
+// Elapsed time: 16 seconds
+dismissDialog("Open Project"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 83 MB (+1367kb) [00:01:35]
+// [GUI Memory]: 88 MB (+1302kb) [00:01:45]
+// Elapsed time: 71 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21, true); // u:M (JViewport:JComponent, cg:JFrame) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+// [Engine Memory]: 831 MB (+18430kb) [00:01:56]
+// Tcl Message: open_hw 
+// HMemoryUtils.trashcanNow. Engine heap size: 849 MB. GUI used memory: 46 MB. Current time: 9/25/18 5:10:12 PM CDT
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ac:JMenuItem (JPopupMenu:JComponent, Popup:JWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// X:p (cg:JFrame): Export Hardware: addNotify
+selectCheckBox(PAResourceItoN.NewExportHardwareDialog_INCLUDE_BITSTREAM, "Include bitstream", true); // g:JCheckBox (JPanel:JComponent, X:p): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:p)
+selectButton("PAResourceItoN.NewExportHardwareDialog_BITSTREAM_OUT_OF_DATE_DO_YOU_WANT_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, H:JDialog)
+// 'm' command handler elapsed time: 11 seconds
+selectButton("PAResourceItoN.NewExportHardwareDialog_EXPORTED_FILE_FOR_THIS_MODULE_WAS_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, H:JDialog)
+dismissDialog("Export Hardware"); // X:p (cg:JFrame)
+// Tcl Message: file copy -force /home/thomas/ece527/mp2/mp2a.runs/impl_1/mp1a_hardware_wrapper.sysdef /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf  
+// Elapsed time: 13 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_IMPORT, "Import"); // Z:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ac:JMenuItem (JPopupMenu:JComponent, Popup:JWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa:p (cg:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aa:p)
+// 'o' command handler elapsed time: 3 seconds
+selectButton("PAResourceItoN.NewLaunchHardwareDialog_EXPORTED_HARDWARE_SYSTEM_OUT_OF_DATE_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, H:JDialog)
+dismissDialog("Launch SDK"); // aa:p (cg:JFrame)
+// Tcl Message: launch_sdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// Elapsed time: 91 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 22, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x:aN (cg:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, x:aN)
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // x:aN (cg:JFrame)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run mp1a_hardware_blk_mem_gen_0_0_synth_1 
+// f:p (cg:JFrame): Launch Runs: addNotify
+// Elapsed time: 19 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, f:p)
+// 'cp' command handler elapsed time: 20 seconds
+dismissDialog("Launch Runs"); // f:p (cg:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP mp1a_hardware_blk_mem_gen_0_0, cache-ID = 171ef93049afcae2; cache size = 3.458 MB. 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 25 17:12:50 2018] Launched mp1a_hardware_blk_mem_gen_0_0_synth_1, synth_1... Run output will be captured here: mp1a_hardware_blk_mem_gen_0_0_synth_1: /home/thomas/ece527/mp2/mp2a.runs/mp1a_hardware_blk_mem_gen_0_0_synth_1/runme.log synth_1: /home/thomas/ece527/mp2/mp2a.runs/synth_1/runme.log [Tue Sep 25 17:12:50 2018] Launched impl_1... Run output will be captured here: /home/thomas/ece527/mp2/mp2a.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 3000 ms.
+// [GUI Memory]: 94 MB (+1453kb) [00:04:36]
+// HMemoryUtils.trashcanNow. Engine heap size: 861 MB. GUI used memory: 47 MB. Current time: 9/25/18 5:12:53 PM CDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking too long to process. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 897 MB. GUI used memory: 56 MB. Current time: 9/25/18 5:13:12 PM CDT
+// [Engine Memory]: 897 MB (+25408kb) [00:04:57]
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 898 MB. GUI used memory: 52 MB. Current time: 9/25/18 5:13:58 PM CDT
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking too long to process. Increasing delay to 4000 ms.
+// ah:x (cg:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 206 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bs:g (cg:JFrame):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, bs:g)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,062 MB. GUI used memory: 54 MB. Current time: 9/25/18 5:16:22 PM CDT
+// TclEventType: DESIGN_CLOSE
+// [Engine Memory]: 1,062 MB (+125962kb) [00:08:07]
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, bs:g)
+// TclEventType: DESIGN_NEW_FAILED
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 46 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2017.2 INFO: [Device 21-403] Loading part xc7z020clg484-1 INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+// Tcl Message: open_run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 6226.590 ; gain = 165.969 ; free physical = 1310 ; free virtual = 4712 
+// Tcl Message: INFO: [Common 17-344] 'open_run' was cancelled 
+// 'dH' command handler elapsed time: 5 seconds
+dismissDialog("Open Implemented Design"); // bs:g (cg:JFrame)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h:k (JPanel:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac:JMenuItem (ai:JPopupMenu, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bs:g (cg:JFrame):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2017.2   **** Build date : Jun 15 2017-18:45:18     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.  Targets(s) ", jsn-Zed-210248685988" may be locked by another hw_server. 
+// a:a (cg:JFrame): Critical Messages: addNotify
+// [GUI Memory]: 103 MB (+4219kb) [00:08:12]
+dismissDialog("Auto Connect"); // bs:g (cg:JFrame)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, a:a)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+dismissDialog("Critical Messages"); // a:a (cg:JFrame)
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// [Engine Memory]: 1,200 MB (+88758kb) [00:08:18]
+/*
+#-------------------------------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Current time: 9/25/18 5:16:35 PM CDT
+# Process ID: 4680
+# OS: Linux
+# User: thomas
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx
+# Technical Support with this file and a testcase attached.
+#-------------------------------------------------------------------------------
+java.lang.ClassCastException: sun.awt.image.BufImgSurfaceData cannot be cast to sun.java2d.xr.XRSurfaceData (See /home/thomas/ece527/mp2/vivado_pid4680.debug)
+*/
+/*
+#-------------------------------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Current time: 9/25/18 5:16:35 PM CDT
+# Process ID: 4680
+# OS: Linux
+# User: thomas
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx
+# Technical Support with this file and a testcase attached.
+#-------------------------------------------------------------------------------
+java.lang.ClassCastException: sun.awt.image.BufImgSurfaceData cannot be cast to sun.java2d.xr.XRSurfaceData (See /home/thomas/ece527/mp2/vivado_pid4680.debug)
+*/
+// HMemoryUtils.trashcanNow. Engine heap size: 1,208 MB. GUI used memory: 57 MB. Current time: 9/25/18 5:16:37 PM CDT
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988 
+// n:a (cg:JFrame): Close Hardware Target: addNotify
+// TclEventType: HW_SERVER_UPDATE
+// Elapsed time: 13 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, n:a)
+dismissDialog("Close Hardware Target"); // n:a (cg:JFrame)
+// Elapsed time: 19 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h:k (JPanel:JComponent, cg:JFrame)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h:k (JPanel:JComponent, cg:JFrame)
+selectButton(PAResourceCommand.PACommandNames_CREATE_HARDWARE_DASHBOARDS, "Dashboard"); // B:JideButton (f:CommandBar, cg:JFrame)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h:k (JPanel:JComponent, cg:JFrame)
+selectButton(PAResourceCommand.PACommandNames_CREATE_HARDWARE_DASHBOARDS, "Dashboard"); // B:JideButton (f:CommandBar, cg:JFrame)
+/*
+#-------------------------------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Current time: 9/25/18 5:17:12 PM CDT
+# Process ID: 4680
+# OS: Linux
+# User: thomas
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx
+# Technical Support with this file and a testcase attached.
+#-------------------------------------------------------------------------------
+java.lang.ClassCastException: sun.awt.image.BufImgSurfaceData cannot be cast to sun.java2d.xr.XRSurfaceData (See /home/thomas/ece527/mp2/vivado_pid4680.debug)
+*/
+/*
+#-------------------------------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Current time: 9/25/18 5:17:12 PM CDT
+# Process ID: 4680
+# OS: Linux
+# User: thomas
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx
+# Technical Support with this file and a testcase attached.
+#-------------------------------------------------------------------------------
+java.lang.ClassCastException: sun.awt.image.BufImgSurfaceData cannot be cast to sun.java2d.xr.XRSurfaceData (See /home/thomas/ece527/mp2/vivado_pid4680.debug)
+*/
+// Elapsed time: 10 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h:k (JPanel:JComponent, cg:JFrame)
+selectButton(PAResourceCommand.PACommandNames_CREATE_HARDWARE_DASHBOARDS, "Dashboard"); // B:JideButton (f:CommandBar, cg:JFrame)
+// Elapsed time: 27 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h:k (JPanel:JComponent, cg:JFrame)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_IMPORT, "Import"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_IMPORT, "Import"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_IMPORT, "Import"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ac:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// X:p (cg:JFrame): Export Hardware: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:p)
+// 'm' command handler elapsed time: 3 seconds
+selectButton("PAResourceItoN.NewExportHardwareDialog_EXPORTED_FILE_FOR_THIS_MODULE_WAS_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, H:JDialog)
+dismissDialog("Export Hardware"); // X:p (cg:JFrame)
+// Tcl Message: file copy -force /home/thomas/ece527/mp2/mp2a.runs/impl_1/mp1a_hardware_wrapper.sysdef /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf  
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_IMPORT, "Import"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ac:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa:p (cg:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aa:p)
+dismissDialog("Launch SDK"); // aa:p (cg:JFrame)
+// Tcl Message: launch_sdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988 
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// n:a (cg:JFrame): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// Elapsed time: 160 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, n:a)
+dismissDialog("Close Hardware Target"); // n:a (cg:JFrame)
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u:M (JViewport:JComponent, cg:JFrame) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mp1a_hardware_wrapper (mp1a_hardware_wrapper.v)]", 1); // B:i (D:JPanel, cg:JFrame)
+// PAPropertyPanels.initPanels (mp1a_hardware.v) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mp1a_hardware_wrapper (mp1a_hardware_wrapper.v), mp1a_hardware_i : mp1a_hardware (mp1a_hardware.bd), mp1a_hardware (mp1a_hardware.v)]", 3, true); // B:i (D:JPanel, cg:JFrame) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mp1a_hardware_wrapper (mp1a_hardware_wrapper.v), mp1a_hardware_i : mp1a_hardware (mp1a_hardware.bd), mp1a_hardware (mp1a_hardware.v)]", 3); // B:i (D:JPanel, cg:JFrame)
+// Elapsed time: 18 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mp1a_hardware_wrapper (mp1a_hardware_wrapper.v), mp1a_hardware_i : mp1a_hardware (mp1a_hardware.bd), mp1a_hardware (mp1a_hardware.v), oled_ip_0 : mp1a_hardware_oled_ip_0_0 (Module Reference Wrapper)]", 7); // B:i (D:JPanel, cg:JFrame)
+// Elapsed time: 26 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mp1a_hardware_wrapper (mp1a_hardware_wrapper.v), mp1a_hardware_i : mp1a_hardware (mp1a_hardware.bd), mp1a_hardware (mp1a_hardware.v), oled_ip_0 : mp1a_hardware_oled_ip_0_0 (Module Reference Wrapper), mp1a_hardware_oled_ip_0_0 (mp1a_hardware_oled_ip_0_0.v), inst : oled_ip (PmodOLEDCtrl.v)]", 9); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mp1a_hardware_wrapper (mp1a_hardware_wrapper.v), mp1a_hardware_i : mp1a_hardware (mp1a_hardware.bd), mp1a_hardware (mp1a_hardware.v), oled_ip_0 : mp1a_hardware_oled_ip_0_0 (Module Reference Wrapper), mp1a_hardware_oled_ip_0_0 (mp1a_hardware_oled_ip_0_0.v), inst : oled_ip (PmodOLEDCtrl.v), Example : OledEX (OledEX.v)]", 11, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mp1a_hardware_wrapper (mp1a_hardware_wrapper.v), mp1a_hardware_i : mp1a_hardware (mp1a_hardware.bd), mp1a_hardware (mp1a_hardware.v), oled_ip_0 : mp1a_hardware_oled_ip_0_0 (Module Reference Wrapper), mp1a_hardware_oled_ip_0_0 (mp1a_hardware_oled_ip_0_0.v), inst : oled_ip (PmodOLEDCtrl.v), Example : OledEX (OledEX.v), SPI_COMP : SpiCtrl (SpiCtrl.v)]", 12, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,230 MB. GUI used memory: 59 MB. Current time: 9/25/18 5:22:03 PM CDT
+// Elapsed time: 16 seconds
+selectCodeEditor("OledEX.v", 357, 197); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("OledEX.v", 356, 479); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("OledEX.v", 357, 320); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("OledEX.v", 356, 243); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("OledEX.v", 359, 163); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("OledEX.v", 355, 84); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("OledEX.v", 359, 84); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("OledEX.v", 359, 42); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 22 seconds
+selectCodeEditor("OledEX.v", 346, 70); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("OledEX.v", 342, 69); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("OledEX.v", 360, 147); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x:aN (cg:JFrame): Synthesis is Out-of-date: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,250 MB. GUI used memory: 54 MB. Current time: 9/25/18 5:23:43 PM CDT
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, x:aN)
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // x:aN (cg:JFrame)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+dismissDialog("Resetting Runs"); // bs:g (cg:JFrame)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 117 seconds
+selectCodeEditor("OledEX.v", 635, 212); // bI:J (JPanel:JComponent, cg:JFrame)
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_CHANGED_MODULES, "Refresh Changed Modules"); // h:k (JPanel:JComponent, cg:JFrame)
+// bs:g (cg:JFrame):  Refresh Changed Modules : addNotify
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// Tcl Message: update_module_reference mp1a_hardware_oled_ip_0_0 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'RST' as interface 'RST'. INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'CLK' as interface 'CLK'. INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'BRAM_CLK' as interface 'BRAM_CLK'. 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0 Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1 Adding cell -- xilinx.com:ip:blk_mem_gen:8.3 - blk_mem_gen_0 Adding cell -- user.org:module_ref:oled_ip:1.0 - oled_ip_0 Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc Successfully read diagram <mp1a_hardware> from BD file </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 1,305 MB (+47439kb) [00:17:35]
+// PAPropertyPanels.initPanels (OledEX.v) elapsed time: 0.3s
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,332 MB. GUI used memory: 61 MB. Current time: 9/25/18 5:25:54 PM CDT
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// Tcl Message: Upgrading '/home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd' 
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: INFO: [IP_Flow 19-1972] Upgraded mp1a_hardware_oled_ip_0_0 from oled_ip_v1_0 1.0 to oled_ip_v1_0 1.0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: Wrote  : </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd>  
+// Tcl Message: upgrade_ip: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 6488.270 ; gain = 86.625 ; free physical = 835 ; free virtual = 4420 update_module_reference: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 6488.270 ; gain = 86.625 ; free physical = 835 ; free virtual = 4420 
+// a:a (cg:JFrame): Critical Messages: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+dismissDialog("Refresh Changed Modules"); // bs:g (cg:JFrame)
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, a:a)
+dismissDialog("Critical Messages"); // a:a (cg:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x:aN (cg:JFrame): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, x:aN)
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// f:p (cg:JFrame): Launch Runs: addNotify
+dismissDialog("No Implementation Results Available"); // x:aN (cg:JFrame)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, f:p)
+// 'cp' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f:p (cg:JFrame)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// [Engine Memory]: 1,387 MB (+17114kb) [00:17:54]
+// Tcl Message: Wrote  : </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd>  Verilog Output written to : /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware.v Verilog Output written to : /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 . INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar . INFO: [BD 41-1029] Generation completed for the IP Integrator block oled_ip_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hw_handoff/mp1a_hardware.hwh Generated Block Design Tcl file /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hw_handoff/mp1a_hardware_bd.tcl Generated Hardware Definition File /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware.hwdef 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP mp1a_hardware_blk_mem_gen_0_0, cache-ID = 171ef93049afcae2; cache size = 3.458 MB. 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP mp1a_hardware_auto_pc_0, cache-ID = e47788bd6dc9e881; cache size = 3.458 MB. 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,407 MB. GUI used memory: 65 MB. Current time: 9/25/18 5:26:15 PM CDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 25 17:26:18 2018] Launched mp1a_hardware_oled_ip_0_0_synth_1, synth_1... Run output will be captured here: mp1a_hardware_oled_ip_0_0_synth_1: /home/thomas/ece527/mp2/mp2a.runs/mp1a_hardware_oled_ip_0_0_synth_1/runme.log synth_1: /home/thomas/ece527/mp2/mp2a.runs/synth_1/runme.log [Tue Sep 25 17:26:18 2018] Launched impl_1... Run output will be captured here: /home/thomas/ece527/mp2/mp2a.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 6555.219 ; gain = 50.930 ; free physical = 771 ; free virtual = 4359 
+// Elapsed time: 14 seconds
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// [GUI Memory]: 111 MB (+2827kb) [00:18:45]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,424 MB. GUI used memory: 96 MB. Current time: 9/25/18 5:28:18 PM CDT
+// TclEventType: RUN_COMPLETED
+// TclEventType: DG_GRAPH_GENERATED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 123 MB (+6404kb) [00:21:54]
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 314 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, ah:x)
+dismissDialog("Bitstream Generation Completed"); // ah:x (cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ac:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// X:p (cg:JFrame): Export Hardware: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:p)
+selectButton("PAResourceItoN.NewExportHardwareDialog_EXPORTED_FILE_FOR_THIS_MODULE_WAS_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, H:JDialog)
+dismissDialog("Export Hardware"); // X:p (cg:JFrame)
+// Tcl Message: file copy -force /home/thomas/ece527/mp2/mp2a.runs/impl_1/mp1a_hardware_wrapper.sysdef /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf  
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ac:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa:p (cg:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aa:p)
+dismissDialog("Launch SDK"); // aa:p (cg:JFrame)
+// Tcl Message: launch_sdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988 
+// n:a (cg:JFrame): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Elapsed time: 101 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, n:a)
+dismissDialog("Close Hardware Target"); // n:a (cg:JFrame)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988 
+// n:a (cg:JFrame): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// Elapsed time: 101 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, n:a)
+dismissDialog("Close Hardware Target"); // n:a (cg:JFrame)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Elapsed time: 108 seconds
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[mp1a_hardware]", 0, true); // i:JTree (JViewport:JComponent, cg:JFrame) - Node
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aF:FrameContainer (ContainerContainer:JideSplitPane, cg:JFrame)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mp1a_hardware_wrapper (mp1a_hardware_wrapper.v), mp1a_hardware_i : mp1a_hardware (mp1a_hardware.bd), mp1a_hardware (mp1a_hardware.v), oled_ip_0 : mp1a_hardware_oled_ip_0_0 (Module Reference Wrapper)]", 7); // B:i (D:JPanel, cg:JFrame)
+// Elapsed time: 14 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mp1a_hardware_wrapper (mp1a_hardware_wrapper.v), mp1a_hardware_i : mp1a_hardware (mp1a_hardware.bd), mp1a_hardware (mp1a_hardware.v), oled_ip_0 : mp1a_hardware_oled_ip_0_0 (Module Reference Wrapper)]", 7); // B:i (D:JPanel, cg:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mp1a_hardware_wrapper (mp1a_hardware_wrapper.v), mp1a_hardware_i : mp1a_hardware (mp1a_hardware.bd), mp1a_hardware (mp1a_hardware.v), oled_ip_0 : mp1a_hardware_oled_ip_0_0 (Module Reference Wrapper), mp1a_hardware_oled_ip_0_0 (mp1a_hardware_oled_ip_0_0.v), inst : oled_ip (PmodOLEDCtrl.v)]", 9); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mp1a_hardware_wrapper (mp1a_hardware_wrapper.v), mp1a_hardware_i : mp1a_hardware (mp1a_hardware.bd), mp1a_hardware (mp1a_hardware.v), oled_ip_0 : mp1a_hardware_oled_ip_0_0 (Module Reference Wrapper), mp1a_hardware_oled_ip_0_0 (mp1a_hardware_oled_ip_0_0.v), inst : oled_ip (PmodOLEDCtrl.v)]", 9, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mp1a_hardware_wrapper (mp1a_hardware_wrapper.v), mp1a_hardware_i : mp1a_hardware (mp1a_hardware.bd), mp1a_hardware (mp1a_hardware.v), oled_ip_0 : mp1a_hardware_oled_ip_0_0 (Module Reference Wrapper), mp1a_hardware_oled_ip_0_0 (mp1a_hardware_oled_ip_0_0.v), inst : oled_ip (PmodOLEDCtrl.v)]", 9, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mp1a_hardware_wrapper (mp1a_hardware_wrapper.v), mp1a_hardware_i : mp1a_hardware (mp1a_hardware.bd), mp1a_hardware (mp1a_hardware.v), oled_ip_0 : mp1a_hardware_oled_ip_0_0 (Module Reference Wrapper), mp1a_hardware_oled_ip_0_0 (mp1a_hardware_oled_ip_0_0.v), inst : oled_ip (PmodOLEDCtrl.v)]", 9); // B:i (D:JPanel, cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OledEX.v", 2); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PmodOLEDCtrl.v", 3); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,444 MB. GUI used memory: 64 MB. Current time: 9/25/18 5:37:53 PM CDT
+// Elapsed time: 14 seconds
+selectCodeEditor("PmodOLEDCtrl.v", 496, 388); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 21 seconds
+selectCodeEditor("PmodOLEDCtrl.v", 134, 153); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 431, 144); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 136, 135); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 135, 135, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+// Elapsed time: 15 seconds
+selectCodeEditor("PmodOLEDCtrl.v", 362, 459); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 362, 459, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+selectCodeEditor("PmodOLEDCtrl.v", 759, 86); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 114, 137); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 551, 131); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 179, 224); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 33 seconds
+selectCodeEditor("PmodOLEDCtrl.v", 190, 316); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 190, 316, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+selectCodeEditor("PmodOLEDCtrl.v", 365, 326); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 177, 341); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 142, 323); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 174, 339); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 348, 336); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 348, 336, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+selectCodeEditor("PmodOLEDCtrl.v", 549, 331); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 170 seconds
+selectCodeEditor("PmodOLEDCtrl.v", 324, 462); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 84, 45); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 294, 44); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 118, 61); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 247, 81); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 22 seconds
+selectCodeEditor("PmodOLEDCtrl.v", 139, 44); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 121, 54); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 212, 57); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 27 seconds
+selectCodeEditor("PmodOLEDCtrl.v", 620, 124); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 165 seconds
+selectCodeEditor("PmodOLEDCtrl.v", 413, 301); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 326, 459); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 326, 459, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+selectCodeEditor("PmodOLEDCtrl.v", 528, 441); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 315, 464); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 315, 464, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+selectCodeEditor("PmodOLEDCtrl.v", 281, 115); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 136, 123); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 183, 146); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 133, 125); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 178, 144); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 366, 86); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 203, 140); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 193, 147); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 1,460 MB (+4000kb) [00:38:49]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 29 seconds
+selectCodeEditor("PmodOLEDCtrl.v", 314, 71); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("PmodOLEDCtrl.v", 149, 228); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,468 MB. GUI used memory: 61 MB. Current time: 9/25/18 5:47:13 PM CDT
+selectCodeEditor("PmodOLEDCtrl.v", 200, 224); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 342, 230); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 186, 253); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 22 seconds
+selectCodeEditor("PmodOLEDCtrl.v", 139, 269); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 397, 265); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 139, 266); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "PmodOLEDCtrl.v", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "PmodOLEDCtrl.v", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "PmodOLEDCtrl.v", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "PmodOLEDCtrl.v", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "PmodOLEDCtrl.v", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "PmodOLEDCtrl.v", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "PmodOLEDCtrl.v", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 302, 237); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 266, 188); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 274, 143); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 24 seconds
+selectCodeEditor("PmodOLEDCtrl.v", 137, 300); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 424, 313); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 340, 294); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 190, 341); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "PmodOLEDCtrl.v", 'v'); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 24 seconds
+selectCodeEditor("PmodOLEDCtrl.v", 139, 355); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: DG_GRAPH_GENERATED
+typeControlKey((HResource) null, "PmodOLEDCtrl.v", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "PmodOLEDCtrl.v", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "PmodOLEDCtrl.v", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "PmodOLEDCtrl.v", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "PmodOLEDCtrl.v", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "PmodOLEDCtrl.v", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 362, 343); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 236, 205); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 304, 63); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 302, 70); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 302, 70, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+selectCodeEditor("PmodOLEDCtrl.v", 372, 280); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 175, 216); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 340, 235); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 145, 304); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 306, 329); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 181, 404); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "PmodOLEDCtrl.v", 'v'); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 480, 432); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 480, 432, false, false, false, false, true); // bI:J (JPanel:JComponent, cg:JFrame) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("PmodOLEDCtrl.v", 308, 434); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 197, 397); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 229, 407); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 325, 434); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 168, 374); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 303, 378); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 167, 419); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "PmodOLEDCtrl.v", 'v'); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 310, 451); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 307, 446); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 307, 415); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 356, 188); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x:aN (cg:JFrame): Synthesis is Out-of-date: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,502 MB. GUI used memory: 62 MB. Current time: 9/25/18 5:50:20 PM CDT
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, x:aN)
+dismissDialog("Synthesis is Out-of-date"); // x:aN (cg:JFrame)
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_CHANGED_MODULES, "Refresh Changed Modules"); // h:k (JPanel:JComponent, cg:JFrame)
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// bs:g (cg:JFrame):  Refresh Changed Modules : addNotify
+// Tcl Message: update_module_reference mp1a_hardware_oled_ip_0_0 
+// Tcl Message: INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'RST' as interface 'RST'. INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'CLK' as interface 'CLK'. INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'BRAM_CLK' as interface 'BRAM_CLK'. 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: Upgrading '/home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd' 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: INFO: [IP_Flow 19-1972] Upgraded mp1a_hardware_oled_ip_0_0 from oled_ip_v1_0 1.0 to oled_ip_v1_0 1.0 
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: Wrote  : </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd>  
+// a:a (cg:JFrame): Critical Messages: addNotify
+dismissDialog("Refresh Changed Modules"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 10 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, a:a)
+dismissDialog("Critical Messages"); // a:a (cg:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x:aN (cg:JFrame): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, x:aN)
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // x:aN (cg:JFrame)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f:p (cg:JFrame): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, f:p)
+// 'cp' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f:p (cg:JFrame)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a:JButton (JPanel:JComponent, bs:g)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PmodOLEDCtrl.v", 3); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: Wrote  : </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd>  Verilog Output written to : /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware.v Verilog Output written to : /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 . INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar . INFO: [BD 41-1029] Generation completed for the IP Integrator block oled_ip_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hw_handoff/mp1a_hardware.hwh Generated Block Design Tcl file /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hw_handoff/mp1a_hardware_bd.tcl Generated Hardware Definition File /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware.hwdef 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP mp1a_hardware_auto_pc_0, cache-ID = e47788bd6dc9e881; cache size = 3.458 MB. 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,536 MB. GUI used memory: 66 MB. Current time: 9/25/18 5:50:54 PM CDT
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// [Engine Memory]: 1,536 MB (+3079kb) [00:42:38]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 25 17:50:56 2018] Launched mp1a_hardware_oled_ip_0_0_synth_1, synth_1... Run output will be captured here: mp1a_hardware_oled_ip_0_0_synth_1: /home/thomas/ece527/mp2/mp2a.runs/mp1a_hardware_oled_ip_0_0_synth_1/runme.log synth_1: /home/thomas/ece527/mp2/mp2a.runs/synth_1/runme.log [Tue Sep 25 17:50:56 2018] Launched impl_1... Run output will be captured here: /home/thomas/ece527/mp2/mp2a.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 6667.746 ; gain = 15.012 ; free physical = 757 ; free virtual = 3872 
+// Elapsed time: 10 seconds
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// Elapsed time: 31 seconds
+selectCodeEditor("PmodOLEDCtrl.v", 142, 438); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 345, 442); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 15 seconds
+selectCodeEditor("PmodOLEDCtrl.v", 139, 70); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 286, 69); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 135, 83); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 396, 102); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 325, 320); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,568 MB. GUI used memory: 63 MB. Current time: 9/25/18 5:53:19 PM CDT
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 281 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, ah:x)
+dismissDialog("Bitstream Generation Completed"); // ah:x (cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ac:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// X:p (cg:JFrame): Export Hardware: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:p)
+selectButton("PAResourceItoN.NewExportHardwareDialog_EXPORTED_FILE_FOR_THIS_MODULE_WAS_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, H:JDialog)
+dismissDialog("Export Hardware"); // X:p (cg:JFrame)
+// Tcl Message: file copy -force /home/thomas/ece527/mp2/mp2a.runs/impl_1/mp1a_hardware_wrapper.sysdef /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf  
+// Elapsed time: 12 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ac:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// X:p (cg:JFrame): Export Hardware: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:p)
+selectButton("PAResourceItoN.NewExportHardwareDialog_EXPORTED_FILE_FOR_THIS_MODULE_WAS_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, H:JDialog)
+dismissDialog("Export Hardware"); // X:p (cg:JFrame)
+// Tcl Message: file copy -force /home/thomas/ece527/mp2/mp2a.runs/impl_1/mp1a_hardware_wrapper.sysdef /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf  
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ac:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa:p (cg:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, aa:p)
+dismissDialog("Launch SDK"); // aa:p (cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ac:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa:p (cg:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aa:p)
+dismissDialog("Launch SDK"); // aa:p (cg:JFrame)
+// Tcl Message: launch_sdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988 
+// n:a (cg:JFrame): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// Elapsed time: 85 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, n:a)
+dismissDialog("Close Hardware Target"); // n:a (cg:JFrame)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Elapsed time: 257 seconds
+selectCodeEditor("PmodOLEDCtrl.v", 391, 457); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("PmodOLEDCtrl.v", 386, 69); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_CHANGED_MODULES, "Refresh Changed Modules"); // h:k (JPanel:JComponent, cg:JFrame)
+// bs:g (cg:JFrame):  Refresh Changed Modules : addNotify
+// Tcl Message: update_module_reference mp1a_hardware_oled_ip_0_0 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'RST' as interface 'RST'. INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'CLK' as interface 'CLK'. INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'BRAM_CLK' as interface 'BRAM_CLK'. 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: Upgrading '/home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd' 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: INFO: [IP_Flow 19-1972] Upgraded mp1a_hardware_oled_ip_0_0 from oled_ip_v1_0 1.0 to oled_ip_v1_0 1.0 
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: Wrote  : </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd>  
+// Tcl Message: update_module_reference: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 6714.547 ; gain = 0.098 ; free physical = 1233 ; free virtual = 3946 
+// a:a (cg:JFrame): Critical Messages: addNotify
+dismissDialog("Refresh Changed Modules"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, a:a)
+dismissDialog("Critical Messages"); // a:a (cg:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u:M (JViewport:JComponent, cg:JFrame)
+// TclEventType: DG_GRAPH_GENERATED
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// x:aN (cg:JFrame): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a:JButton (JPanel:JComponent, x:aN)
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // x:aN (cg:JFrame)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f:p (cg:JFrame): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, f:p)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,603 MB. GUI used memory: 60 MB. Current time: 9/25/18 6:03:29 PM CDT
+// 'cp' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f:p (cg:JFrame)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// bs:g (cg:JFrame):  Generate Bitstream : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// [Engine Memory]: 1,615 MB (+2308kb) [00:55:25]
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: Wrote  : </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd>  Verilog Output written to : /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware.v Verilog Output written to : /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware_wrapper.v 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 . INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar . INFO: [BD 41-1029] Generation completed for the IP Integrator block oled_ip_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hw_handoff/mp1a_hardware.hwh Generated Block Design Tcl file /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hw_handoff/mp1a_hardware_bd.tcl Generated Hardware Definition File /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware.hwdef 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP mp1a_hardware_auto_pc_0, cache-ID = e47788bd6dc9e881; cache size = 3.458 MB. 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Sep 25 18:03:45 2018] Launched mp1a_hardware_oled_ip_0_0_synth_1, synth_1... Run output will be captured here: mp1a_hardware_oled_ip_0_0_synth_1: /home/thomas/ece527/mp2/mp2a.runs/mp1a_hardware_oled_ip_0_0_synth_1/runme.log synth_1: /home/thomas/ece527/mp2/mp2a.runs/synth_1/runme.log [Tue Sep 25 18:03:45 2018] Launched impl_1... Run output will be captured here: /home/thomas/ece527/mp2/mp2a.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 6746.484 ; gain = 16.023 ; free physical = 1565 ; free virtual = 4286 
+// Elapsed time: 16 seconds
+dismissDialog("Generate Bitstream"); // bs:g (cg:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,628 MB. GUI used memory: 64 MB. Current time: 9/25/18 6:03:54 PM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: RUN_COMPLETED
+// TclEventType: DG_GRAPH_GENERATED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 260 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, ah:x)
+dismissDialog("Bitstream Generation Completed"); // ah:x (cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ac:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// X:p (cg:JFrame): Export Hardware: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, X:p)
+selectButton("PAResourceItoN.NewExportHardwareDialog_EXPORTED_FILE_FOR_THIS_MODULE_WAS_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, H:JDialog)
+dismissDialog("Export Hardware"); // X:p (cg:JFrame)
+// Tcl Message: file copy -force /home/thomas/ece527/mp2/mp2a.runs/impl_1/mp1a_hardware_wrapper.sysdef /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf  
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_FILE, "Open Recent File"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ac:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa:p (cg:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aa:p)
+dismissDialog("Launch SDK"); // aa:p (cg:JFrame)
+// Tcl Message: launch_sdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// Elapsed time: 232 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // Z:JMenu (JPopupMenu:JComponent, cg:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // ac:JMenuItem (JPopupMenu:JComponent, cg:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // U:JideMenu (CommandMenuBar:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa:p (cg:JFrame): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, aa:p)
+dismissDialog("Launch SDK"); // aa:p (cg:JFrame)
+// Tcl Message: launch_sdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,644 MB. GUI used memory: 63 MB. Current time: 9/25/18 6:33:54 PM CDT
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 4000 ms.
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 5000 ms.
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988 
+// n:a (cg:JFrame): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,645 MB. GUI used memory: 64 MB. Current time: 9/25/18 7:03:55 PM CDT
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988 
+// n:a (cg:JFrame): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// Elapsed time: 3255 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, n:a)
+dismissDialog("Close Hardware Target"); // n:a (cg:JFrame)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988 
+// n:a (cg:JFrame): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// Elapsed time: 270 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, n:a)
+dismissDialog("Close Hardware Target"); // n:a (cg:JFrame)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 6000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988 
+// TclEventType: HW_SERVER_UPDATE
+// n:a (cg:JFrame): Close Hardware Target: addNotify
+// Elapsed time: 263 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f:a (JPanel:JComponent, n:a)
+dismissDialog("Close Hardware Target"); // n:a (cg:JFrame)
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Elapsed time: 278 seconds
+dismissDialog("Close Hardware Target"); // n:a (cg:JFrame)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OledEX.v", 2); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+// Elapsed time: 150 seconds
+selectCodeEditor("OledEX.v", 593, 104); // bI:J (JPanel:JComponent, cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PmodOLEDCtrl.v", 3); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)

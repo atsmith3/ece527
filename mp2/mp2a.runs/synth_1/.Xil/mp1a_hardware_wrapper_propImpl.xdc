@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/andrew/ece527/mp2/mp2a.srcs/constrs_1/new/pinout.xdc rfile:../../../mp2a.srcs/constrs_1/new/pinout.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/thomas/ece527/mp2/mp2a.srcs/constrs_1/new/pinout.xdc rfile:../../../mp2a.srcs/constrs_1/new/pinout.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN T18 [get_ports DISPLAY_BUTTON]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]

@@ -1,8 +1,8 @@
-16:07:28 **** Incremental Build of configuration Debug for project oled_ctrl ****
+19:28:42 **** Incremental Build of configuration Debug for project oled_ctrl ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
 
-16:07:28 Build Finished (took 528ms)
+19:28:42 Build Finished (took 386ms)
 

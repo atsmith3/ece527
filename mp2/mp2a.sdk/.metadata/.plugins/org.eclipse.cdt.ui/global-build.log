@@ -1040,3 +1040,1074 @@ make pre-build main-build
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
+17:20:07 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:34:03 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:34:07 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:34:23 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:35:39 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:58:27 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:59:13 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:10:06 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:10:37 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:15:39 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24360	   1492	  22616	  48468	   bd54	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+18:15:42 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:25:01 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:152:7: error: 'i' undeclared (first use in this function)
+   for(i = 0; i < 1000000; i++)
+       ^
+../src/helloworld.c:152:7: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+18:25:03 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:152:7: error: 'i' undeclared (first use in this function)
+   for(i = 0; i < 1000000; i++)
+       ^
+../src/helloworld.c:152:7: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+18:25:52 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24360	   1492	  22616	  48468	   bd54	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+18:25:53 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:26:40 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24360	   1492	  22616	  48468	   bd54	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+18:26:42 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:33:33 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:155:6: error: expected ';' before '}' token
+      }
+      ^
+make: *** [src/helloworld.o] Error 1
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+18:33:38 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24148	   1492	  22616	  48256	   bc80	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+18:33:39 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:37:35 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:167:5: warning: data definition has no type or storage class
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+../src/helloworld.c:167:5: warning: type defaults to 'int' in declaration of 'cleanup_platform' [-Wimplicit-int]
+../src/helloworld.c:167:5: error: conflicting types for 'cleanup_platform'
+In file included from ../src/helloworld.c:49:0:
+../src/platform.h:39:6: note: previous declaration of 'cleanup_platform' was here
+ void cleanup_platform();
+      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:168:5: error: expected identifier or '(' before 'return'
+     return 0;
+     ^~~~~~
+../src/helloworld.c:169:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [src/helloworld.o] Error 1
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+18:37:56 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:167:5: warning: data definition has no type or storage class
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+../src/helloworld.c:167:5: warning: type defaults to 'int' in declaration of 'cleanup_platform' [-Wimplicit-int]
+../src/helloworld.c:167:5: error: conflicting types for 'cleanup_platform'
+In file included from ../src/helloworld.c:49:0:
+../src/platform.h:39:6: note: previous declaration of 'cleanup_platform' was here
+ void cleanup_platform();
+      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:168:5: error: expected identifier or '(' before 'return'
+     return 0;
+     ^~~~~~
+../src/helloworld.c:169:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [src/helloworld.o] Error 1
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+18:38:15 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:167:5: warning: data definition has no type or storage class
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+../src/helloworld.c:167:5: warning: type defaults to 'int' in declaration of 'cleanup_platform' [-Wimplicit-int]
+../src/helloworld.c:167:5: error: conflicting types for 'cleanup_platform'
+In file included from ../src/helloworld.c:49:0:
+../src/platform.h:39:6: note: previous declaration of 'cleanup_platform' was here
+ void cleanup_platform();
+      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:168:5: error: expected identifier or '(' before 'return'
+     return 0;
+     ^~~~~~
+../src/helloworld.c:169:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+18:38:26 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:167:5: warning: data definition has no type or storage class
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+../src/helloworld.c:167:5: warning: type defaults to 'int' in declaration of 'cleanup_platform' [-Wimplicit-int]
+../src/helloworld.c:167:5: error: conflicting types for 'cleanup_platform'
+In file included from ../src/helloworld.c:49:0:
+../src/platform.h:39:6: note: previous declaration of 'cleanup_platform' was here
+ void cleanup_platform();
+      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:168:5: error: expected identifier or '(' before 'return'
+     return 0;
+     ^~~~~~
+../src/helloworld.c:169:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+18:40:25 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24360	   1492	  22616	  48468	   bd54	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+18:40:36 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24360	   1492	  22616	  48468	   bd54	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+18:40:37 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:40:42 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:40:55 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:41:46 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:44:05 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24296	   1492	  22616	  48404	   bd14	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+18:45:10 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24296	   1492	  22616	  48404	   bd14	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+18:45:12 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:46:29 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24232	   1492	  22616	  48340	   bcd4	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+18:46:36 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:48:47 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24296	   1492	  22616	  48404	   bd14	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+18:55:06 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24296	   1492	  22616	  48404	   bd14	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+18:58:48 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:141:59: error: expected expression before ')' token
+      while(XGpio_DiscreteRead(&misc_sig, SEND_DATA_CH) == ){
+                                                           ^
+../src/helloworld.c:138:9: warning: unused variable 'flag' [-Wunused-variable]
+     int flag;
+         ^~~~
+make: *** [src/helloworld.o] Error 1
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+18:58:53 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:141:59: error: expected expression before ')' token
+      while(XGpio_DiscreteRead(&misc_sig, SEND_DATA_CH) == ){
+                                                           ^
+../src/helloworld.c:138:9: warning: variable 'flag' set but not used [-Wunused-but-set-variable]
+     int flag;
+         ^~~~
+make: *** [src/helloworld.o] Error 1
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+19:01:02 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:138:9: warning: variable 'flag' set but not used [-Wunused-but-set-variable]
+     int flag;
+         ^~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24296	   1492	  22616	  48404	   bd14	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+19:02:02 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:138:9: warning: variable 'sw_flag' set but not used [-Wunused-but-set-variable]
+     int sw_flag = 0;
+         ^~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24296	   1492	  22616	  48404	   bd14	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+19:03:17 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:159:5: error: expected expression before '}' token
+     }
+     ^
+make: *** [src/helloworld.o] Error 1
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+19:03:54 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24296	   1492	  22616	  48404	   bd14	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+19:04:11 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:05:03 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24296	   1492	  22616	  48404	   bd14	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+19:05:54 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24296	   1492	  22616	  48404	   bd14	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+19:05:57 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:06:11 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:06:48 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:07:20 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24232	   1492	  22616	  48340	   bcd4	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+19:07:23 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:08:03 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:138:9: warning: variable 'sw_flag' set but not used [-Wunused-but-set-variable]
+     int sw_flag = 0;
+         ^~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24296	   1492	  22616	  48404	   bd14	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+19:08:04 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:11:33 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24296	   1492	  22616	  48404	   bd14	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+19:12:33 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24360	   1492	  22616	  48468	   bd54	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+19:12:36 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:12:54 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24360	   1492	  22616	  48468	   bd54	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+19:12:57 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:16:44 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:17:03 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:18:01 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24360	   1492	  22616	  48468	   bd54	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+19:18:42 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24360	   1492	  22616	  48468	   bd54	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+19:18:43 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:19:23 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24360	   1492	  22616	  48468	   bd54	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+19:19:25 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:23:56 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:149:10: warning: unused variable 'flag' [-Wunused-variable]
+      int flag = 1;
+          ^~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24360	   1492	  22616	  48468	   bd54	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+19:25:08 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:163:15: error: expected expression before ')' token
+         while() {
+               ^
+../src/helloworld.c: At top level:
+../src/helloworld.c:172:5: warning: data definition has no type or storage class
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+../src/helloworld.c:172:5: warning: type defaults to 'int' in declaration of 'cleanup_platform' [-Wimplicit-int]
+../src/helloworld.c:172:5: error: conflicting types for 'cleanup_platform'
+In file included from ../src/helloworld.c:49:0:
+../src/platform.h:39:6: note: previous declaration of 'cleanup_platform' was here
+ void cleanup_platform();
+      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:173:5: error: expected identifier or '(' before 'return'
+     return 0;
+     ^~~~~~
+../src/helloworld.c:174:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+19:25:09 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:163:15: error: expected expression before ')' token
+         while() {
+               ^
+../src/helloworld.c: At top level:
+../src/helloworld.c:172:5: warning: data definition has no type or storage class
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+../src/helloworld.c:172:5: warning: type defaults to 'int' in declaration of 'cleanup_platform' [-Wimplicit-int]
+../src/helloworld.c:172:5: error: conflicting types for 'cleanup_platform'
+In file included from ../src/helloworld.c:49:0:
+../src/platform.h:39:6: note: previous declaration of 'cleanup_platform' was here
+ void cleanup_platform();
+      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:173:5: error: expected identifier or '(' before 'return'
+     return 0;
+     ^~~~~~
+../src/helloworld.c:174:1: error: expected identifier or '(' before '}' token
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+ }
+ ^
+make: *** [src/helloworld.o] Error 1
+19:25:26 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:169:5: error: 'flag' undeclared (first use in this function)
+     flag = 0
+     ^~~~
+../src/helloworld.c:169:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:170:5: error: expected ';' before '}' token
+     }
+     ^
+../src/helloworld.c: At top level:
+../src/helloworld.c:171:5: warning: data definition has no type or storage class
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+../src/helloworld.c:171:5: warning: type defaults to 'int' in declaration of 'cleanup_platform' [-Wimplicit-int]
+../src/helloworld.c:171:5: error: conflicting types for 'cleanup_platform'
+In file included from ../src/helloworld.c:49:0:
+../src/platform.h:39:6: note: previous declaration of 'cleanup_platform' was here
+ void cleanup_platform();
+      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:172:5: error: expected identifier or '(' before 'return'
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+     return 0;
+     ^~~~~~
+../src/helloworld.c:173:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [src/helloworld.o] Error 1
+19:25:50 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:172:5: warning: data definition has no type or storage class
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+../src/helloworld.c:172:5: warning: type defaults to 'int' in declaration of 'cleanup_platform' [-Wimplicit-int]
+../src/helloworld.c:172:5: error: conflicting types for 'cleanup_platform'
+In file included from ../src/helloworld.c:49:0:
+../src/platform.h:39:6: note: previous declaration of 'cleanup_platform' was here
+ void cleanup_platform();
+      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:173:5: error: expected identifier or '(' before 'return'
+     return 0;
+     ^~~~~~
+../src/helloworld.c:174:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+19:25:55 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:172:5: warning: data definition has no type or storage class
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+../src/helloworld.c:172:5: warning: type defaults to 'int' in declaration of 'cleanup_platform' [-Wimplicit-int]
+../src/helloworld.c:172:5: error: conflicting types for 'cleanup_platform'
+In file included from ../src/helloworld.c:49:0:
+../src/platform.h:39:6: note: previous declaration of 'cleanup_platform' was here
+ void cleanup_platform();
+      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:173:5: error: expected identifier or '(' before 'return'
+     return 0;
+     ^~~~~~
+../src/helloworld.c:174:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+19:26:11 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:172:5: warning: data definition has no type or storage class
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+../src/helloworld.c:172:5: warning: type defaults to 'int' in declaration of 'cleanup_platform' [-Wimplicit-int]
+../src/helloworld.c:172:5: error: conflicting types for 'cleanup_platform'
+In file included from ../src/helloworld.c:49:0:
+../src/platform.h:39:6: note: previous declaration of 'cleanup_platform' was here
+ void cleanup_platform();
+      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:173:5: error: expected identifier or '(' before 'return'
+     return 0;
+     ^~~~~~
+../src/helloworld.c:174:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [src/helloworld.o] Error 1
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+19:27:14 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24360	   1492	  22616	  48468	   bd54	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+19:27:17 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:28:34 **** Auto Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../oled_ctrl_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: oled_ctrl.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../oled_ctrl_bsp/ps7_cortexa9_0/lib -o "oled_ctrl.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: oled_ctrl.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size oled_ctrl.elf  |tee "oled_ctrl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24360	   1492	  22616	  48468	   bd54	oled_ctrl.elf
+Finished building: oled_ctrl.elf.size
+ 
+19:28:35 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:28:42 **** Incremental Build of configuration Debug for project oled_ctrl ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.

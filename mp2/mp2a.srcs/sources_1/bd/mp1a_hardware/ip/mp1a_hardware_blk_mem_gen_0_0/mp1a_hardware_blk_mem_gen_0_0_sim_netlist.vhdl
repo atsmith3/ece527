@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
--- Date        : Mon Sep 24 17:18:19 2018
+-- Date        : Mon Sep 24 17:18:18 2018
 -- Host        : andrew-vm running 64-bit Ubuntu 17.10
--- Command     : write_vhdl -force -mode funcsim
---               /home/andrew/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/ip/mp1a_hardware_blk_mem_gen_0_0/mp1a_hardware_blk_mem_gen_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top mp1a_hardware_blk_mem_gen_0_0 -prefix
+--               mp1a_hardware_blk_mem_gen_0_0_ mp1a_hardware_blk_mem_gen_0_0_sim_netlist.vhdl
 -- Design      : mp1a_hardware_blk_mem_gen_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,8 +20,6 @@ entity mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper_init is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper_init is
@@ -188,8 +186,6 @@ entity mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_prim_width is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_prim_width is
@@ -211,8 +207,6 @@ entity mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_generic_cstr is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_generic_cstr is
@@ -234,8 +228,6 @@ entity mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_top is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_top;
 
 architecture STRUCTURE of mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_top is
@@ -257,8 +249,6 @@ entity mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_v8_3_6_synth is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_v8_3_6_synth : entity is "blk_mem_gen_v8_3_6_synth";
 end mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_v8_3_6_synth;
 
 architecture STRUCTURE of mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_v8_3_6_synth is
@@ -486,8 +476,6 @@ entity mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 is
   attribute C_WRITE_WIDTH_B of mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is 8;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is "zynq";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is "blk_mem_gen_v8_3_6";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_v8_3_6 : entity is "yes";
 end mp1a_hardware_blk_mem_gen_0_0_blk_mem_gen_v8_3_6;

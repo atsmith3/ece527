@@ -231,33 +231,43 @@ module oled_ip(
                 end
                 "Idle" : begin
                     oled_init <= 1'b1;
-                    if(ADDRESS == 8'h10 && WRITE == 1'b1) begin
+                    if(ADDRESS == 8'h10 && WRITE == 1'b0) begin
                         current_state <= "OledExample";
                     end
+                    else
+                        current_state <= "Idle";
                 end
                // Go through the initialization sequence
                 "OledInitialize" : begin
                     if(init_done == 1'b1) begin
                             current_state <= "OledClear";
                     end
+                    else
+                        current_state <= "OledInitialize"; 
                 end
                 "OledClear" : begin
                     if(example_done == 1'b1) begin
                         current_state <= "Wait";
                     end
+                    else
+                        current_state <= "OledClear"; 
                 end
                 // Do example and Do nothing when finished
                 "OledExample" : begin
                     if(example_done == 1'b1) begin
-                            current_state <= "Wait";
+                         current_state <= "Wait";
                     end
+                    else
+                         current_state <= "OledExample";
                 end
                 "Wait" : begin
-                    if(ADDRESS == 8'h00 && WRITE == 1'b0) begin
+                    if(ADDRESS == 8'h00 && WRITE == 1'b1) begin
                         current_state <= "Idle";
                     end
+                    else
+                        current_state <= "Wait";
                 end
-                default : current_state <= "OledInitialize";
+                default : current_state <= "start";
             endcase
         end
     end

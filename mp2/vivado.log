@@ -1,0 +1,281 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Sep 25 17:08:04 2018
+# Process ID: 4680
+# Current directory: /home/thomas/ece527/mp2
+# Command line: vivado
+# Log file: /home/thomas/ece527/mp2/vivado.log
+# Journal file: /home/thomas/ece527/mp2/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/thomas/ece527/mp2/mp2a.xpr
+INFO: [Project 1-313] Project file moved from '/home/andrew/ece527/mp2' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory '/home/thomas/ece527/mp2/mp2a.ip_user_files', nor could it be found using path '/home/andrew/ece527/mp2/mp2a.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/Desktop/Xilinx/Vivado/2017.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'mp1a_hardware_auto_pc_0' generated file not found '/home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/ip/mp1a_hardware_auto_pc_0/stats.txt'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 5897.223 ; gain = 102.441 ; free physical = 1271 ; free virtual = 4924
+update_compile_order -fileset sources_1
+open_hw
+INFO: [Vivado 12-4159] Implementation run is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-run implementation and re-generate bitstream before doing hardware export.
+file copy -force /home/thomas/ece527/mp2/mp2a.runs/impl_1/mp1a_hardware_wrapper.sysdef /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+reset_run synth_1
+reset_run mp1a_hardware_blk_mem_gen_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP mp1a_hardware_blk_mem_gen_0_0, cache-ID = 171ef93049afcae2; cache size = 3.458 MB.
+[Tue Sep 25 17:12:50 2018] Launched mp1a_hardware_blk_mem_gen_0_0_synth_1, synth_1...
+Run output will be captured here:
+mp1a_hardware_blk_mem_gen_0_0_synth_1: /home/thomas/ece527/mp2/mp2a.runs/mp1a_hardware_blk_mem_gen_0_0_synth_1/runme.log
+synth_1: /home/thomas/ece527/mp2/mp2a.runs/synth_1/runme.log
+[Tue Sep 25 17:12:50 2018] Launched impl_1...
+Run output will be captured here: /home/thomas/ece527/mp2/mp2a.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 46 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+open_run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 6226.590 ; gain = 165.969 ; free physical = 1310 ; free virtual = 4712
+INFO: [Common 17-344] 'open_run' was cancelled
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.2
+  **** Build date : Jun 15 2017-18:45:18
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-Zed-210248685988" may be locked by another hw_server.
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248685988
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Vivado 12-106] *** Exception: java.lang.ClassCastException: sun.awt.image.BufImgSurfaceData cannot be cast to sun.java2d.xr.XRSurfaceData (See /home/thomas/ece527/mp2/vivado_pid4680.debug)
+ERROR: [Vivado 12-106] *** Exception: java.lang.ClassCastException: sun.awt.image.BufImgSurfaceData cannot be cast to sun.java2d.xr.XRSurfaceData (See /home/thomas/ece527/mp2/vivado_pid4680.debug)
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988
+ERROR: [Vivado 12-106] *** Exception: java.lang.ClassCastException: sun.awt.image.BufImgSurfaceData cannot be cast to sun.java2d.xr.XRSurfaceData (See /home/thomas/ece527/mp2/vivado_pid4680.debug)
+ERROR: [Vivado 12-106] *** Exception: java.lang.ClassCastException: sun.awt.image.BufImgSurfaceData cannot be cast to sun.java2d.xr.XRSurfaceData (See /home/thomas/ece527/mp2/vivado_pid4680.debug)
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248685988
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+file copy -force /home/thomas/ece527/mp2/mp2a.runs/impl_1/mp1a_hardware_wrapper.sysdef /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+
+launch_sdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988
+reset_run synth_1
+update_module_reference mp1a_hardware_oled_ip_0_0
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'RST' as interface 'RST'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'CLK' as interface 'CLK'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'BRAM_CLK' as interface 'BRAM_CLK'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'CLK': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-3153] Bus Interface 'BRAM_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'BRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.3 - blk_mem_gen_0
+Adding cell -- user.org:module_ref:oled_ip:1.0 - oled_ip_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <mp1a_hardware> from BD file </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd>
+Upgrading '/home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd'
+INFO: [IP_Flow 19-1972] Upgraded mp1a_hardware_oled_ip_0_0 from oled_ip_v1_0 1.0 to oled_ip_v1_0 1.0
+Wrote  : </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd> 
+upgrade_ip: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 6488.270 ; gain = 86.625 ; free physical = 835 ; free virtual = 4420
+update_module_reference: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 6488.270 ; gain = 86.625 ; free physical = 835 ; free virtual = 4420
+launch_runs impl_1 -to_step write_bitstream
+WARNING: [BD 41-927] Following properties on pin /oled_ip_0/BRAM_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=mp1a_hardware_oled_ip_0_0_BRAM_CLK 
+Wrote  : </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd> 
+Verilog Output written to : /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware.v
+Verilog Output written to : /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block oled_ip_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/ip/mp1a_hardware_auto_pc_0/mp1a_hardware_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hw_handoff/mp1a_hardware.hwh
+Generated Block Design Tcl file /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hw_handoff/mp1a_hardware_bd.tcl
+Generated Hardware Definition File /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP mp1a_hardware_blk_mem_gen_0_0, cache-ID = 171ef93049afcae2; cache size = 3.458 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP mp1a_hardware_auto_pc_0, cache-ID = e47788bd6dc9e881; cache size = 3.458 MB.
+[Tue Sep 25 17:26:18 2018] Launched mp1a_hardware_oled_ip_0_0_synth_1, synth_1...
+Run output will be captured here:
+mp1a_hardware_oled_ip_0_0_synth_1: /home/thomas/ece527/mp2/mp2a.runs/mp1a_hardware_oled_ip_0_0_synth_1/runme.log
+synth_1: /home/thomas/ece527/mp2/mp2a.runs/synth_1/runme.log
+[Tue Sep 25 17:26:18 2018] Launched impl_1...
+Run output will be captured here: /home/thomas/ece527/mp2/mp2a.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 6555.219 ; gain = 50.930 ; free physical = 771 ; free virtual = 4359
+file copy -force /home/thomas/ece527/mp2/mp2a.runs/impl_1/mp1a_hardware_wrapper.sysdef /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+
+launch_sdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248685988
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248685988
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248685988
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+update_module_reference mp1a_hardware_oled_ip_0_0
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'RST' as interface 'RST'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'CLK' as interface 'CLK'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'BRAM_CLK' as interface 'BRAM_CLK'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'CLK': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-3153] Bus Interface 'BRAM_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'BRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading '/home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd'
+INFO: [IP_Flow 19-1972] Upgraded mp1a_hardware_oled_ip_0_0 from oled_ip_v1_0 1.0 to oled_ip_v1_0 1.0
+Wrote  : </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+WARNING: [BD 41-927] Following properties on pin /oled_ip_0/BRAM_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=mp1a_hardware_oled_ip_0_0_BRAM_CLK 
+Wrote  : </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd> 
+Verilog Output written to : /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware.v
+Verilog Output written to : /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block oled_ip_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/ip/mp1a_hardware_auto_pc_0/mp1a_hardware_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hw_handoff/mp1a_hardware.hwh
+Generated Block Design Tcl file /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hw_handoff/mp1a_hardware_bd.tcl
+Generated Hardware Definition File /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP mp1a_hardware_auto_pc_0, cache-ID = e47788bd6dc9e881; cache size = 3.458 MB.
+[Tue Sep 25 17:50:56 2018] Launched mp1a_hardware_oled_ip_0_0_synth_1, synth_1...
+Run output will be captured here:
+mp1a_hardware_oled_ip_0_0_synth_1: /home/thomas/ece527/mp2/mp2a.runs/mp1a_hardware_oled_ip_0_0_synth_1/runme.log
+synth_1: /home/thomas/ece527/mp2/mp2a.runs/synth_1/runme.log
+[Tue Sep 25 17:50:56 2018] Launched impl_1...
+Run output will be captured here: /home/thomas/ece527/mp2/mp2a.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 6667.746 ; gain = 15.012 ; free physical = 757 ; free virtual = 3872
+file copy -force /home/thomas/ece527/mp2/mp2a.runs/impl_1/mp1a_hardware_wrapper.sysdef /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+
+file copy -force /home/thomas/ece527/mp2/mp2a.runs/impl_1/mp1a_hardware_wrapper.sysdef /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+
+launch_sdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248685988
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+update_module_reference mp1a_hardware_oled_ip_0_0
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'RST' as interface 'RST'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'CLK' as interface 'CLK'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'BRAM_CLK' as interface 'BRAM_CLK'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'CLK': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-3153] Bus Interface 'BRAM_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'BRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading '/home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd'
+INFO: [IP_Flow 19-1972] Upgraded mp1a_hardware_oled_ip_0_0 from oled_ip_v1_0 1.0 to oled_ip_v1_0 1.0
+Wrote  : </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd> 
+update_module_reference: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 6714.547 ; gain = 0.098 ; free physical = 1233 ; free virtual = 3946
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+WARNING: [BD 41-927] Following properties on pin /oled_ip_0/BRAM_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=mp1a_hardware_oled_ip_0_0_BRAM_CLK 
+Wrote  : </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd> 
+Verilog Output written to : /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware.v
+Verilog Output written to : /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block oled_ip_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/ip/mp1a_hardware_auto_pc_0/mp1a_hardware_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hw_handoff/mp1a_hardware.hwh
+Generated Block Design Tcl file /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hw_handoff/mp1a_hardware_bd.tcl
+Generated Hardware Definition File /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP mp1a_hardware_auto_pc_0, cache-ID = e47788bd6dc9e881; cache size = 3.458 MB.
+[Tue Sep 25 18:03:45 2018] Launched mp1a_hardware_oled_ip_0_0_synth_1, synth_1...
+Run output will be captured here:
+mp1a_hardware_oled_ip_0_0_synth_1: /home/thomas/ece527/mp2/mp2a.runs/mp1a_hardware_oled_ip_0_0_synth_1/runme.log
+synth_1: /home/thomas/ece527/mp2/mp2a.runs/synth_1/runme.log
+[Tue Sep 25 18:03:45 2018] Launched impl_1...
+Run output will be captured here: /home/thomas/ece527/mp2/mp2a.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 6746.484 ; gain = 16.023 ; free physical = 1565 ; free virtual = 4286
+file copy -force /home/thomas/ece527/mp2/mp2a.runs/impl_1/mp1a_hardware_wrapper.sysdef /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+
+launch_sdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/thomas/ece527/mp2/mp2a.sdk -hwspec /home/thomas/ece527/mp2/mp2a.sdk/mp1a_hardware_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248685988
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248685988
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248685988
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210248685988
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248685988
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.

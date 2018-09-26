@@ -295,49 +295,49 @@ module OledEX(
             //3. Send the byte of data given by the block Ram
             //4. Repeat 7 more times for the rest of the character bytes
             "SendChar1" : begin
-                    temp_addr <= {temp_char, 3'b000};
+                    temp_addr <= {temp_char, 3'b111};
                     after_state <= "SendChar2";
                     current_state <= "ReadMem";
             end
             
             "SendChar2" : begin
-                    temp_addr <= {temp_char, 3'b001};
+                    temp_addr <= {temp_char, 3'b110};
                     after_state <= "SendChar3";
                     current_state <= "ReadMem";
             end
             
             "SendChar3" : begin
-                    temp_addr <= {temp_char, 3'b010};
+                    temp_addr <= {temp_char, 3'b101};
                     after_state <= "SendChar4";
                     current_state <= "ReadMem";
             end
             
             "SendChar4" : begin
-                    temp_addr <= {temp_char, 3'b011};
+                    temp_addr <= {temp_char, 3'b100};
                     after_state <= "SendChar5";
                     current_state <= "ReadMem";
             end
             
             "SendChar5" : begin
-                    temp_addr <= {temp_char, 3'b100};
+                    temp_addr <= {temp_char, 3'b011};
                     after_state <= "SendChar6";
                     current_state <= "ReadMem";
             end
             
             "SendChar6" : begin
-                    temp_addr <= {temp_char, 3'b101};
+                    temp_addr <= {temp_char, 3'b010};
                     after_state <= "SendChar7";
                     current_state <= "ReadMem";
             end
             
             "SendChar7" : begin
-                    temp_addr <= {temp_char, 3'b110};
+                    temp_addr <= {temp_char, 3'b001};
                     after_state <= "SendChar8";
                     current_state <= "ReadMem";
             end
             
             "SendChar8" : begin
-                    temp_addr <= {temp_char, 3'b111};
+                    temp_addr <= {temp_char, 3'b000};
                     after_state <= after_char_state;
                     current_state <= "ReadMem";
             end

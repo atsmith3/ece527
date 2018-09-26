@@ -1,8 +1,8 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
-//Date        : Tue Sep 25 15:48:49 2018
-//Host        : andrew-vm running 64-bit Ubuntu 17.10
+//Date        : Tue Sep 25 18:03:39 2018
+//Host        : ubuntu running 64-bit Ubuntu 18.04 LTS
 //Command     : generate_target mp1a_hardware_wrapper.bd
 //Design      : mp1a_hardware_wrapper
 //Purpose     : IP block netlist

@@ -1,0 +1,210 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Sep 25 02:11:48 2018
+# Process ID: 1393
+# Current directory: /home/thomas/ece527/mp2
+# Command line: vivado
+# Log file: /home/thomas/ece527/mp2/vivado.log
+# Journal file: /home/thomas/ece527/mp2/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/thomas/ece527/mp2/mp2a.xpr
+INFO: [Project 1-313] Project file moved from '/home/andrew/ece527/mp2' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory '/home/thomas/ece527/mp2/mp2a.ip_user_files', nor could it be found using path '/home/andrew/ece527/mp2/mp2a.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/Desktop/Xilinx/Vivado/2017.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'mp1a_hardware_auto_pc_0' generated file not found '/home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/ip/mp1a_hardware_auto_pc_0/stats.txt'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 5898.883 ; gain = 95.051 ; free physical = 2213 ; free virtual = 5193
+update_module_reference mp1a_hardware_oled_ip_0_0
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+CRITICAL WARNING: [HDL 9-806] Syntax error near "end". [/home/thomas/ece527/mp2/PmodOLEDCtrl.v:227]
+ERROR: [IP_Flow 19-259] [HDL Parser] Failed analyze operation while parsing HDL.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file '/home/thomas/ece527/mp2/PmodOLEDCtrl.v'.
+ERROR: [IP_Flow 19-4668] Failed to infer definition from module 'oled_ip'.
+ERROR: [Common 17-39] 'update_module_reference' failed due to earlier errors.
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.2
+  **** Build date : Jun 15 2017-18:45:18
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210248470634
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/thomas/ece527/mp2/mp2a.runs/impl_1/mp1a_hardware_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/thomas/ece527/mp2/mp2a.runs/impl_1/mp1a_hardware_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+reset_run mp1a_hardware_blk_mem_gen_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP mp1a_hardware_blk_mem_gen_0_0, cache-ID = 171ef93049afcae2; cache size = 3.457 MB.
+[Tue Sep 25 02:15:39 2018] Launched mp1a_hardware_blk_mem_gen_0_0_synth_1, synth_1...
+Run output will be captured here:
+mp1a_hardware_blk_mem_gen_0_0_synth_1: /home/thomas/ece527/mp2/mp2a.runs/mp1a_hardware_blk_mem_gen_0_0_synth_1/runme.log
+synth_1: /home/thomas/ece527/mp2/mp2a.runs/synth_1/runme.log
+[Tue Sep 25 02:15:39 2018] Launched impl_1...
+Run output will be captured here: /home/thomas/ece527/mp2/mp2a.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 70 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+Parsing XDC File [/home/thomas/ece527/mp2/.Xil/Vivado-1393-ubuntu/dcp17/mp1a_hardware_wrapper_board.xdc]
+Finished Parsing XDC File [/home/thomas/ece527/mp2/.Xil/Vivado-1393-ubuntu/dcp17/mp1a_hardware_wrapper_board.xdc]
+Parsing XDC File [/home/thomas/ece527/mp2/.Xil/Vivado-1393-ubuntu/dcp17/mp1a_hardware_wrapper_early.xdc]
+Finished Parsing XDC File [/home/thomas/ece527/mp2/.Xil/Vivado-1393-ubuntu/dcp17/mp1a_hardware_wrapper_early.xdc]
+Parsing XDC File [/home/thomas/ece527/mp2/.Xil/Vivado-1393-ubuntu/dcp17/mp1a_hardware_wrapper.xdc]
+Finished Parsing XDC File [/home/thomas/ece527/mp2/.Xil/Vivado-1393-ubuntu/dcp17/mp1a_hardware_wrapper.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Restored from archive | CPU: 0.310000 secs | Memory: 2.928413 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.27 ; elapsed = 00:00:00.33 . Memory (MB): peak = 6491.668 ; gain = 4.000 ; free physical = 1534 ; free virtual = 4672
+open_run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 6497.723 ; gain = 253.348 ; free physical = 1623 ; free virtual = 4747
+INFO: [Common 17-344] 'open_run' was cancelled
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/thomas/ece527/mp2/mp2a.runs/impl_1/mp1a_hardware_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+update_module_reference mp1a_hardware_oled_ip_0_0
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+INFO: [IP_Flow 19-4753] Inferred signal 'reset' from port 'RST' as interface 'RST'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'CLK' as interface 'CLK'.
+INFO: [IP_Flow 19-4753] Inferred signal 'clock' from port 'BRAM_CLK' as interface 'BRAM_CLK'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'CLK': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-3153] Bus Interface 'BRAM_CLK': ASSOCIATED_BUSIF bus parameter is missing.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'BRAM_CLK': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.3 - blk_mem_gen_0
+Adding cell -- user.org:module_ref:oled_ip:1.0 - oled_ip_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <mp1a_hardware> from BD file </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd>
+Upgrading '/home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd'
+INFO: [IP_Flow 19-1972] Upgraded mp1a_hardware_oled_ip_0_0 from oled_ip_v1_0 1.0 to oled_ip_v1_0 1.0
+Wrote  : </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd> 
+upgrade_ip: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 6527.754 ; gain = 28.023 ; free physical = 1517 ; free virtual = 4672
+update_module_reference: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 6527.754 ; gain = 28.023 ; free physical = 1517 ; free virtual = 4672
+make_wrapper -files [get_files /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd] -top
+WARNING: [BD 41-927] Following properties on pin /oled_ip_0/BRAM_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=mp1a_hardware_oled_ip_0_0_BRAM_CLK 
+Wrote  : </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd> 
+Verilog Output written to : /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware.v
+Verilog Output written to : /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 6556.660 ; gain = 20.906 ; free physical = 1473 ; free virtual = 4629
+validate_bd_design -force
+WARNING: [BD 41-927] Following properties on pin /oled_ip_0/BRAM_CLK have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=mp1a_hardware_oled_ip_0_0_BRAM_CLK 
+validate_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 6575.969 ; gain = 0.012 ; free physical = 1476 ; free virtual = 4631
+save_bd_design
+Wrote  : </home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/mp1a_hardware.bd> 
+reset_run synth_1
+reset_run mp1a_hardware_blk_mem_gen_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream
+INFO: [BD 41-1662] The design 'mp1a_hardware.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware.v
+Verilog Output written to : /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block oled_ip_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/ip/mp1a_hardware_auto_pc_0/mp1a_hardware_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hw_handoff/mp1a_hardware.hwh
+Generated Block Design Tcl file /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hw_handoff/mp1a_hardware_bd.tcl
+Generated Hardware Definition File /home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP mp1a_hardware_blk_mem_gen_0_0, cache-ID = 171ef93049afcae2; cache size = 3.458 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP mp1a_hardware_auto_pc_0, cache-ID = e47788bd6dc9e881; cache size = 3.458 MB.
+[Tue Sep 25 02:23:03 2018] Launched mp1a_hardware_oled_ip_0_0_synth_1, synth_1...
+Run output will be captured here:
+mp1a_hardware_oled_ip_0_0_synth_1: /home/thomas/ece527/mp2/mp2a.runs/mp1a_hardware_oled_ip_0_0_synth_1/runme.log
+synth_1: /home/thomas/ece527/mp2/mp2a.runs/synth_1/runme.log
+[Tue Sep 25 02:23:03 2018] Launched impl_1...
+Run output will be captured here: /home/thomas/ece527/mp2/mp2a.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 6645.863 ; gain = 27.098 ; free physical = 1420 ; free virtual = 4566
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property top oled_ip [current_fileset]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/thomas/ece527/mp2/PmodOLEDCtrl.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/thomas/ece527/mp2/mp2a.srcs/sources_1/bd/mp1a_hardware/hdl/mp1a_hardware_wrapper.v:]
+ERROR: [filemgmt 56-285] srcscanner execution failed with return code 255.
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property top mp1a_hardware_wrapper [current_fileset]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sources_1
+reset_run synth_1
+reset_run mp1a_hardware_oled_ip_0_0_synth_1
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+launch_runs impl_1 -to_step write_bitstream
+[Tue Sep 25 02:25:14 2018] Launched mp1a_hardware_oled_ip_0_0_synth_1, synth_1...
+Run output will be captured here:
+mp1a_hardware_oled_ip_0_0_synth_1: /home/thomas/ece527/mp2/mp2a.runs/mp1a_hardware_oled_ip_0_0_synth_1/runme.log
+synth_1: /home/thomas/ece527/mp2/mp2a.runs/synth_1/runme.log
+[Tue Sep 25 02:25:14 2018] Launched impl_1...
+Run output will be captured here: /home/thomas/ece527/mp2/mp2a.runs/impl_1/runme.log
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
