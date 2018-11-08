@@ -1,14 +1,19 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'anges' on host 'laptop-qdoqh21e' (Windows NT_amd64 version 6.2) on Thu Nov 08 14:40:11 -0600 2018
+INFO: [HLS 200-10] For user 'anges' on host 'laptop-qdoqh21e' (Windows NT_amd64 version 6.2) on Thu Nov 08 17:53:55 -0600 2018
 INFO: [HLS 200-10] In directory 'C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4'
-INFO: [HLS 200-10] Opening project 'C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_hls_conv3'.
-INFO: [HLS 200-10] Opening solution 'C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_hls_conv3/lenet_hls_conv3_soln'.
+INFO: [HLS 200-10] Opening project 'C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_hls_conv1'.
+INFO: [HLS 200-10] Opening solution 'C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_hls_conv1/lenet_hls_conv1_soln'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-   Compiling ../../../lenet_hls_tb_c3.c in debug mode
-   Compiling ../../../lenet_hls_c3.c in debug mode
+   Compiling ../../../lenet_hls_tb_c1.c in debug mode
+   Compiling ../../../lenet_hls_c1.c in debug mode
    Generating csim.exe
+../../../lenet_hls_tb_c1.c: In function 'main':
+../../../lenet_hls_tb_c1.c:113:3: warning: passing argument 2 of 'relu2_tb' from incompatible pointer type [enabled by default]
+../../../lenet_hls_tb_c1.c:22:6: note: expected 'float (*)[14][14]' but argument is of type 'float (*)[28][28]'
+../../../lenet_hls_tb_c1.c:114:3: warning: passing argument 4 of 'convolution1' from incompatible pointer type [enabled by default]
+../../../lenet_hls_c1.h:4:5: note: expected 'float (*)[14][14]' but argument is of type 'float (*)[28][28]'
 INFO: [SIM 211-1] CSim file generation done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************

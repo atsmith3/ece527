@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('c5_w_0_load_2', lenet_hls_conv5/lenet_hls_c5.c:63) on array 'c5_w[0]', lenet_hls_conv5/lenet_hls_c5.c:18 due to limited memory ports." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:48:21.984-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)&#xD;&#xA;   between bus read on port 'DATA_B' (lenet_hls_conv5/lenet_hls_c5.c:44) and bus read on port 'DATA_B' (lenet_hls_conv5/lenet_hls_c5.c:44)." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:48:09.361-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)&#xD;&#xA;   between bus read on port 'DATA_B' (lenet_hls_conv5/lenet_hls_c5.c:44) and bus read on port 'DATA_B' (lenet_hls_conv5/lenet_hls_c5.c:44)." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:48:09.340-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)&#xD;&#xA;   between bus read on port 'DATA_B' (lenet_hls_conv5/lenet_hls_c5.c:44) and bus read on port 'DATA_B' (lenet_hls_conv5/lenet_hls_c5.c:44)." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:48:09.307-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xD;&#xA;   between bus read on port 'DATA_B' (lenet_hls_conv5/lenet_hls_c5.c:44) and bus read on port 'DATA_B' (lenet_hls_conv5/lenet_hls_c5.c:44)." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:48:09.278-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 24, distance = 1, offset = 1)&#xD;&#xA;   between bus request on port 'DATA_A' (lenet_hls_conv5/lenet_hls_c5.c:33) and bus request on port 'DATA_A' (lenet_hls_conv5/lenet_hls_c5.c:33)." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:48:09.074-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 23, distance = 1, offset = 1)&#xD;&#xA;   between bus request on port 'DATA_A' (lenet_hls_conv5/lenet_hls_c5.c:33) and bus request on port 'DATA_A' (lenet_hls_conv5/lenet_hls_c5.c:33)." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:48:09.048-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1)&#xD;&#xA;   between bus request on port 'DATA_A' (lenet_hls_conv5/lenet_hls_c5.c:33) and bus request on port 'DATA_A' (lenet_hls_conv5/lenet_hls_c5.c:33)." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:48:08.976-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)&#xD;&#xA;   between bus request on port 'DATA_A' (lenet_hls_conv5/lenet_hls_c5.c:33) and bus request on port 'DATA_A' (lenet_hls_conv5/lenet_hls_c5.c:33)." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:48:08.909-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)&#xD;&#xA;   between bus request on port 'DATA_A' (lenet_hls_conv5/lenet_hls_c5.c:33) and bus request on port 'DATA_A' (lenet_hls_conv5/lenet_hls_c5.c:33)." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:48:08.732-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)&#xD;&#xA;   between bus request on port 'DATA_A' (lenet_hls_conv5/lenet_hls_c5.c:33) and bus request on port 'DATA_A' (lenet_hls_conv5/lenet_hls_c5.c:33)." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:48:08.689-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xD;&#xA;   between bus request on port 'DATA_A' (lenet_hls_conv5/lenet_hls_c5.c:33) and bus request on port 'DATA_A' (lenet_hls_conv5/lenet_hls_c5.c:33)." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:48:08.657-0600" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'convolution5/output' to 'convolution5/output_r' to avoid the conflict with HDL keywords or other object names." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:47:58.406-0600" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'convolution5/input' to 'convolution5/input_r' to avoid the conflict with HDL keywords or other object names." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:47:58.358-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-4.1.1.1' (lenet_hls_conv5/lenet_hls_c5.c:61) because its parent loop or function is pipelined." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:47:51.569-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-2.1.1.1' (lenet_hls_conv5/lenet_hls_c5.c:42) because its parent loop or function is pipelined." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:47:51.537-0600" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-1.1.1' (lenet_hls_conv5/lenet_hls_c5.c:31) because its parent loop or function is pipelined." projectName="lenet_hls_conv5" solutionName="lenet_hls_conv5_soln" date="2018-11-08T16:47:51.503-0600" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

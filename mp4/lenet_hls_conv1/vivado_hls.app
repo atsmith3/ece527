@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="" name="lenet_hls_conv1">
+<project xmlns="com.autoesl.autopilot.project" name="lenet_hls_conv1" top="convolution1">
     <files>
         <file name="lenet_hls_conv1/lenet_hls_c1.c" sc="0" tb="false" cflags=""/>
         <file name="lenet_hls_conv1/lenet_hls_c1.h" sc="0" tb="false" cflags=""/>
@@ -7,7 +7,7 @@
     <includePaths/>
     <libraryPaths/>
     <Simulation>
-        <SimFlow name="csim" csimMode="2" lastCsimMode="0"/>
+        <SimFlow name="csim" csimMode="2" lastCsimMode="2"/>
     </Simulation>
     <solutions xmlns="">
         <solution name="lenet_hls_conv1_soln" status="active"/>

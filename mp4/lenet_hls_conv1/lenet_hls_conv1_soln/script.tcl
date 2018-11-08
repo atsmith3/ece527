@@ -4,6 +4,7 @@
 ## Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project lenet_hls_conv1
+set_top convolution1
 add_files lenet_hls_conv1/lenet_hls_c1.c
 add_files lenet_hls_conv1/lenet_hls_c1.h
 add_files -tb lenet_hls_conv1/lenet_hls_tb_c1.c

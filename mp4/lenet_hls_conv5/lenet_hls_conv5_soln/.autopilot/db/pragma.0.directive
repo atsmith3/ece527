@@ -1,0 +1,91 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="convolution5" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="400"/>
+<option name="port" positionalBoolean="4" value="input"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="DATA_A"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolution5" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="48000"/>
+<option name="port" positionalBoolean="4" value="weights"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="DATA_B"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolution5" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="120"/>
+<option name="port" positionalBoolean="4" value="bias"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="DATA_C"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolution5" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="120"/>
+<option name="port" positionalBoolean="4" value="output"/>
+<option name="offset" value="slave"/>
+<option name="bundle" value="DATA_D"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolution5" label="">
+<pragma name="INTERFACE">
+<option name="s_axilite" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolution5" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolution5" label="">
+<pragma name="UNROLL">
+<option name="FACTOR" value="5"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolution5" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolution5" label="">
+<pragma name="UNROLL">
+<option name="FACTOR" value="5"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolution5" label="">
+<pragma name="UNROLL">
+<option name="FACTOR" value="20"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolution5" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolution5" label="">
+<pragma name="UNROLL">
+<option name="FACTOR" value="16"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolution5" label="">
+<pragma name="UNROLL">
+<option name="FACTOR" value="20"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="convolution5" label="">
+<pragma name="UNROLL">
+<option name="FACTOR" value="20"/>
+</pragma>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>
