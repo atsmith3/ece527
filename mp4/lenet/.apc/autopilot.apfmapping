@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="lenet_hls.c" path="C:\Users\atsmith3\Downloads\Tutorial_Files\lenet\lenet_hls.c"/>
+    <originFiles name="lenet_hls.h" path="C:\Xilinx\Vivado_HLS\2017.2\lenet_hls.h"/>
+    <originFiles name="images.bin" path="C:\Users\atsmith3\Downloads\Tutorial_Files\lenet\images.bin"/>
+    <originFiles name="labels.bin" path="C:\Users\atsmith3\Downloads\Tutorial_Files\lenet\labels.bin"/>
+    <originFiles name="params.bin" path="C:\Users\atsmith3\Downloads\Tutorial_Files\lenet\params.bin"/>
+  </source>
+  <testbench>
+    <originFiles name="lenet_tb.c" path="C:\Xilinx\Vivado_HLS\2017.2\lenet_tb.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

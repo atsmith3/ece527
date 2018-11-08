@@ -1,0 +1,324 @@
+
+
+================================================================
+== Vivado HLS Report for 'copy_i'
+================================================================
+* Date:           Wed Nov  7 23:47:49 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        lenet
+* Solution:       lenet_accelerator
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.75|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  10305|  10305|  10305|  10305|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-------+-------+----------+-----------+-----------+------+----------+
+        |             |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |  10304|  10304|       322|          -|          -|    32|    no    |
+        | + Loop 1.1  |    320|    320|        10|          -|          -|    32|    no    |
+        +-------------+-------+-------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 12
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond1)
+3 --> 
+	4  / (!exitcond)
+	2  / (exitcond)
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	3  / true
+* FSM state operations: 
+
+ <State 1>: 1.59ns
+ST_1: image_in_i1_read (4)  [1/1] 0.00ns
+:0  %image_in_i1_read = call i30 @_ssdm_op_Read.ap_auto.i30(i30 %image_in_i1)
+
+ST_1: StgValue_14 (5)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecInterface(float* %in_r, [6 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 1024, [16 x i8]* @p_str2, [6 x i8]* @p_str3, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1)
+
+ST_1: StgValue_15 (6)  [1/1] 1.59ns  loc: lenet/lenet_hls.c:30
+:2  br label %.loopexit
+
+
+ <State 2>: 3.88ns
+ST_2: j (8)  [1/1] 0.00ns
+.loopexit:0  %j = phi i6 [ 0, %0 ], [ %j_10, %.loopexit.loopexit ]
+
+ST_2: tmp (9)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:30
+.loopexit:1  %tmp = call i11 @_ssdm_op_BitConcatenate.i11.i6.i5(i6 %j, i5 0)
+
+ST_2: tmp_147_cast (10)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:30
+.loopexit:2  %tmp_147_cast = zext i11 %tmp to i12
+
+ST_2: exitcond1 (11)  [1/1] 3.88ns  loc: lenet/lenet_hls.c:30
+.loopexit:3  %exitcond1 = icmp eq i6 %j, -32
+
+ST_2: empty (12)  [1/1] 0.00ns
+.loopexit:4  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32)
+
+ST_2: j_10 (13)  [1/1] 2.31ns  loc: lenet/lenet_hls.c:30
+.loopexit:5  %j_10 = add i6 %j, 1
+
+ST_2: StgValue_22 (14)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:30
+.loopexit:6  br i1 %exitcond1, label %2, label %.preheader.preheader
+
+ST_2: StgValue_23 (16)  [1/1] 1.59ns  loc: lenet/lenet_hls.c:32
+.preheader.preheader:0  br label %.preheader
+
+ST_2: StgValue_24 (40)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:35
+:0  ret void
+
+
+ <State 3>: 5.15ns
+ST_3: k (18)  [1/1] 0.00ns
+.preheader:0  %k = phi i6 [ %k_7, %1 ], [ 0, %.preheader.preheader ]
+
+ST_3: k_cast1_cast (19)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:32
+.preheader:1  %k_cast1_cast = zext i6 %k to i12
+
+ST_3: tmp_s (20)  [1/1] 2.33ns  loc: lenet/lenet_hls.c:32
+.preheader:2  %tmp_s = add i12 %tmp_147_cast, %k_cast1_cast
+
+ST_3: tmp_148_cast6 (21)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:32
+.preheader:3  %tmp_148_cast6 = zext i12 %tmp_s to i31
+
+ST_3: tmp_148_cast (22)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:32
+.preheader:4  %tmp_148_cast = zext i12 %tmp_s to i32
+
+ST_3: image_in_i1_cast (23)  [1/1] 0.00ns
+.preheader:5  %image_in_i1_cast = zext i30 %image_in_i1_read to i31
+
+ST_3: sum (24)  [1/1] 2.82ns  loc: lenet/lenet_hls.c:32
+.preheader:6  %sum = add i31 %image_in_i1_cast, %tmp_148_cast6
+
+ST_3: sum_cast (25)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:32
+.preheader:7  %sum_cast = zext i31 %sum to i32
+
+ST_3: in_addr (26)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:32
+.preheader:8  %in_addr = getelementptr float* %in_r, i32 %sum_cast
+
+ST_3: out_0_addr (27)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:32
+.preheader:9  %out_0_addr = getelementptr [1024 x float]* %out_0, i32 0, i32 %tmp_148_cast
+
+ST_3: exitcond (28)  [1/1] 3.88ns  loc: lenet/lenet_hls.c:31
+.preheader:10  %exitcond = icmp eq i6 %k, -32
+
+ST_3: empty_75 (29)  [1/1] 0.00ns
+.preheader:11  %empty_75 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32)
+
+ST_3: k_7 (30)  [1/1] 2.31ns  loc: lenet/lenet_hls.c:31
+.preheader:12  %k_7 = add i6 %k, 1
+
+ST_3: StgValue_38 (31)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:31
+.preheader:13  br i1 %exitcond, label %.loopexit.loopexit, label %1
+
+ST_3: StgValue_39 (38)  [1/1] 0.00ns
+.loopexit.loopexit:0  br label %.loopexit
+
+
+ <State 4>: 8.75ns
+ST_4: in_load_req (33)  [7/7] 8.75ns  loc: lenet/lenet_hls.c:32
+:0  %in_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %in_addr, i32 1)
+
+
+ <State 5>: 8.75ns
+ST_5: in_load_req (33)  [6/7] 8.75ns  loc: lenet/lenet_hls.c:32
+:0  %in_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %in_addr, i32 1)
+
+
+ <State 6>: 8.75ns
+ST_6: in_load_req (33)  [5/7] 8.75ns  loc: lenet/lenet_hls.c:32
+:0  %in_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %in_addr, i32 1)
+
+
+ <State 7>: 8.75ns
+ST_7: in_load_req (33)  [4/7] 8.75ns  loc: lenet/lenet_hls.c:32
+:0  %in_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %in_addr, i32 1)
+
+
+ <State 8>: 8.75ns
+ST_8: in_load_req (33)  [3/7] 8.75ns  loc: lenet/lenet_hls.c:32
+:0  %in_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %in_addr, i32 1)
+
+
+ <State 9>: 8.75ns
+ST_9: in_load_req (33)  [2/7] 8.75ns  loc: lenet/lenet_hls.c:32
+:0  %in_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %in_addr, i32 1)
+
+
+ <State 10>: 8.75ns
+ST_10: in_load_req (33)  [1/7] 8.75ns  loc: lenet/lenet_hls.c:32
+:0  %in_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %in_addr, i32 1)
+
+
+ <State 11>: 8.75ns
+ST_11: in_addr_read (34)  [1/1] 8.75ns  loc: lenet/lenet_hls.c:32
+:1  %in_addr_read = call float @_ssdm_op_Read.m_axi.floatP(float* %in_addr)
+
+
+ <State 12>: 3.25ns
+ST_12: StgValue_48 (35)  [1/1] 3.25ns  loc: lenet/lenet_hls.c:32
+:2  store float %in_addr_read, float* %out_0_addr, align 4
+
+ST_12: StgValue_49 (36)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:31
+:3  br label %.preheader
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', lenet/lenet_hls.c:30) [8]  (1.59 ns)
+
+ <State 2>: 3.88ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', lenet/lenet_hls.c:30) [8]  (0 ns)
+	'icmp' operation ('exitcond1', lenet/lenet_hls.c:30) [11]  (3.88 ns)
+
+ <State 3>: 5.15ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', lenet/lenet_hls.c:31) [18]  (0 ns)
+	'add' operation ('tmp_s', lenet/lenet_hls.c:32) [20]  (2.33 ns)
+	'add' operation ('sum', lenet/lenet_hls.c:32) [24]  (2.82 ns)
+
+ <State 4>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'in_r' (lenet/lenet_hls.c:32) [33]  (8.75 ns)
+
+ <State 5>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'in_r' (lenet/lenet_hls.c:32) [33]  (8.75 ns)
+
+ <State 6>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'in_r' (lenet/lenet_hls.c:32) [33]  (8.75 ns)
+
+ <State 7>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'in_r' (lenet/lenet_hls.c:32) [33]  (8.75 ns)
+
+ <State 8>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'in_r' (lenet/lenet_hls.c:32) [33]  (8.75 ns)
+
+ <State 9>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'in_r' (lenet/lenet_hls.c:32) [33]  (8.75 ns)
+
+ <State 10>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'in_r' (lenet/lenet_hls.c:32) [33]  (8.75 ns)
+
+ <State 11>: 8.75ns
+The critical path consists of the following:
+	bus read on port 'in_r' (lenet/lenet_hls.c:32) [34]  (8.75 ns)
+
+ <State 12>: 3.25ns
+The critical path consists of the following:
+	'store' operation (lenet/lenet_hls.c:32) of variable 'in_addr_read', lenet/lenet_hls.c:32 on array 'out_0' [35]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

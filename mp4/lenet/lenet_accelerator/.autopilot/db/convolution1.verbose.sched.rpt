@@ -1,0 +1,645 @@
+
+
+================================================================
+== Vivado HLS Report for 'convolution1'
+================================================================
+* Date:           Wed Nov  7 23:47:51 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        lenet
+* Solution:       lenet_accelerator
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.26|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                         |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |        Loop Name        | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1                 |    ?|    ?|         ?|          -|          -|     6|    no    |
+        | + Loop 1.1              |    ?|    ?|         ?|          -|          -|    28|    no    |
+        |  ++ Loop 1.1.1          |    ?|    ?|         ?|          -|          -|    28|    no    |
+        |   +++ Loop 1.1.1.1      |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        |    ++++ Loop 1.1.1.1.1  |    ?|    ?|        11|          -|          -|     ?|    no    |
+        +-------------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 23
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond2)
+3 --> 
+	4  / (!exitcond1)
+	2  / (exitcond1)
+4 --> 
+	5  / (!exitcond)
+	3  / (exitcond)
+5 --> 
+	17  / (!tmp_23)
+	6  / (tmp_23)
+6 --> 
+	7  / (tmp_25)
+	5  / (!tmp_25)
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	6  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	4  / true
+* FSM state operations: 
+
+ <State 1>: 1.59ns
+ST_1: StgValue_24 (5)  [1/1] 1.59ns  loc: lenet/lenet_hls.c:131
+:0  br label %.loopexit
+
+
+ <State 2>: 2.33ns
+ST_2: co (7)  [1/1] 0.00ns
+.loopexit:0  %co = phi i3 [ 0, %0 ], [ %co_3, %.loopexit.loopexit ]
+
+ST_2: co_cast3 (8)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:131
+.loopexit:1  %co_cast3 = zext i3 %co to i32
+
+ST_2: co_cast3_cast (9)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:131
+.loopexit:2  %co_cast3_cast = zext i3 %co to i6
+
+ST_2: tmp_174 (10)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:131
+.loopexit:3  %tmp_174 = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %co, i2 0)
+
+ST_2: p_shl2_cast1 (11)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:137
+.loopexit:4  %p_shl2_cast1 = zext i5 %tmp_174 to i6
+
+ST_2: p_shl2_cast (12)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:137
+.loopexit:5  %p_shl2_cast = zext i5 %tmp_174 to i9
+
+ST_2: tmp_175 (13)  [1/1] 2.33ns  loc: lenet/lenet_hls.c:137
+.loopexit:6  %tmp_175 = add i6 %co_cast3_cast, %p_shl2_cast1
+
+ST_2: tmp_191_cast (14)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:137
+.loopexit:7  %tmp_191_cast = zext i6 %tmp_175 to i32
+
+ST_2: tmp_176 (15)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:131
+.loopexit:8  %tmp_176 = call i8 @_ssdm_op_BitConcatenate.i8.i3.i5(i3 %co, i5 0)
+
+ST_2: p_shl_cast (16)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:140
+.loopexit:9  %p_shl_cast = zext i8 %tmp_176 to i9
+
+ST_2: tmp_177 (17)  [1/1] 2.32ns  loc: lenet/lenet_hls.c:140
+.loopexit:10  %tmp_177 = sub i9 %p_shl_cast, %p_shl2_cast
+
+ST_2: tmp_194_cast (18)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:140
+.loopexit:11  %tmp_194_cast = sext i9 %tmp_177 to i10
+
+ST_2: exitcond2 (19)  [1/1] 2.07ns  loc: lenet/lenet_hls.c:131
+.loopexit:12  %exitcond2 = icmp eq i3 %co, -2
+
+ST_2: empty (20)  [1/1] 0.00ns
+.loopexit:13  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6)
+
+ST_2: co_3 (21)  [1/1] 2.26ns  loc: lenet/lenet_hls.c:131
+.loopexit:14  %co_3 = add i3 %co, 1
+
+ST_2: StgValue_40 (22)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:131
+.loopexit:15  br i1 %exitcond2, label %4, label %.preheader5.preheader
+
+ST_2: conv1_b_addr (24)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:140
+.preheader5.preheader:0  %conv1_b_addr = getelementptr [6 x float]* %conv1_b, i32 0, i32 %co_cast3
+
+ST_2: StgValue_42 (25)  [1/1] 1.59ns  loc: lenet/lenet_hls.c:135
+.preheader5.preheader:1  br label %.preheader5
+
+ST_2: StgValue_43 (112)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:144
+:0  ret void
+
+
+ <State 3>: 4.67ns
+ST_3: i (27)  [1/1] 0.00ns
+.preheader5:0  %i = phi i5 [ 0, %.preheader5.preheader ], [ %h, %.preheader5.loopexit ]
+
+ST_3: i_cast2 (28)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:135
+.preheader5:1  %i_cast2 = zext i5 %i to i32
+
+ST_3: i_cast2_cast (29)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:140
+.preheader5:2  %i_cast2_cast = zext i5 %i to i10
+
+ST_3: tmp_178 (30)  [1/1] 2.32ns  loc: lenet/lenet_hls.c:140
+.preheader5:3  %tmp_178 = add i10 %tmp_194_cast, %i_cast2_cast
+
+ST_3: tmp_172 (31)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:140
+.preheader5:4  %tmp_172 = trunc i10 %tmp_178 to i9
+
+ST_3: p_shl3_cast (32)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:140
+.preheader5:5  %p_shl3_cast = call i14 @_ssdm_op_BitConcatenate.i14.i9.i5(i9 %tmp_172, i5 0)
+
+ST_3: tmp_173 (33)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:140
+.preheader5:6  %tmp_173 = call i12 @_ssdm_op_BitConcatenate.i12.i10.i2(i10 %tmp_178, i2 0)
+
+ST_3: p_shl4_cast (34)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:140
+.preheader5:7  %p_shl4_cast = sext i12 %tmp_173 to i14
+
+ST_3: tmp_179 (35)  [1/1] 2.34ns  loc: lenet/lenet_hls.c:140
+.preheader5:8  %tmp_179 = sub i14 %p_shl3_cast, %p_shl4_cast
+
+ST_3: i_cast (36)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:135
+.preheader5:9  %i_cast = zext i5 %i to i6
+
+ST_3: exitcond1 (37)  [1/1] 3.31ns  loc: lenet/lenet_hls.c:132
+.preheader5:10  %exitcond1 = icmp eq i5 %i, -4
+
+ST_3: empty_83 (38)  [1/1] 0.00ns
+.preheader5:11  %empty_83 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 28, i64 28, i64 28)
+
+ST_3: h (39)  [1/1] 2.33ns  loc: lenet/lenet_hls.c:132
+.preheader5:12  %h = add i5 1, %i
+
+ST_3: StgValue_57 (40)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:132
+.preheader5:13  br i1 %exitcond1, label %.loopexit.loopexit, label %.preheader4.preheader
+
+ST_3: tmp (42)  [1/1] 2.33ns  loc: lenet/lenet_hls.c:135
+.preheader4.preheader:0  %tmp = add i6 %i_cast, 5
+
+ST_3: tmp_cast (43)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:135
+.preheader4.preheader:1  %tmp_cast = zext i6 %tmp to i32
+
+ST_3: StgValue_60 (44)  [1/1] 1.59ns  loc: lenet/lenet_hls.c:136
+.preheader4.preheader:2  br label %.preheader4
+
+ST_3: StgValue_61 (110)  [1/1] 0.00ns
+.loopexit.loopexit:0  br label %.loopexit
+
+
+ <State 4>: 3.31ns
+ST_4: j (46)  [1/1] 0.00ns
+.preheader4:0  %j = phi i5 [ %w, %3 ], [ 0, %.preheader4.preheader ]
+
+ST_4: j_cast1 (47)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:136
+.preheader4:1  %j_cast1 = zext i5 %j to i32
+
+ST_4: j_cast1_cast (48)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:140
+.preheader4:2  %j_cast1_cast = zext i5 %j to i14
+
+ST_4: tmp_180 (49)  [1/1] 2.34ns  loc: lenet/lenet_hls.c:140
+.preheader4:3  %tmp_180 = add i14 %tmp_179, %j_cast1_cast
+
+ST_4: tmp_199_cast (50)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:140
+.preheader4:4  %tmp_199_cast = zext i14 %tmp_180 to i32
+
+ST_4: output_addr (51)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:140
+.preheader4:5  %output_addr = getelementptr [4704 x float]* %output_r, i32 0, i32 %tmp_199_cast
+
+ST_4: j_cast (52)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:136
+.preheader4:6  %j_cast = zext i5 %j to i6
+
+ST_4: exitcond (53)  [1/1] 3.31ns  loc: lenet/lenet_hls.c:133
+.preheader4:7  %exitcond = icmp eq i5 %j, -4
+
+ST_4: empty_84 (54)  [1/1] 0.00ns
+.preheader4:8  %empty_84 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 28, i64 28, i64 28)
+
+ST_4: w (55)  [1/1] 2.33ns  loc: lenet/lenet_hls.c:133
+.preheader4:9  %w = add i5 %j, 1
+
+ST_4: StgValue_72 (56)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:133
+.preheader4:10  br i1 %exitcond, label %.preheader5.loopexit, label %.preheader3.preheader
+
+ST_4: tmp_s (58)  [1/1] 2.33ns  loc: lenet/lenet_hls.c:136
+.preheader3.preheader:0  %tmp_s = add i6 %j_cast, 5
+
+ST_4: tmp_cast_85 (59)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:136
+.preheader3.preheader:1  %tmp_cast_85 = zext i6 %tmp_s to i32
+
+ST_4: StgValue_75 (60)  [1/1] 1.59ns  loc: lenet/lenet_hls.c:135
+.preheader3.preheader:2  br label %.preheader3
+
+ST_4: StgValue_76 (108)  [1/1] 0.00ns
+.preheader5.loopexit:0  br label %.preheader5
+
+
+ <State 5>: 5.22ns
+ST_5: i19 (62)  [1/1] 0.00ns
+.preheader3:0  %i19 = phi i32 [ %i_20, %2 ], [ %i_cast2, %.preheader3.preheader ]
+
+ST_5: m (63)  [1/1] 0.00ns
+.preheader3:1  %m = phi i32 [ %m_2, %2 ], [ 0, %.preheader3.preheader ]
+
+ST_5: sum (64)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:137
+.preheader3:2  %sum = phi float [ %sum_1, %2 ], [ 0.000000e+00, %.preheader3.preheader ]
+
+ST_5: tmp_181 (65)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:135
+.preheader3:3  %tmp_181 = trunc i32 %i19 to i7
+
+ST_5: tmp_201_cast (66)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:137
+.preheader3:4  %tmp_201_cast = call i12 @_ssdm_op_BitConcatenate.i12.i7.i5(i7 %tmp_181, i5 0)
+
+ST_5: tmp_182 (67)  [1/1] 2.90ns  loc: lenet/lenet_hls.c:137
+.preheader3:5  %tmp_182 = add i32 %tmp_191_cast, %m
+
+ST_5: tmp_183 (68)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:137
+.preheader3:6  %tmp_183 = trunc i32 %tmp_182 to i9
+
+ST_5: tmp_184 (69)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:137
+.preheader3:7  %tmp_184 = trunc i32 %tmp_182 to i7
+
+ST_5: p_shl5_cast (70)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:137
+.preheader3:8  %p_shl5_cast = call i9 @_ssdm_op_BitConcatenate.i9.i7.i2(i7 %tmp_184, i2 0)
+
+ST_5: tmp_185 (71)  [1/1] 2.32ns  loc: lenet/lenet_hls.c:137
+.preheader3:9  %tmp_185 = add i9 %tmp_183, %p_shl5_cast
+
+ST_5: tmp_23 (72)  [1/1] 3.26ns  loc: lenet/lenet_hls.c:135
+.preheader3:10  %tmp_23 = icmp slt i32 %i19, %tmp_cast
+
+ST_5: m_2 (73)  [1/1] 2.90ns  loc: lenet/lenet_hls.c:135
+.preheader3:11  %m_2 = add nsw i32 1, %m
+
+ST_5: StgValue_89 (74)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:135
+.preheader3:12  br i1 %tmp_23, label %.preheader.preheader, label %3
+
+ST_5: StgValue_90 (76)  [1/1] 1.59ns  loc: lenet/lenet_hls.c:137
+.preheader.preheader:0  br label %.preheader
+
+ST_5: conv1_b_load (103)  [2/2] 2.32ns  loc: lenet/lenet_hls.c:140
+:0  %conv1_b_load = load float* %conv1_b_addr, align 4
+
+
+ <State 6>: 5.58ns
+ST_6: j14 (78)  [1/1] 0.00ns
+.preheader:0  %j14 = phi i32 [ %j_15, %1 ], [ %j_cast1, %.preheader.preheader ]
+
+ST_6: n (79)  [1/1] 0.00ns
+.preheader:1  %n = phi i32 [ %n_2, %1 ], [ 0, %.preheader.preheader ]
+
+ST_6: sum_1 (80)  [1/1] 0.00ns
+.preheader:2  %sum_1 = phi float [ %sum_5, %1 ], [ %sum, %.preheader.preheader ]
+
+ST_6: tmp_186 (81)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:137
+.preheader:3  %tmp_186 = trunc i32 %j14 to i12
+
+ST_6: tmp_187 (82)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:137
+.preheader:4  %tmp_187 = trunc i32 %n to i9
+
+ST_6: tmp_188 (83)  [1/1] 2.33ns  loc: lenet/lenet_hls.c:137
+.preheader:5  %tmp_188 = add i12 %tmp_186, %tmp_201_cast
+
+ST_6: tmp_205_cast (84)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:137
+.preheader:6  %tmp_205_cast = zext i12 %tmp_188 to i32
+
+ST_6: input_0_addr (85)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:137
+.preheader:7  %input_0_addr = getelementptr [1024 x float]* %input_0, i32 0, i32 %tmp_205_cast
+
+ST_6: tmp_189 (86)  [1/1] 2.32ns  loc: lenet/lenet_hls.c:137
+.preheader:8  %tmp_189 = add i9 %tmp_187, %tmp_185
+
+ST_6: tmp_206_cast (87)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:137
+.preheader:9  %tmp_206_cast = zext i9 %tmp_189 to i32
+
+ST_6: conv1_w_0_addr (88)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:137
+.preheader:10  %conv1_w_0_addr = getelementptr [150 x float]* %conv1_w_0, i32 0, i32 %tmp_206_cast
+
+ST_6: tmp_25 (89)  [1/1] 3.26ns  loc: lenet/lenet_hls.c:136
+.preheader:11  %tmp_25 = icmp slt i32 %j14, %tmp_cast_85
+
+ST_6: n_2 (90)  [1/1] 2.90ns  loc: lenet/lenet_hls.c:136
+.preheader:12  %n_2 = add nsw i32 1, %n
+
+ST_6: StgValue_105 (91)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:136
+.preheader:13  br i1 %tmp_25, label %1, label %2
+
+ST_6: conv1_w_0_load (93)  [2/2] 3.25ns  loc: lenet/lenet_hls.c:137
+:0  %conv1_w_0_load = load float* %conv1_w_0_addr, align 4
+
+ST_6: input_0_load (94)  [2/2] 3.25ns  loc: lenet/lenet_hls.c:137
+:1  %input_0_load = load float* %input_0_addr, align 4
+
+ST_6: j_15 (97)  [1/1] 2.90ns  loc: lenet/lenet_hls.c:136
+:4  %j_15 = add nsw i32 %j14, 1
+
+ST_6: i_20 (100)  [1/1] 2.90ns  loc: lenet/lenet_hls.c:135
+:0  %i_20 = add nsw i32 %i19, 1
+
+ST_6: StgValue_110 (101)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:135
+:1  br label %.preheader3
+
+
+ <State 7>: 3.25ns
+ST_7: conv1_w_0_load (93)  [1/2] 3.25ns  loc: lenet/lenet_hls.c:137
+:0  %conv1_w_0_load = load float* %conv1_w_0_addr, align 4
+
+ST_7: input_0_load (94)  [1/2] 3.25ns  loc: lenet/lenet_hls.c:137
+:1  %input_0_load = load float* %input_0_addr, align 4
+
+
+ <State 8>: 5.70ns
+ST_8: tmp_26 (95)  [4/4] 5.70ns  loc: lenet/lenet_hls.c:137
+:2  %tmp_26 = fmul float %conv1_w_0_load, %input_0_load
+
+
+ <State 9>: 5.70ns
+ST_9: tmp_26 (95)  [3/4] 5.70ns  loc: lenet/lenet_hls.c:137
+:2  %tmp_26 = fmul float %conv1_w_0_load, %input_0_load
+
+
+ <State 10>: 5.70ns
+ST_10: tmp_26 (95)  [2/4] 5.70ns  loc: lenet/lenet_hls.c:137
+:2  %tmp_26 = fmul float %conv1_w_0_load, %input_0_load
+
+
+ <State 11>: 5.70ns
+ST_11: tmp_26 (95)  [1/4] 5.70ns  loc: lenet/lenet_hls.c:137
+:2  %tmp_26 = fmul float %conv1_w_0_load, %input_0_load
+
+
+ <State 12>: 7.26ns
+ST_12: sum_5 (96)  [5/5] 7.26ns  loc: lenet/lenet_hls.c:137
+:3  %sum_5 = fadd float %sum_1, %tmp_26
+
+
+ <State 13>: 7.26ns
+ST_13: sum_5 (96)  [4/5] 7.26ns  loc: lenet/lenet_hls.c:137
+:3  %sum_5 = fadd float %sum_1, %tmp_26
+
+
+ <State 14>: 7.26ns
+ST_14: sum_5 (96)  [3/5] 7.26ns  loc: lenet/lenet_hls.c:137
+:3  %sum_5 = fadd float %sum_1, %tmp_26
+
+
+ <State 15>: 7.26ns
+ST_15: sum_5 (96)  [2/5] 7.26ns  loc: lenet/lenet_hls.c:137
+:3  %sum_5 = fadd float %sum_1, %tmp_26
+
+
+ <State 16>: 7.26ns
+ST_16: sum_5 (96)  [1/5] 7.26ns  loc: lenet/lenet_hls.c:137
+:3  %sum_5 = fadd float %sum_1, %tmp_26
+
+ST_16: StgValue_122 (98)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:136
+:5  br label %.preheader
+
+
+ <State 17>: 2.32ns
+ST_17: conv1_b_load (103)  [1/2] 2.32ns  loc: lenet/lenet_hls.c:140
+:0  %conv1_b_load = load float* %conv1_b_addr, align 4
+
+
+ <State 18>: 7.26ns
+ST_18: tmp_24 (104)  [5/5] 7.26ns  loc: lenet/lenet_hls.c:140
+:1  %tmp_24 = fadd float %sum, %conv1_b_load
+
+
+ <State 19>: 7.26ns
+ST_19: tmp_24 (104)  [4/5] 7.26ns  loc: lenet/lenet_hls.c:140
+:1  %tmp_24 = fadd float %sum, %conv1_b_load
+
+
+ <State 20>: 7.26ns
+ST_20: tmp_24 (104)  [3/5] 7.26ns  loc: lenet/lenet_hls.c:140
+:1  %tmp_24 = fadd float %sum, %conv1_b_load
+
+
+ <State 21>: 7.26ns
+ST_21: tmp_24 (104)  [2/5] 7.26ns  loc: lenet/lenet_hls.c:140
+:1  %tmp_24 = fadd float %sum, %conv1_b_load
+
+
+ <State 22>: 7.26ns
+ST_22: tmp_24 (104)  [1/5] 7.26ns  loc: lenet/lenet_hls.c:140
+:1  %tmp_24 = fadd float %sum, %conv1_b_load
+
+
+ <State 23>: 3.25ns
+ST_23: StgValue_129 (105)  [1/1] 3.25ns  loc: lenet/lenet_hls.c:140
+:2  store float %tmp_24, float* %output_addr, align 4
+
+ST_23: StgValue_130 (106)  [1/1] 0.00ns  loc: lenet/lenet_hls.c:133
+:3  br label %.preheader4
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('co') with incoming values : ('co', lenet/lenet_hls.c:131) [7]  (1.59 ns)
+
+ <State 2>: 2.33ns
+The critical path consists of the following:
+	'phi' operation ('co') with incoming values : ('co', lenet/lenet_hls.c:131) [7]  (0 ns)
+	'add' operation ('tmp_175', lenet/lenet_hls.c:137) [13]  (2.33 ns)
+
+ <State 3>: 4.67ns
+The critical path consists of the following:
+	'phi' operation ('h') with incoming values : ('h', lenet/lenet_hls.c:132) [27]  (0 ns)
+	'add' operation ('tmp_178', lenet/lenet_hls.c:140) [30]  (2.32 ns)
+	'sub' operation ('tmp_179', lenet/lenet_hls.c:140) [35]  (2.34 ns)
+
+ <State 4>: 3.31ns
+The critical path consists of the following:
+	'phi' operation ('w') with incoming values : ('w', lenet/lenet_hls.c:133) [46]  (0 ns)
+	'icmp' operation ('exitcond', lenet/lenet_hls.c:133) [53]  (3.31 ns)
+
+ <State 5>: 5.22ns
+The critical path consists of the following:
+	'phi' operation ('m') with incoming values : ('m', lenet/lenet_hls.c:135) [63]  (0 ns)
+	'add' operation ('tmp_182', lenet/lenet_hls.c:137) [67]  (2.9 ns)
+	'add' operation ('tmp_185', lenet/lenet_hls.c:137) [71]  (2.32 ns)
+
+ <State 6>: 5.58ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j_cast1', lenet/lenet_hls.c:136) ('j', lenet/lenet_hls.c:136) [78]  (0 ns)
+	'add' operation ('tmp_188', lenet/lenet_hls.c:137) [83]  (2.33 ns)
+	'getelementptr' operation ('input_0_addr', lenet/lenet_hls.c:137) [85]  (0 ns)
+	'load' operation ('input_0_load', lenet/lenet_hls.c:137) on array 'input_0' [94]  (3.25 ns)
+
+ <State 7>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('conv1_w_0_load', lenet/lenet_hls.c:137) on array 'conv1_w_0' [93]  (3.25 ns)
+
+ <State 8>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_26', lenet/lenet_hls.c:137) [95]  (5.7 ns)
+
+ <State 9>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_26', lenet/lenet_hls.c:137) [95]  (5.7 ns)
+
+ <State 10>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_26', lenet/lenet_hls.c:137) [95]  (5.7 ns)
+
+ <State 11>: 5.7ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_26', lenet/lenet_hls.c:137) [95]  (5.7 ns)
+
+ <State 12>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', lenet/lenet_hls.c:137) [96]  (7.26 ns)
+
+ <State 13>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', lenet/lenet_hls.c:137) [96]  (7.26 ns)
+
+ <State 14>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', lenet/lenet_hls.c:137) [96]  (7.26 ns)
+
+ <State 15>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', lenet/lenet_hls.c:137) [96]  (7.26 ns)
+
+ <State 16>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('sum', lenet/lenet_hls.c:137) [96]  (7.26 ns)
+
+ <State 17>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('conv1_b_load', lenet/lenet_hls.c:140) on array 'conv1_b' [103]  (2.32 ns)
+
+ <State 18>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_24', lenet/lenet_hls.c:140) [104]  (7.26 ns)
+
+ <State 19>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_24', lenet/lenet_hls.c:140) [104]  (7.26 ns)
+
+ <State 20>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_24', lenet/lenet_hls.c:140) [104]  (7.26 ns)
+
+ <State 21>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_24', lenet/lenet_hls.c:140) [104]  (7.26 ns)
+
+ <State 22>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_24', lenet/lenet_hls.c:140) [104]  (7.26 ns)
+
+ <State 23>: 3.25ns
+The critical path consists of the following:
+	'store' operation (lenet/lenet_hls.c:140) of variable 'tmp_24', lenet/lenet_hls.c:140 on array 'output_r' [105]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
