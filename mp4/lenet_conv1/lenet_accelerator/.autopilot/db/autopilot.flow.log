@@ -1,0 +1,376 @@
+INFO: [HLS 200-0] Workspace C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator opened at Thu Nov 08 06:39:55 -0600 2018
+INFO: [HLS 200-100] Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-100] Command     config_clock returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     open_platform DefaultPlatform 
+INFO: [HLS 200-100] Command     open_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     import_lib C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq 
+INFO: [HLS 200-100] Execute       source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.lib 
+INFO: [HLS 200-100] Execute         source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.lib 
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.lib 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute         source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute       source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_old.lib 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute       source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_vivado.lib 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute       source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
+INFO: [HLS 200-100] Execute         source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/target_info.tcl 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute         source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute         source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.004 sec.
+INFO: [HLS 200-100] Execute       source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       get_default_platform 
+INFO: [HLS 200-100] Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+INFO: [HLS 200-100] Command       config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       config_chip_info -quiet -speed medium 
+INFO: [HLS 200-100] Command       config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
+INFO: [HLS 200-100] Execute         source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/target_info.tcl 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.004 sec.
+INFO: [HLS 200-100] Execute         source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute         source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.007 sec.
+INFO: [HLS 200-100] Command     import_lib returned 0; 0.032 sec.
+INFO: [HLS 200-100] Execute     source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq.gen 
+INFO: [HLS 200-100] Execute       source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/virtex.gen 
+INFO: [HLS 200-100] Execute         source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.gen 
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/plb46.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/fsl.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/axi4.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/nativeAXI4.gen 
+INFO: [HLS 200-100] Execute             source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.004 sec.
+INFO: [HLS 200-100] Execute             source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.gen 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0.007 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.013 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.01 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.008 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/dds_compiler.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/util.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfft.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.095 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/ip/xfir.gen 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.139 sec.
+INFO: [HLS 200-100] Execute         source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.gen 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.142 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.142 sec.
+INFO: [HLS 200-100] Execute     open_platform DefaultPlatform 
+INFO: [HLS 200-100] Command     open_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     import_lib C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_fpv6 
+INFO: [HLS 200-100] Execute       source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+INFO: [HLS 200-100] Execute         source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_hp.lib 
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.005 sec.
+INFO: [HLS 200-100] Execute       source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+INFO: [HLS 200-100] Execute         source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx.hlp 
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/target_info.tcl 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.028 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+INFO: [HLS 200-100] Execute             source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/maxi.hlp 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Execute             source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/interface/saxilite.hlp 
+INFO: [HLS 200-100] Command             ap_source returned 0; 0 sec.
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute           source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/dsp48.hlp 
+INFO: [HLS 200-100] Command           ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command         ap_source returned 0; 0.033 sec.
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.034 sec.
+INFO: [HLS 200-100] Execute       source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_hp.hlp 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Command     import_lib returned 0; 0.05 sec.
+INFO: [HLS 200-100] Execute     source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+INFO: [HLS 200-100] Execute       source C:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Command     ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-100] Execute     set_part xc7z020clg484-1 
+INFO: [HLS 200-100] Execute       add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+INFO: [HLS 200-100] Execute         get_default_platform 
+INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         license_isbetapart xc7z020 
+INFO: [HLS 200-100] Command         license_isbetapart returned 1; 0.017 sec.
+INFO: [HLS 200-100] Execute         get_default_platform 
+INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+INFO: [HLS 200-100] Command         config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute         config_chip_info -quiet -speed slow 
+INFO: [HLS 200-100] Command         config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Command       add_library returned 0; 0.035 sec.
+INFO: [HLS 200-100] Execute       add_library xilinx/zynq/zynq_fpv6 
+INFO: [HLS 200-100] Execute         get_default_platform 
+INFO: [HLS 200-100] Command         get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Command       add_library returned 0; 0.006 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [HLS 200-100] Execute       get_default_platform 
+INFO: [HLS 200-100] Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Command     set_part returned 0; 0.111 sec.
+INFO: [HLS 200-100] Execute     get_default_platform 
+INFO: [HLS 200-100] Command     get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+INFO: [HLS 200-100] Command     config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute     config_chip_info -quiet -speed slow 
+INFO: [HLS 200-100] Command     config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Command   open_solution returned 0; 0.403 sec.
+INFO: [HLS 200-100] Execute   set_part xc7z020clg484-1 
+INFO: [HLS 200-100] Execute     add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+INFO: [HLS 200-100] Execute       get_default_platform 
+INFO: [HLS 200-100] Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       license_isbetapart xc7z020 
+INFO: [HLS 200-100] Command       license_isbetapart returned 1; 0 sec.
+INFO: [HLS 200-100] Execute       get_default_platform 
+INFO: [HLS 200-100] Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+INFO: [HLS 200-100] Command       config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       config_chip_info -quiet -speed slow 
+INFO: [HLS 200-100] Command       config_chip_info returned 0; 0 sec.
+INFO: [HLS 200-100] Command     add_library returned 0; 0.012 sec.
+INFO: [HLS 200-100] Execute     add_library xilinx/zynq/zynq_fpv6 
+INFO: [HLS 200-100] Execute       get_default_platform 
+INFO: [HLS 200-100] Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Command     add_library returned 0; 0.003 sec.
+INFO: [HLS 200-100] Execute     get_default_platform 
+INFO: [HLS 200-100] Command     get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-100] Command   set_part returned 0; 0.056 sec.
+INFO: [HLS 200-100] Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-100] Command   create_clock returned 0; 0.008 sec.
+INFO: [HLS 200-100] Execute   csynth_design 
+INFO: [HLS 200-100] Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 
+WARNING: [HLS 200-40] Skipped source file 'images.bin'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+WARNING: [HLS 200-40] Skipped source file 'labels.bin'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'lenet/lenet_hls.c' ... 
+INFO: [HLS 200-0] Compiling one TU...
+INFO: [HLS 200-100] Execute       is_m_axi_addr64 
+INFO: [HLS 200-100] Command       is_m_axi_addr64 returned 0; 0 sec.
+INFO: [HLS 200-0] Handling lenet/lenet_hls.c as C
+INFO: [HLS 200-0] Syntax Checking before pre-processing...
+INFO: [HLS 200-100] Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado_HLS/2017.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot" -I "C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__cdecl=  "lenet/lenet_hls.c"  -o "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pp.00.o" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado_HLS/2017.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot -I C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__cdecl= lenet/lenet_hls.c -o C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pp.00.o
+INFO: [HLS 200-100] Command       clang returned 0; 0.238 sec.
+INFO: [HLS 200-100] Execute       is_encrypted C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pp.00.o 
+INFO: [HLS 200-100] Command       is_encrypted returned 0; 0.001 sec.
+INFO: [HLS 200-0] Source preprocessing
+INFO: [HLS 200-100] Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado_HLS/2017.2/msys" -hls -fno-exceptions  -D__llvm__  -CC -E "lenet/lenet_hls.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot" -I "C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__cdecl=  -o "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pp.0.c" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado_HLS/2017.2/msys -hls -fno-exceptions -D__llvm__ -CC -E lenet/lenet_hls.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot -I C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__cdecl= -o C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pp.0.c
+INFO: [HLS 200-100] Command       clang returned 0; 0.267 sec.
+INFO: [HLS 200-0] GCC PP time: 0 seconds per iteration
+INFO: [HLS 200-100] Execute       list_core -type functional_unit 
+INFO: [HLS 200-100] Command       list_core returned 0; 0 sec.
+INFO: [HLS 200-0] CDT Preprocessing...
+INFO: [HLS 200-0] Marker-Pragma convertor: C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pp.0.c C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pp.0.c.ap-line.c C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pp.0.c.ap-line.c.CXX 1
+INFO: [HLS 200-0] Converting Markers to Pragmas...
+INFO: [HLS 200-100] Execute       cdt  "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pp.0.c.ap-line.c"  -m "convolution1" -o "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pp.0.c.ap-cdt.c" -c --pp --directive C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/lenet_accelerator.directive --source C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet/lenet_hls.c --error C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_fulldsp HAddSub_meddsp HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ca --gf --pd --p2d C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db --sd --scff C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/.systemc_flag --ad 
+INFO: [HLS 200-100] Command       cdt returned 0; 0.827 sec.
+INFO: [HLS 200-0] Marker-Pragma convertor: C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pp.0.c.ap-cdt.c C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pragma.0.c C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pragma.0.c.ap-line.CXX 0
+INFO: [HLS 200-0] Converting Pragmas to Markers...
+INFO: [HLS 200-100] Execute       source C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/pragma.status.tcl 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-0] Pragma Handling...
+INFO: [HLS 200-0] Source preprocessing
+INFO: [HLS 200-100] Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado_HLS/2017.2/msys" -hls -fno-exceptions  -D__llvm__  -CC -E "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pragma.1.c"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89   -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot" -I "C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__cdecl=  -o "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pragma.2.c" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado_HLS/2017.2/msys -hls -fno-exceptions -D__llvm__ -CC -E C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pragma.1.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot -I C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__cdecl= -o C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pragma.2.c
+INFO: [HLS 200-100] Command       clang returned 0; 0.262 sec.
+INFO: [HLS 200-0] Processing labels
+INFO: [HLS 200-100] Execute       clang  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado_HLS/2017.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pragma.2.c"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -std=gnu89  -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot" -I "C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.g.bc" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado_HLS/2017.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.pragma.2.c -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -std=gnu89 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot -I C:/Xilinx/Vivado_HLS/2017.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -g -o C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.g.bc
+INFO: [HLS 200-100] Command       clang returned 0; 0.235 sec.
+WARNING: [HLS 200-40] Skipped source file 'params.bin'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-100] Execute       source C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/pragma.status.tcl 
+INFO: [HLS 200-100] Command       ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 96.191 ; gain = 46.711
+INFO: [HLS 200-0] Linking Release ...
+INFO: [HLS 200-100] Execute       llvm-ld C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.bc -disable-opt -LC:/Xilinx/Vivado_HLS/2017.2/win64/lib -lm_basic -o C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o 
+INFO: [HLS 200-100] Command       llvm-ld returned 0; 0.183 sec.
+INFO: [HLS 200-100] Execute       disassemble C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o 
+INFO: [HLS 200-100] Execute         is_encrypted C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o.bc 
+INFO: [HLS 200-100] Command         is_encrypted returned 0; 0 sec.
+INFO: [HLS 200-100] Command       disassemble returned 0; 0.054 sec.
+INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
+INFO: [HLS 200-0] Linking Debug ...
+INFO: [HLS 200-100] Execute       llvm-ld C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/lenet_hls.g.bc -disable-opt -LC:/Xilinx/Vivado_HLS/2017.2/win64/lib -lm_basic -o C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.g 
+INFO: [HLS 200-100] Command       llvm-ld returned 0; 0.2 sec.
+INFO: [HLS 200-100] Execute       disassemble C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.g C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.g 
+INFO: [HLS 200-100] Execute         is_encrypted C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.g.bc 
+INFO: [HLS 200-100] Command         is_encrypted returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command       disassemble returned 0; 0.03 sec.
+INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 96.215 ; gain = 46.734
+INFO: [HLS 200-100] Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+INFO: [HLS 200-100] Execute         cleanup_all_models 
+INFO: [HLS 200-100] Command         cleanup_all_models returned 0; 0 sec.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-100] Execute         transform -promote-dbg-pointer C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.pp.bc -o C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.pp.0.bc -f 
+INFO: [HLS 200-100] Command         transform returned 0; 0.009 sec.
+INFO: [HLS 200-100] Execute         llvm-ld C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado_HLS/2017.2/win64/lib -lfloatconversion -o C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.g.0 
+INFO: [HLS 200-100] Command         llvm-ld returned 0; 0.14 sec.
+INFO: [HLS 200-0] Running Standard Transforms...
+INFO: [HLS 200-100] Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top convolution1 -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.g.0.bc -o C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (lenet/lenet_hls.c:24) in function 'convolution1': changing partial unrolling into complete unrolling since the unrolling factor (=32) is no less than the loop trip count (=32).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1' (lenet/lenet_hls.c:33) in function 'convolution1': changing partial unrolling into complete unrolling since the unrolling factor (=5) is no less than the loop trip count (=5).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (lenet/lenet_hls.c:40) in function 'convolution1': changing partial unrolling into complete unrolling since the unrolling factor (=6) is no less than the loop trip count (=6).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5.1.1' (lenet/lenet_hls.c:64) in function 'convolution1': changing partial unrolling into complete unrolling since the unrolling factor (=28) is no less than the loop trip count (=28).
+INFO: [HLS 200-100] Command         transform returned 0; 0.049 sec.
+INFO: [HLS 200-100] Execute         disassemble C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.g.1 C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.g.1 
+INFO: [HLS 200-100] Execute           is_encrypted C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.g.1.bc 
+INFO: [HLS 200-100] Command           is_encrypted returned 0; 0 sec.
+INFO: [HLS 200-100] Command         disassemble returned 0; 0.054 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 98.520 ; gain = 49.039
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-0] Checking Synthesizability 1/2..
+INFO: [HLS 200-100] Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.g.1.bc -o C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [HLS 200-100] Command         transform returned 0; 0.105 sec.
+INFO: [HLS 200-0] Checking Synthesizability 2/2..
+INFO: [HLS 200-100] Execute         transform -syn-check C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.g.2.prechk.bc -o C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-100] Command         transform returned 0; 0.009 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 98.520 ; gain = 49.039
+INFO: [HLS 200-0] Compiler optimizing ...
+INFO: [HLS 200-0] Share syncheck's 1.bc for syn flow: copy C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.g.1.bc to C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o.1.bc
+INFO: [HLS 200-0] Presyn 1...
+INFO: [HLS 200-100] Execute         transform -hls -tmp C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -simplifycfg -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o.1.bc -o C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (lenet/lenet_hls.c:22) in function 'convolution1' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-1.1' (lenet/lenet_hls.c:24) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2' (lenet/lenet_hls.c:30) in function 'convolution1' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-2.1.1' (lenet/lenet_hls.c:33) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-5' (lenet/lenet_hls.c:61) in function 'convolution1' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-5.1.1' (lenet/lenet_hls.c:64) because its parent loop or function is pipelined.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (lenet/lenet_hls.c:40) in function 'convolution1': changing partial unrolling into complete unrolling since the unrolling factor (=6) is no less than the loop trip count (=6).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (lenet/lenet_hls.c:24) in function 'convolution1' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1' (lenet/lenet_hls.c:32) in function 'convolution1' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1' (lenet/lenet_hls.c:33) in function 'convolution1' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (lenet/lenet_hls.c:40) in function 'convolution1' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5.1' (lenet/lenet_hls.c:63) in function 'convolution1' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5.1.1' (lenet/lenet_hls.c:64) in function 'convolution1' completely.
+INFO: [XFORM 203-102] Partitioning array 'c1_i' (lenet/lenet_hls.c:12) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'c1_w' (lenet/lenet_hls.c:13) in dimension 2 automatically.
+INFO: [HLS 200-100] Command         transform returned 0; 3.133 sec.
+INFO: [HLS 200-0] Presyn 2...
+INFO: [HLS 200-100] Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o.1.tmp.bc -o C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [HLS 200-100] Command         transform returned 0; 0.79 sec.
+INFO: [HLS 200-100] Execute         disassemble C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o.2 C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o.2 
+INFO: [HLS 200-100] Execute           is_encrypted C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o.2.bc 
+INFO: [HLS 200-100] Command           is_encrypted returned 0; 0 sec.
+INFO: [HLS 200-100] Command         disassemble returned 0; 0.067 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 127.926 ; gain = 78.445
+INFO: [HLS 200-0] Building ssdm...
+INFO: [HLS 200-100] Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -interface-preproc -interface-gen -deadargelim -directive-preproc -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -read-loop-dep -dce -bitwidth -loop-dep -norm-name -legalize -validate-dataflow -cdfg-build C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o.2.bc -o C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-811] Inferring bus burst read of length 6 on port 'DATA_C' (lenet/lenet_hls.c:42:2).
+INFO: [HLS 200-100] Command         transform returned 0; 17.901 sec.
+INFO: [HLS 200-100] Execute         disassemble C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o.3 C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o.3 
+INFO: [HLS 200-100] Execute           is_encrypted C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/.autopilot/db/a.o.3.bc 
+INFO: [HLS 200-100] Command           is_encrypted returned 0; 0.001 sec.
+INFO: [HLS 200-100] Command         disassemble returned 0; 0.06 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 166.984 ; gain = 117.504
+INFO: [HLS 200-0] Finish building internal data model.
+INFO: [HLS 200-100] Command       opt_and_import_c returned 0; 22.444 sec.
+INFO: [HLS 200-100] Command     elaborate returned 0; 24.951 sec.
+INFO: [HLS 200-100] Execute     autosyn 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-0] Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'convolution1' ...
+INFO: [HLS 200-100] Execute       ap_set_top_model convolution1 
+INFO: [HLS 200-100] Command       ap_set_top_model returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute       get_model_list convolution1 -filter all-wo-channel -topdown 
+INFO: [HLS 200-100] Command       get_model_list returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       preproc_iomode -model convolution1 
+INFO: [HLS 200-100] Command       preproc_iomode returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       get_model_list convolution1 -filter all-wo-channel 
+INFO: [HLS 200-100] Command       get_model_list returned 0; 0.001 sec.
+INFO: [HLS 200-0] Model list for configure: convolution1
+INFO: [HLS 200-0] Configuring Module : convolution1 ...
+INFO: [HLS 200-100] Execute       set_default_model convolution1 
+INFO: [HLS 200-100] Command       set_default_model returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       apply_spec_resource_limit convolution1 
+INFO: [HLS 200-100] Command       apply_spec_resource_limit returned 0; 0.001 sec.
+INFO: [HLS 200-0] Model list for preprocess: convolution1
+INFO: [HLS 200-0] Preprocessing Module: convolution1 ...
+INFO: [HLS 200-100] Execute       set_default_model convolution1 
+INFO: [HLS 200-100] Command       set_default_model returned 0; 0 sec.
+INFO: [HLS 200-100] Execute       cdfg_preprocess -model convolution1 
+INFO: [HLS 200-100] Command       cdfg_preprocess returned 0; 16.955 sec.
+INFO: [HLS 200-100] Execute       rtl_gen_preprocess convolution1 
+WARNING: [SYN 201-107] Renaming port name 'convolution1/input' to 'convolution1/input_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'convolution1/output' to 'convolution1/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-100] Command       rtl_gen_preprocess returned 0; 0.001 sec.
+INFO: [HLS 200-0] Model list for synthesis: convolution1
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'convolution1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-100] Execute       set_default_model convolution1 
+INFO: [HLS 200-100] Command       set_default_model returned 0; 0.001 sec.
+INFO: [HLS 200-100] Execute       schedule -model convolution1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between bus request on port 'DATA_A' (lenet/lenet_hls.c:26) and bus request on port 'DATA_A' (lenet/lenet_hls.c:26).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between bus request on port 'DATA_A' (lenet/lenet_hls.c:26) and bus request on port 'DATA_A' (lenet/lenet_hls.c:26).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between bus request on port 'DATA_A' (lenet/lenet_hls.c:26) and bus request on port 'DATA_A' (lenet/lenet_hls.c:26).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between bus request on port 'DATA_A' (lenet/lenet_hls.c:26) and bus request on port 'DATA_A' (lenet/lenet_hls.c:26).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1)
+   between bus request on port 'DATA_A' (lenet/lenet_hls.c:26) and bus request on port 'DATA_A' (lenet/lenet_hls.c:26).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 27, distance = 1, offset = 1)
+   between bus request on port 'DATA_A' (lenet/lenet_hls.c:26) and bus request on port 'DATA_A' (lenet/lenet_hls.c:26).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 31, distance = 1, offset = 1)
+   between bus request on port 'DATA_A' (lenet/lenet_hls.c:26) and bus request on port 'DATA_A' (lenet/lenet_hls.c:26).
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 32, Depth: 41.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between bus request on port 'DATA_B' (lenet/lenet_hls.c:35) and bus request on port 'DATA_B' (lenet/lenet_hls.c:35).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between bus request on port 'DATA_B' (lenet/lenet_hls.c:35) and bus request on port 'DATA_B' (lenet/lenet_hls.c:35).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between bus request on port 'DATA_B' (lenet/lenet_hls.c:35) and bus request on port 'DATA_B' (lenet/lenet_hls.c:35).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between bus request on port 'DATA_B' (lenet/lenet_hls.c:35) and bus request on port 'DATA_B' (lenet/lenet_hls.c:35).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1)
+   between bus request on port 'DATA_B' (lenet/lenet_hls.c:35) and bus request on port 'DATA_B' (lenet/lenet_hls.c:35).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 23, distance = 1, offset = 1)
+   between bus request on port 'DATA_B' (lenet/lenet_hls.c:35) and bus request on port 'DATA_B' (lenet/lenet_hls.c:35).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 24, distance = 1, offset = 1)
+   between bus request on port 'DATA_B' (lenet/lenet_hls.c:35) and bus request on port 'DATA_B' (lenet/lenet_hls.c:35).
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 25, Depth: 34.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 4'.
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constr
