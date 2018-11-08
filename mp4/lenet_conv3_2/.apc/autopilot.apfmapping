@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="lenet_hls.c" path="C:\Users\anges\Documents\UIUC\ECE_527\ece527\mp4\lenet_conv3_2\lenet_hls.c"/>
+    <originFiles name="lenet_hls.h" path="C:\Users\anges\Documents\UIUC\ECE_527\ece527\mp4\lenet_conv3_2\lenet_hls.h"/>
+  </source>
+  <testbench>
+    <originFiles name="lenet_tb.c" path="C:\Users\anges\Documents\UIUC\ECE_527\ece527\mp4\lenet_conv3_2\lenet_tb.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

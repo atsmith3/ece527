@@ -83,15 +83,15 @@ proc check_tvin_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "c.fc6.autotvin_DATA_A.dat"
-         "c.fc6.autotvin_DATA_B.dat"
-         "c.fc6.autotvin_DATA_C.dat"
-         "c.fc6.autotvin_input_r.dat"
-         "c.fc6.autotvin_weights.dat"
-         "c.fc6.autotvin_bias.dat"
-         "c.fc6.autotvin_output_r.dat"
-         "c.fc6.autotvout_DATA_D.dat"
-         "c.fc6.autotvout_ap_return.dat"
+         "c.convolution1.autotvin_DATA_A.dat"
+         "c.convolution1.autotvin_DATA_B.dat"
+         "c.convolution1.autotvin_DATA_C.dat"
+         "c.convolution1.autotvin_input_r.dat"
+         "c.convolution1.autotvin_weights.dat"
+         "c.convolution1.autotvin_bias.dat"
+         "c.convolution1.autotvin_output_r.dat"
+         "c.convolution1.autotvout_DATA_D.dat"
+         "c.convolution1.autotvout_ap_return.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {
@@ -116,8 +116,8 @@ proc check_tvout_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "rtl.fc6.autotvout_DATA_D.dat"
-         "rtl.fc6.autotvout_ap_return.dat"
+         "rtl.convolution1.autotvout_DATA_D.dat"
+         "rtl.convolution1.autotvout_ap_return.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {

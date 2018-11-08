@@ -1,0 +1,19 @@
+   Build using "C:/Xilinx/Vivado_HLS/2017.2/msys/bin/g++.exe"
+   Compiling apatb_convolution3.cpp
+   Compiling (apcc) lenet_hls.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'anges' on host 'laptop-qdoqh21e' (Windows NT_amd64 version 6.2) on Thu Nov 08 12:21:43 -0600 2018
+INFO: [HLS 200-10] In directory 'C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv3_2/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) lenet_tb.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'c:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'anges' on host 'laptop-qdoqh21e' (Windows NT_amd64 version 6.2) on Thu Nov 08 12:21:48 -0600 2018
+INFO: [HLS 200-10] In directory 'C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv3_2/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe

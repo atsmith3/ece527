@@ -62,8 +62,8 @@ module AESL_axi_master_DATA_B (
     );
 
 //------------------------Parameter----------------------
-`define TV_IN_DATA_B "../tv/cdatafile/c.fc6.autotvin_DATA_B.dat"
-`define TV_OUT_DATA_B "../tv/rtldatafile/rtl.fc6.autotvout_DATA_B.dat"
+`define TV_IN_DATA_B "../tv/cdatafile/c.convolution1.autotvin_DATA_B.dat"
+`define TV_OUT_DATA_B "../tv/rtldatafile/rtl.convolution1.autotvout_DATA_B.dat"
  parameter DATA_B_ADDR_BITWIDTH = 32'd 32;
  parameter DATA_B_AWUSER_BITWIDTH = 32'd 1;
  parameter DATA_B_DATA_BITWIDTH = 32'd 32;
@@ -72,10 +72,10 @@ module AESL_axi_master_DATA_B (
  parameter DATA_B_RUSER_BITWIDTH = 32'd 1;
  parameter DATA_B_BUSER_BITWIDTH = 32'd 1;
  parameter   FIFO_DEPTH            =   1 + 1;
- parameter   mem_page_num            =   32'd 3;
+ parameter   mem_page_num            =   32'd 4;
  parameter   FIFO_DEPTH_ADDR_WIDTH   =    32'd 32;
 parameter DATA_B_C_DATA_BITWIDTH = 32'd 32;
-parameter DATA_B_mem_depth = 32'd 1200;
+parameter DATA_B_mem_depth = 32'd 150;
 parameter ReadReqLatency = 32'd 1;
 parameter WriteReqLatency = 32'd 1;
 // Input and Output
@@ -200,6 +200,7 @@ reg [32 - 1 : 0] weights = 0;
 reg [DATA_B_DATA_BITWIDTH - 1 : 0] DATA_B_mem_0 [0: DATA_B_mem_depth - 1]; 
 reg [DATA_B_DATA_BITWIDTH - 1 : 0] DATA_B_mem_1 [0: DATA_B_mem_depth - 1]; 
 reg [DATA_B_DATA_BITWIDTH - 1 : 0] DATA_B_mem_2 [0: DATA_B_mem_depth - 1]; 
+reg [DATA_B_DATA_BITWIDTH - 1 : 0] DATA_B_mem_3 [0: DATA_B_mem_depth - 1]; 
 reg [31 : 0] clk_counter ;
 reg [31 : 0] current_AW_req_transaction = 0 ;
 reg [31 : 0] current_AR_req_transaction = -1 ;
@@ -234,6 +235,7 @@ initial begin : initialize_DATA_B_mem
       DATA_B_mem_0[i] = 0;
       DATA_B_mem_1[i] = 0;
       DATA_B_mem_2[i] = 0;
+      DATA_B_mem_3[i] = 0;
   end
 end
 
@@ -505,7 +507,7 @@ initial begin : AW_request_proc
             end
             
             if (FIFO_AW_req_ADDR_tmp/data_byte_size > DATA_B_mem_depth) begin
-                $display ("C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_fcl/lenet_accelerator/sim/verilog/AESL_axi_master_DATA_B.v: Write request address %d exceed AXI master DATA_B array depth: %d",FIFO_AW_req_ADDR_tmp/data_byte_size, DATA_B_mem_depth); 
+                $display ("C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/sim/verilog/AESL_axi_master_DATA_B.v: Write request address %d exceed AXI master DATA_B array depth: %d",FIFO_AW_req_ADDR_tmp/data_byte_size, DATA_B_mem_depth); 
                 $finish;
             end
             
@@ -532,6 +534,7 @@ initial begin : AW_request_proc
                                         0 : WDATA_tmp[j] = DATA_B_mem_0[FIFO_AW_req_ADDR_tmp / data_byte_size + counter][j];
                                         1 : WDATA_tmp[j] = DATA_B_mem_1[FIFO_AW_req_ADDR_tmp / data_byte_size + counter][j];
                                         2 : WDATA_tmp[j] = DATA_B_mem_2[FIFO_AW_req_ADDR_tmp / data_byte_size + counter][j];
+                                        3 : WDATA_tmp[j] = DATA_B_mem_3[FIFO_AW_req_ADDR_tmp / data_byte_size + counter][j];
                                         default: $display("The page_num of AXI write is not valid!");
                                     endcase
                                 end
@@ -545,6 +548,7 @@ initial begin : AW_request_proc
                             0 : DATA_B_mem_0[FIFO_AW_req_ADDR_tmp / data_byte_size + counter] <= WDATA_tmp;
                             1 : DATA_B_mem_1[FIFO_AW_req_ADDR_tmp / data_byte_size + counter] <= WDATA_tmp;
                             2 : DATA_B_mem_2[FIFO_AW_req_ADDR_tmp / data_byte_size + counter] <= WDATA_tmp;
+                            3 : DATA_B_mem_3[FIFO_AW_req_ADDR_tmp / data_byte_size + counter] <= WDATA_tmp;
                             default: $display("The page_num of AXI write is not valid!");
                         endcase
                         if (counter === output_length && FIFO_WDATA_size_empty != 1 ) begin
@@ -591,6 +595,7 @@ initial begin : AW_request_proc
                                         0 : WDATA_tmp[j] = DATA_B_mem_0[FIFO_AW_req_ADDR_tmp / data_byte_size][j];
                                         1 : WDATA_tmp[j] = DATA_B_mem_1[FIFO_AW_req_ADDR_tmp / data_byte_size][j];
                                         2 : WDATA_tmp[j] = DATA_B_mem_2[FIFO_AW_req_ADDR_tmp / data_byte_size][j];
+                                        3 : WDATA_tmp[j] = DATA_B_mem_3[FIFO_AW_req_ADDR_tmp / data_byte_size][j];
                                         default: $display("The page_num of AXI write is not valid!");
                                     endcase
                                 end
@@ -604,6 +609,7 @@ initial begin : AW_request_proc
                             0 : DATA_B_mem_0[FIFO_AW_req_ADDR_tmp / data_byte_size] <= WDATA_tmp;
                             1 : DATA_B_mem_1[FIFO_AW_req_ADDR_tmp / data_byte_size] <= WDATA_tmp;
                             2 : DATA_B_mem_2[FIFO_AW_req_ADDR_tmp / data_byte_size] <= WDATA_tmp;
+                            3 : DATA_B_mem_3[FIFO_AW_req_ADDR_tmp / data_byte_size] <= WDATA_tmp;
                             default: $display("The page_num of AXI write is not valid!");
                         endcase
                         if (FIFO_WDATA_size_empty != 1 ) begin
@@ -685,7 +691,7 @@ initial begin : AR_request_proc
             end
 
             if (FIFO_AR_req_ADDR_tmp/data_byte_size > DATA_B_mem_depth) begin
-                $display ("C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_fcl/lenet_accelerator/sim/verilog/AESL_axi_master_DATA_B.v: Read request address %d exceed AXI master DATA_B array depth: %d",FIFO_AR_req_ADDR_tmp/data_byte_size, DATA_B_mem_depth); 
+                $display ("C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_accelerator/sim/verilog/AESL_axi_master_DATA_B.v: Read request address %d exceed AXI master DATA_B array depth: %d",FIFO_AR_req_ADDR_tmp/data_byte_size, DATA_B_mem_depth); 
                 $finish;
             end
 
@@ -703,6 +709,7 @@ initial begin : AR_request_proc
                             0 : RDATA_tmp <= DATA_B_mem_0[FIFO_AR_req_ADDR_tmp / data_byte_size +   counter] ;
                             1 : RDATA_tmp <= DATA_B_mem_1[FIFO_AR_req_ADDR_tmp / data_byte_size +   counter] ;
                             2 : RDATA_tmp <= DATA_B_mem_2[FIFO_AR_req_ADDR_tmp / data_byte_size +   counter] ;
+                            3 : RDATA_tmp <= DATA_B_mem_3[FIFO_AR_req_ADDR_tmp / data_byte_size +   counter] ;
                             default: $display("The page_num of AXI read is not valid!");
                         endcase
                     RVALID_tmp <= 1;
@@ -734,6 +741,7 @@ initial begin : AR_request_proc
                             0 : RDATA_tmp <= DATA_B_mem_0[FIFO_AR_req_ADDR_tmp / data_byte_size ] ;
                             1 : RDATA_tmp <= DATA_B_mem_1[FIFO_AR_req_ADDR_tmp / data_byte_size ] ;
                             2 : RDATA_tmp <= DATA_B_mem_2[FIFO_AR_req_ADDR_tmp / data_byte_size ] ;
+                            3 : RDATA_tmp <= DATA_B_mem_3[FIFO_AR_req_ADDR_tmp / data_byte_size ] ;
                             default: $display("The page_num of AXI read is not valid!");
                         endcase
                     RVALID_tmp <= 1;
@@ -868,7 +876,7 @@ initial begin : read_file_process
       end
       mem_page = transaction_num % mem_page_num ;
       mem_tmp [DATA_B_DATA_BITWIDTH - 1: 0] = 0;
-      for(i = 0; i < 1200 ; i = i + 1) begin 
+      for(i = 0; i < 150 ; i = i + 1) begin 
           token = read_token(fp);
           ret = $sscanf(token, "0x%x", token_tmp); 
           if (factor == 4) begin
@@ -887,6 +895,7 @@ initial begin : read_file_process
                       0 : DATA_B_mem_0[i/factor] = mem_tmp;
                       1 : DATA_B_mem_1[i/factor] = mem_tmp;
                       2 : DATA_B_mem_2[i/factor] = mem_tmp;
+                      3 : DATA_B_mem_3[i/factor] = mem_tmp;
                       default: $display("The page_num of read file is not valid!");
                   endcase
                   mem_tmp [DATA_B_DATA_BITWIDTH - 1 : 0] = 0;
@@ -902,6 +911,7 @@ initial begin : read_file_process
                       0 : DATA_B_mem_0[i/factor] = mem_tmp;
                       1 : DATA_B_mem_1[i/factor] = mem_tmp;
                       2 : DATA_B_mem_2[i/factor] = mem_tmp;
+                      3 : DATA_B_mem_3[i/factor] = mem_tmp;
                       default: $display("The page_num of read file is not valid!");
                   endcase
                   mem_tmp [DATA_B_DATA_BITWIDTH - 1: 0] = 0;
@@ -913,6 +923,7 @@ initial begin : read_file_process
                   0 : DATA_B_mem_0[i] = mem_tmp;
                   1 : DATA_B_mem_1[i] = mem_tmp;
                   2 : DATA_B_mem_2[i] = mem_tmp;
+                  3 : DATA_B_mem_3[i] = mem_tmp;
                   default: $display("The page_num of read file is not valid!");
               endcase
               mem_tmp [DATA_B_DATA_BITWIDTH - 1: 0] = 0;
@@ -924,6 +935,7 @@ initial begin : read_file_process
                   0 : DATA_B_mem_0[i/factor] = mem_tmp;
                   1 : DATA_B_mem_1[i/factor] = mem_tmp;
                   2 : DATA_B_mem_2[i/factor] = mem_tmp;
+                  3 : DATA_B_mem_3[i/factor] = mem_tmp;
                   default: $display("The page_num of read file is not valid!");
               endcase
           end
@@ -934,6 +946,7 @@ initial begin : read_file_process
                   0 : DATA_B_mem_0[i/factor] = mem_tmp;
                   1 : DATA_B_mem_1[i/factor] = mem_tmp;
                   2 : DATA_B_mem_2[i/factor] = mem_tmp;
+                  3 : DATA_B_mem_3[i/factor] = mem_tmp;
                   default: $display("The page_num of read file is not valid!");
               endcase
           end

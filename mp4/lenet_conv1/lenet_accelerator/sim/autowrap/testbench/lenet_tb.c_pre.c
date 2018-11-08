@@ -1,7 +1,7 @@
-# 1 "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_fcl/lenet_tb.c"
+# 1 "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_tb.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_fcl/lenet_tb.c"
+# 1 "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_tb.c"
 # 1 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 1 3
 # 19 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdio.h" 3
 # 1 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/_mingw.h" 1 3
@@ -430,7 +430,7 @@ int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) vswscanf (const wch
  wint_t __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) fputwchar (wint_t);
  int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) getw (FILE*);
  int __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) putw (int, FILE*);
-# 2 "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_fcl/lenet_tb.c" 2
+# 2 "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_tb.c" 2
 # 1 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdlib.h" 1 3
 # 21 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/stdlib.h" 3
 # 1 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/include/stddef.h" 1 3 4
@@ -652,7 +652,7 @@ char* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) lltoa (long long,
 char* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) ulltoa (unsigned long long , char *, int);
 wchar_t* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) lltow (long long, wchar_t *, int);
 wchar_t* __attribute__((__cdecl__)) __attribute__ ((__nothrow__)) ulltow (unsigned long long, wchar_t *, int);
-# 3 "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_fcl/lenet_tb.c" 2
+# 3 "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_tb.c" 2
 # 1 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 1 3
 # 16 "c:\\xilinx\\vivado_hls\\2017.2\\msys\\bin\\../lib/gcc/mingw32/4.6.2/../../../../include/math.h" 3
        
@@ -1038,10 +1038,10 @@ extern long double __attribute__((__cdecl__)) fminl (long double, long double);
 extern double __attribute__((__cdecl__)) fma (double, double, double);
 extern float __attribute__((__cdecl__)) fmaf (float, float, float);
 extern long double __attribute__((__cdecl__)) fmal (long double, long double, long double);
-# 4 "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_fcl/lenet_tb.c" 2
+# 4 "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_tb.c" 2
 
-# 1 "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_fcl/lenet_hls.h" 1
-# 34 "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_fcl/lenet_hls.h"
+# 1 "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_hls.h" 1
+# 34 "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_hls.h"
 typedef float image_t[1][32][32];
 
 typedef float conv1_weight_t[6][1][5][5];
@@ -1078,73 +1078,78 @@ void lenet_wrapper(
        conv1_out_t c1_o_1,
        conv3_out_t c3_o_1,
        conv5_out_t c5_o_1);
-# 6 "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_fcl/lenet_tb.c" 2
+# 6 "C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_conv1/lenet_tb.c" 2
 
 
+int convolution1_tb(float input[1][32][32], float weights[6][1][5][5], float bias[6], float output[6][28][28]) {
 
-int fc6_tb(float input[120][1][1], float weights[10][120][1][1], float bias[10], float output[10]) {
- int n, c;
-    for(n = 0; n < 10; n++) {
-        output[n] = 0;
-        for(c = 0; c < 120; c++)
-        {
-            output[n] += weights[n][c][0][0] * input[c][0][0];
+ int co, h, w, i, m, j, n;
+ float sum = 0.0;
+
+    for(co = 0; co < 6; co++) {
+        for(h = 0; h < 28; h++) {
+            for(w = 0; w < 28; w++) {
+                sum = 0.0;
+                for(i = h, m = 0; i < (h + 5); i++, m++) {
+                    for(j = w, n = 0; j < (w + 5); j++, n++) {
+                        sum += weights[co][0][m][n] * input[0][i][j];
+                    }
+                }
+                output[co][h][w] = sum + bias[co];
+            }
         }
-        output[n]+=bias[n];
     }
-
-    return 0;
 }
 
 
 
 int main() {
 
- float _i[120][1][1];
- float _w[10][120][1][1];
- float _b[10];
- float _o_h[10];
- float _o_s[10];
+ float _i[1][32][32];
+ float _w[6][1][5][5];
+ float _b[6];
+ float _o_h[6][28][28];
+ float _o_s[6][28][28];
 
  int i, j, k, l;
- for(i = 0; i < 120; i++) {
-  for(j = 0; j < 1; j++) {
-   for(k = 0; k < 1; k++) {
+ for(i = 0; i < 1; i++) {
+  for(j = 0; j < 32; j++) {
+   for(k = 0; k < 32; k++) {
     _i[i][j][k] = (float)(rand()%1000)/100.0;
    }
   }
  }
 
- for(i = 0; i < 10; i++) {
-  for(j = 0; j < 120; j++) {
-   for(k = 0; k < 1; k++) {
-    for(l = 0; l < 1; l++) {
+ for(i = 0; i < 6; i++) {
+  for(j = 0; j < 1; j++) {
+   for(k = 0; k < 5; k++) {
+    for(l = 0; l < 5; l++) {
         _w[i][j][k][l] = (float)(rand()%100)/100.0;
     }
    }
   }
  }
 
- for(i = 0; i < 10; i++) {
+ for(i = 0; i < 6; i++) {
   _b[i] = (float)(rand()%100)/100.0;
  }
 
 
- fc6_tb(_i, _w, _b, _o_s);
- fc6(_i, _w, _b, _o_h);
+ convolution1_tb(_i, _w, _b, _o_s);
+ convolution1(_i, _w, _b, _o_h);
 
 
 
 
  printf("[TEST_BENCH] Output SW: ");
- for(i = 0; i < 10; i++) {
-   printf("%f ", _o_s[i]);
+ for(i = 0; i < 28; i++) {
+   printf("%f ", _o_s[1][i][15]);
  }
  printf("\n");
 
  printf("[TEST_BENCH] Output HW: ");
- for(i = 0; i < 10; i++) {
-   printf("%f ", _o_s[i]);
+ for(i = 0; i < 28; i++) {
+   printf("%f ", _o_s[1][i][15]);
  }
  printf("\n");
 

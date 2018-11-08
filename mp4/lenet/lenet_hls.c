@@ -1,5 +1,27 @@
 #include "lenet_hls.h"
 
+// Convolution Layer 3
+void convolution3_tb(float input[6][14][14], float weights[16][6][5][5], float bias[16], float output[16][10][10]) {
+	int co, h, w, i, m, j, n, ci;
+	float sum = 0.0;
+
+	for(co = 0; co < 16; co++) {
+		for(h = 0; h < 10; h++) {
+			for(w = 0; w < 10; w++) {
+				sum = 0;
+				for(i = h, m = 0; i < (h+5); i++, m++) {
+					for(j = w, n = 0; j < (w+5); j++, n++) {
+						for (ci = 0; ci < 6; ci++) {
+							sum += weights[co][ci][m][n] * input[ci][i][j];
+						}
+					}
+				}
+				output[co][h][w] = sum + bias[co];
+			}
+		}
+	}
+}
+
 // Convolution Layer 1
 int convolution1(float input[1][32][32], float weights[6][1][5][5], float bias[6], float output[6][28][28]) {
 #pragma HLS INTERFACE m_axi      depth=1024   port=input   offset=slave bundle=DATA_A
@@ -59,8 +81,8 @@ int convolution1(float input[1][32][32], float weights[6][1][5][5], float bias[6
     }
 
     for(i = 0; i < 6; i++) {
-#pragma HLS pipeline II=1
 		for(j = 0; j < 28; j++) {
+#pragma HLS pipeline II=1
 			for(k = 0; k < 28; k++) {
 #pragma HLS unroll FACTOR=28
 				output[i][j][k] = c1_o[i][j][k];

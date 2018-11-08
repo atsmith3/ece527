@@ -46,11 +46,11 @@ module AESL_axi_slave_AXILiteS (
     );
 
 //------------------------Parameter----------------------
-`define TV_IN_input_r "../tv/cdatafile/c.fc6.autotvin_input_r.dat"
-`define TV_IN_weights "../tv/cdatafile/c.fc6.autotvin_weights.dat"
-`define TV_IN_bias "../tv/cdatafile/c.fc6.autotvin_bias.dat"
-`define TV_IN_output_r "../tv/cdatafile/c.fc6.autotvin_output_r.dat"
-`define TV_OUT_ap_return "../tv/rtldatafile/rtl.fc6.autotvout_ap_return.dat"
+`define TV_IN_input_r "../tv/cdatafile/c.convolution1.autotvin_input_r.dat"
+`define TV_IN_weights "../tv/cdatafile/c.convolution1.autotvin_weights.dat"
+`define TV_IN_bias "../tv/cdatafile/c.convolution1.autotvin_bias.dat"
+`define TV_IN_output_r "../tv/cdatafile/c.convolution1.autotvin_output_r.dat"
+`define TV_OUT_ap_return "../tv/rtldatafile/rtl.convolution1.autotvout_ap_return.dat"
 parameter ADDR_WIDTH = 6;
 parameter DATA_WIDTH = 32;
 parameter input_r_DEPTH = 1;
@@ -69,8 +69,8 @@ parameter ap_return_DEPTH = 1;
 reg [31 : 0] ap_return_OPERATE_DEPTH = 0;
 parameter ap_return_c_bitwidth = 32;
 parameter START_ADDR = 0;
-parameter fc6_continue_addr = 0;
-parameter fc6_auto_start_addr = 0;
+parameter convolution1_continue_addr = 0;
+parameter convolution1_auto_start_addr = 0;
 parameter input_r_data_in_addr = 24;
 parameter weights_data_in_addr = 32;
 parameter bias_data_in_addr = 40;

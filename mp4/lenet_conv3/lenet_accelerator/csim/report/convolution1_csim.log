@@ -1,0 +1,10 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../lenet_tb.c in debug mode
+   Compiling ../../../lenet_hls.c in debug mode
+../../../lenet_hls.c: In function 'convolution3':
+../../../lenet_hls.c:70:23: error: 'c1_o' undeclared (first use in this function)
+../../../lenet_hls.c:70:23: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [obj/lenet_hls.o] Error 1
+CRITICAL WARNING: [SIM 100] CSim file generation failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

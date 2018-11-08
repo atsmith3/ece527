@@ -1,0 +1,4 @@
+Running: xsim.dir/convolution3/xsimk.exe -simmode gui -wdb convolution3.wdb -simrunnum 0 -socket 57194
+Design successfully loaded
+Design Loading Memory Usage: 10172 KB (Peak: 10172 KB)
+Design Loading CPU Usage: 93 ms
