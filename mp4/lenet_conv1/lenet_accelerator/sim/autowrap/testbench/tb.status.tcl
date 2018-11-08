@@ -1,1 +1,0 @@
-set ::AESL_AUTOSIM::gTopFileName lenet_hls.c_pre.c.tb.c
