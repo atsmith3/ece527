@@ -61,6 +61,11 @@ void lenet_wrapper(/* Inputs */
 				   /* Output */
 				   fc6_output_t fc6_o_o,
 				   int* done,
-				   int* start);
+				   int* start,
+
+				   /* DEBUG */
+				   conv1_out_t c1_o_1,
+				   conv3_out_t c3_o_1,
+				   conv5_out_t c5_o_1);
 
 #endif

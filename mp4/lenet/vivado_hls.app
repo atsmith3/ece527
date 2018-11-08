@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="lenet_wrapper" name="lenet">
+<project xmlns="com.autoesl.autopilot.project" name="lenet" top="lenet_wrapper">
     <files>
         <file name="../lenet_tb.c" sc="0" tb="1" cflags=""/>
         <file name="lenet/images.bin" sc="0" tb="false" cflags=""/>

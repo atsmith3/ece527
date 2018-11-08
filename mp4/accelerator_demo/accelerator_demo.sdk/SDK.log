@@ -1263,3 +1263,9 @@ con
 19:33:53 INFO  : Successfully done setting SDK workspace  
 19:33:53 INFO  : Processing command line option -hwspec C:/Users/atsmith3/Downloads/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper.hdf.
 19:33:53 INFO  : Checking for hwspec changes in the project accelerator_bd_wrapper_hw_platform_1.
+01:54:27 INFO  : Registering command handlers for SDK TCF services
+01:54:27 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\anges\Documents\UIUC\ECE_527\ece527\mp4\accelerator_demo\accelerator_demo.sdk\temp_xsdb_launch_script.tcl
+01:54:31 INFO  : XSCT server has started successfully.
+01:54:31 INFO  : Successfully done setting XSCT server connection channel  
+01:54:40 INFO  : Processing command line option -hwspec C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper.hdf.
+01:54:40 INFO  : Successfully done setting SDK workspace  

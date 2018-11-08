@@ -29,62 +29,62 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>C:/Users/atsmith3/Downloads/Tutorial_Files/lenet/.apc/.src</location>
+			<location>C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>C:/Users/atsmith3/Downloads/Tutorial_Files/lenet/.apc/.tb</location>
+			<location>C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet/.apc/.tb</location>
 		</link>
 		<link>
 			<name>lenet_accelerator/constraints</name>
 			<type>2</type>
-			<location>C:/Users/atsmith3/Downloads/Tutorial_Files/lenet/lenet_accelerator/.tcls</location>
+			<location>C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet/lenet_accelerator/.tcls</location>
 		</link>
 		<link>
 			<name>source/images.bin</name>
 			<type>1</type>
-			<location>C:/Users/atsmith3/Downloads/Tutorial_Files/lenet/images.bin</location>
+			<location>C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet/images.bin</location>
 		</link>
 		<link>
 			<name>source/labels.bin</name>
 			<type>1</type>
-			<location>C:/Users/atsmith3/Downloads/Tutorial_Files/lenet/labels.bin</location>
+			<location>C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet/labels.bin</location>
 		</link>
 		<link>
 			<name>source/lenet_hls.c</name>
 			<type>1</type>
-			<location>C:/Users/atsmith3/Downloads/Tutorial_Files/lenet/lenet_hls.c</location>
+			<location>C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet/lenet_hls.c</location>
 		</link>
 		<link>
 			<name>source/lenet_hls.h</name>
 			<type>1</type>
-			<location>C:/Users/atsmith3/Downloads/Tutorial_Files/lenet/lenet_hls.h</location>
+			<location>C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet/lenet_hls.h</location>
 		</link>
 		<link>
 			<name>source/params.bin</name>
 			<type>1</type>
-			<location>C:/Users/atsmith3/Downloads/Tutorial_Files/lenet/params.bin</location>
+			<location>C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet/params.bin</location>
 		</link>
 		<link>
 			<name>testbench/lenet_tb.c</name>
 			<type>1</type>
-			<location>C:/Users/atsmith3/Downloads/Tutorial_Files/lenet/lenet_tb.c</location>
+			<location>C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet/lenet_tb.c</location>
 		</link>
 		<link>
 			<name>lenet_accelerator/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/Users/atsmith3/Downloads/Tutorial_Files/lenet/lenet_accelerator/lenet_accelerator.directive</location>
+			<location>C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet/lenet_accelerator/lenet_accelerator.directive</location>
 		</link>
 		<link>
 			<name>lenet_accelerator/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/Users/atsmith3/Downloads/Tutorial_Files/lenet/lenet_accelerator/directives.tcl</location>
+			<location>C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet/lenet_accelerator/directives.tcl</location>
 		</link>
 		<link>
 			<name>lenet_accelerator/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/Users/atsmith3/Downloads/Tutorial_Files/lenet/lenet_accelerator/script.tcl</location>
+			<location>C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet/lenet_accelerator/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

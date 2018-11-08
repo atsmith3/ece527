@@ -2,11 +2,11 @@
 # Webtalk v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # 
-# Start of session at: Sun Oct 28 22:00:57 2018
-# Process ID: 4408
-# Current directory: C:/Users/atsmith3/Downloads/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/webtalk
+# Start of session at: Thu Nov  8 03:31:32 2018
+# Process ID: 7568
+# Current directory: C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/accelerator_demo/accelerator_demo.sdk/webtalk
 # Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
-# Log file: C:/Users/atsmith3/Downloads/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/webtalk/webtalk.log
-# Journal file: C:/Users/atsmith3/Downloads/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/webtalk\webtalk.jou
+# Log file: C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/accelerator_demo/accelerator_demo.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/accelerator_demo/accelerator_demo.sdk/webtalk\webtalk.jou
 #-----------------------------------------------------------
 source sdk_webtalk.tcl

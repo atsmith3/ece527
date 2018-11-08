@@ -7,6 +7,9 @@
       <mgLog/>
       <packageLog/>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="lenet" solutionName="lenet_accelerator" date="2018-11-08T03:52:16.969-0600"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="lenet" solutionName="lenet_accelerator" date="2018-11-08T02:55:54.626-0600"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="lenet" solutionName="lenet_accelerator" date="2018-11-08T02:55:39.547-0600"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="lenet" solutionName="lenet_accelerator" date="2018-11-07T23:52:09.692-0600"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="lenet" solutionName="lenet_accelerator" date="2018-11-07T23:51:36.493-0600"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="lenet" solutionName="lenet_accelerator" date="2018-11-07T23:49:50.699-0600"/>

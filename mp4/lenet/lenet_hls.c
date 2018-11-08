@@ -299,9 +299,6 @@ void relu6(float input[10], float output[10]) {
     }
 }
 
-//Get test image from dataset
-//get_image(images, k, image);
-
 void lenet_wrapper(/* Inputs */
 		           image_t image_in_i,
 		           conv1_weight_t c1_w_i, conv1_bias_t c1_b_i,
@@ -311,8 +308,12 @@ void lenet_wrapper(/* Inputs */
 				   /* Output */
 				   fc6_output_t fc6_o_o,
 				   int* done,
-				   int* start
-		           ) {
+				   int* start,
+
+				   /* DEBUG */
+				   conv1_out_t c1_o_1,
+				   conv3_out_t c3_o_1,
+				   conv5_out_t c5_o_1) {
 
 #pragma HLS INTERFACE m_axi depth=1024 port=image_in_i offset=slave bundle=DATA_IMAGE_IN_I
 
@@ -347,11 +348,11 @@ void lenet_wrapper(/* Inputs */
 	fc6_output_t fc6_o = {0};
 
 	/* Local Buffering -- Internal */
-	conv1_out_t c1_o_1 = {0};
+	//conv1_out_t c1_o_1 = {0};
 	conv1_out_t c1_o_2 = {0};
-	conv3_out_t c3_o_1 = {0};
+	//conv3_out_t c3_o_1 = {0};
 	conv3_out_t c3_o_2 = {0};
-	conv5_out_t c5_o_1 = {0};
+	//conv5_out_t c5_o_1 = {0};
 	conv5_out_t c5_o_2 = {0};
 	pool2_t p2_o_1 = {0};
 	pool2_t p2_o_2 = {0};
