@@ -1,6 +1,5 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../lenet_hls_tb_c1.c in debug mode
    Compiling ../../../lenet_hls_c1.c in debug mode
    Generating csim.exe
 INFO: [SIM 1] CSim file generation done with 0 errors.

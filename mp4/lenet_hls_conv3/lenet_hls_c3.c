@@ -40,7 +40,7 @@ int convolution3(float input[6][14][14], float weights[16][6][5][5], float bias[
 	}
 
 	for(i = 0; i < 16; i++) {
-		for(j = 0; j < 5; j++) {
+		for(j = 0; j < 6; j++) {
 			for(k = 0; k < 5; k++) {
 #pragma HLS pipeline II=1
 				for(l = 0; l < 5; l++) {

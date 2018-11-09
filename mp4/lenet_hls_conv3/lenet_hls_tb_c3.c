@@ -92,7 +92,7 @@ int main() {
 	for(i = 0; i < 6; i++) {
 		for(j = 0; j < 14; j++) {
 			for(k = 0; k < 14; k++) {
-				_i[i][j][k] = (float)(rand()%1000)/100.0;
+				_i[i][j][k] = (float)(rand()%100)/100.0 - 0.5;
 			}
 		}
 	}
@@ -101,14 +101,14 @@ int main() {
 		for(j = 0; j < 6; j++) {
 			for(k = 0; k < 5; k++) {
 				for(l = 0; l < 5; l++) {
-						_w[i][j][k][l] = (float)(rand()%100)/100.0;
+						_w[i][j][k][l] = (float)(rand()%100)/100.0 - 0.5;
 				}
 			}
 		}
 	}
 
 	for(i = 0; i < 16; i++) {
-		_b[i] = (float)(rand()%100)/100.0;
+		_b[i] = (float)(rand()%100)/100.0 - 0.5;
 	}
 
 	/* Tests */
@@ -124,13 +124,13 @@ int main() {
 
 
 	printf("[TEST_BENCH] Output SW: ");
-	for(i = 0; i < 5; i++) {
+	for(i = 0; i < 10; i++) {
 		 printf("%f ", _o_s[10][i][5]);
 	}
 	printf("\n");
 
 	printf("[TEST_BENCH] Output HW: ");
-	for(i = 0; i < 5; i++) {
+	for(i = 0; i < 10; i++) {
 		 printf("%f ", _o_h[10][i][5]);
 	}
 	printf("\n");
