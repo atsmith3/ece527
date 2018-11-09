@@ -1,0 +1,166 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+\documentclass[letterpaper, 10 pt, conference]{IEEEconf}  % Comment this line out
+                                                          % if you need a4paper
+%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4
+                                                          % paper
+
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{float}
+\usepackage[pdftex]{graphicx}
+\usepackage{color}
+\usepackage{mathtools}          %loads amsmath as well
+\usepackage{titlesec}
+
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+% The following packages can be found on http:\\www.ctan.org
+%\usepackage{graphics} % for pdf, bitmapped graphics files
+%\usepackage{epsfig} % for postscript graphics files
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{times} % assumes new font selection scheme installed
+%\usepackage{amsmath} % assumes amsmath package installed
+%\usepackage{amssymb}  % assumes amsmath package installed
+
+\title{\LARGE \bf ECE 527 SoC Design Machine Problem 4}
+
+%\author{ \parbox{3 in}{\centering Huibert Kwakernaak*
+%         \thanks{*Use the $\backslash$thanks command to put information here}\\
+%         Faculty of Electrical Engineering, Mathematics and Computer Science\\
+%         University of Twente\\
+%         7500 AE Enschede, The Netherlands\\
+%         {\tt\small h.kwakernaak@autsubmit.com}}
+%         \hspace*{ 0.5 in}
+%         \parbox{3 in}{ \centering Pradeep Misra**
+%         \thanks{**The footnote marks may be inserted manually}\\
+%        Department of Electrical Engineering \\
+%         Wright State University\\
+%         Dayton, OH 45435, USA\\
+%         {\tt\small pmisra@cs.wright.edu}}
+%}
+
+\author{Andrew Smith(atsmith3) and Thomas Furlong(tfurlon2)}% <-this % stops a space
+\begin{document}
+
+
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{INTRODUCTION}
+In this MP we worked with HLS to accelerate the convolution neural net LeNet. LeNet is a six layer neural net that has two max pooling layers, three convolution layers, and one fully connected layer. In our implementation we will outline and analyze various hardware accelerated layers to achieve speed up over a bare metal implementation running on an embedded ARM core. In this MP, we had the opportunity to work on a larger scale project using HLS. This project also let us work with DRAM memory interfaces and hardware/software co-design principles. Our design was ran on the Xilinx Zedboard. 
+
+
+\section{Assumptions}
+One assumption that we made was to start the AXI timers right before the first image begins to be processed. This was to get a more exact cycle count for each image reference as well as total image reference time. 
+
+\section{Software Analysis}
+Table 1 is an analysis of the software implementation of LeNet running on the embedded ARM core. This was the baseline implementation the we will use to compare the hardware accelerated version. The code for this portion was provided by the course. 
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{lllll}
+\cline{1-2}
+\multicolumn{1}{|l|}{Time Per Image}      & \multicolumn{1}{l|}{DATA} &  &  &  \\ \cline{1-2}
+\multicolumn{1}{|l|}{Time For All Images} & \multicolumn{1}{l|}{DATA} &  &  &  \\ \cline{1-2}
+                                          &                       &  &  &  \\
+                                          &                       &  &  & 
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{Hardware Accelerator Analysis}
+Table 2 is a performance analysis of the hardware accelerated implementation. In this part,  components of LeNet were ported to the programmable logic to achieve speed up over the baseline software version.  A detailed account of our design choices for the hardware accelerators are listed below in the Design section. 
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{lllll}
+\cline{1-2}
+\multicolumn{1}{|l|}{Time Per Image}      & \multicolumn{1}{l|}{DATA} &  &  &  \\ \cline{1-2}
+\multicolumn{1}{|l|}{Time For All Images} & \multicolumn{1}{l|}{DATA} &  &  &  \\ \cline{1-2}
+                                          &                       &  &  &  \\
+                                          &                       &  &  & 
+\end{tabular}
+\end{center}
+\end{table} 
+
+Furthermore, Table 3 outlines the resource utilization of the hardware accelerators. The addition of the accelerators did have a reasonable impact on the utilization on the FPGA which can be seen below. The addition of pipelines and loop unrolls significantly increased the LUT and Flip Flop count. 
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|l|lll}
+\cline{1-2}
+Flip Flops    & 26170  &  &  &  \\ \cline{1-2}
+LUT's         & 21325  &  &  &  \\ \cline{1-2}
+BRAM          & 4      &  &  &  \\ \cline{1-2}
+DSP           & 12     &  &  &  \\ \cline{1-2}
+I/O           & 130    &  &  &  \\ \cline{1-2}
+On Chip Power & 2.0009 W&  &  &  \\ \cline{1-2}
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\subsection{Speedup Over Software Version}
+Table 4 is an analysis  of the speed up of the pure software implementation versus the hardware aided implementation. XXXGive reasons into results.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{lllll}
+\cline{1-2}
+\multicolumn{1}{|l|}{Speed Up  In Time Per Image}     & \multicolumn{1}{l|}{DATA} &  &  &  \\ \cline{1-2}
+\multicolumn{1}{|l|}{Speed Up In Time For All Images} & \multicolumn{1}{l|}{DATA} &  &  &  \\ \cline{1-2}
+                                                      &                       &  &  &  \\
+                                                      &                       &  &  & 
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{Accuracy of Hardware Acceleration}
+The hardware accelerated version had an accuracy of 98.39\%.  This was the accuracy of the software so precision is maintained. 
+
+
+\section{System Overview}
+The data flow of this MP has a few major parts. First, there is software application running on the embedded ARM core on the board. This is represented by the Zynq Processing System (PS) in Figure 1.  This software application is responsible for loading the SD card data into DRAM as well as maintaining data synchronization with the hardware accelerators. In addition to this the software application was also responsible for XXX in the LeNet algorithm. Not every layer of the neural net was implemented on the programmable logic (PL) side so some layers were implemented in software. The other major component of the system is the hardware accelerators generated by HLS. These accelerators were placed on the programmable logic and were given access to DRAM through the AXI HP ports. The Zynq system sends the accelerators weights, biases, and image data to be processed and then waits for handshake signals from the PL side before it continues with the inference. A description of the accelerators is provided below. 
+
+
+\section{Hardware Accelerator Description}
+\subsection{Accelerated Layers}
+In this MP, we accelerated the fully connected layer. 
+
+\subsection{Fully Connected Layer}
+The fully connected layer has a few different ports to interface the hardware and software. This accelerated block has four AXI High Performace ports. The four ports have DRAM offsets provided by the PS to allow the hardware block to have faster access to DRAM. Our design philosophy was to capitalize on the data locality of the operations in this layer. From this, we made internal buffers that would allow the hardware block to quickly access data instead of waiting on DRAM. There was also opportunity for parallelization in some in the array operations. In our HLS implementation, we used m\_axi port declarations as well as pipeline and loop unrolls. Since we know the size of the loops we were able to get exact loop unroll factors that best fit the sizes of the arrays. We also used a s\_axilite port for control signal passing to the PS. 
+
+
+
+\section{MP Feedback}
+Overall this MP was a great learning experience into how HLS can be used to accelerate more complex tasks. A better description into how to work with the SDK functions that interact with the IP's would be helpful for future students. 
+
+
+
+\section{Changes to Version of Code}
+
+
+\section{Difficulties and Bugs}
+
+
+
+\section{What We Learned}
+In this MP we learned more about the development and control flow of HLS accelerated applications. Working closely with the AXI high performance and AXI lite ports also gave us a better understanding of fast memory interfaces. In addition to this, we also learned more about HLS pragmas and their impact on application performance. 
+
+
+\section{MP Platform}
+
+
+\end{document}
