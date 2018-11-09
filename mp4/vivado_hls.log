@@ -1,14 +1,184 @@
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'anges' on host 'laptop-qdoqh21e' (Windows NT_amd64 version 6.2) on Thu Nov 08 20:15:30 -0600 2018
+INFO: [HLS 200-10] For user 'anges' on host 'laptop-qdoqh21e' (Windows NT_amd64 version 6.2) on Thu Nov 08 22:24:21 -0600 2018
 INFO: [HLS 200-10] In directory 'C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4'
 INFO: [HLS 200-10] Opening project 'C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_hls_conv3'.
+INFO: [HLS 200-10] Adding design file 'lenet_hls_conv3/lenet_hls_c3.c' to the project
+INFO: [HLS 200-10] Adding design file 'lenet_hls_conv3/lenet_hls_c3.h' to the project
+INFO: [HLS 200-10] Adding test bench file 'lenet_hls_conv3/lenet_hls_tb_c3.c' to the project
 INFO: [HLS 200-10] Opening solution 'C:/Users/anges/Documents/UIUC/ECE_527/ece527/mp4/lenet_hls_conv3/lenet_hls_conv3_soln'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-   Compiling ../../../lenet_hls_tb_c3.c in debug mode
-   Compiling ../../../lenet_hls_c3.c in debug mode
-   Generating csim.exe
-INFO: [SIM 211-1] CSim file generation done with 0 errors.
-INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Analyzing design file 'lenet_hls_conv3/lenet_hls_c3.c' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 96.023 ; gain = 45.992
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 96.059 ; gain = 46.027
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' (lenet_hls_conv3/lenet_hls_c3.c:35) in function 'convolution3': changing partial unrolling into complete unrolling since the unrolling factor (=32) is no less than the loop trip count (=14).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1.1' (lenet_hls_conv3/lenet_hls_c3.c:46) in function 'convolution3': changing partial unrolling into complete unrolling since the unrolling factor (=5) is no less than the loop trip count (=5).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (lenet_hls_conv3/lenet_hls_c3.c:54) in function 'convolution3': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4.1.1.1.1.1' (lenet_hls_conv3/lenet_hls_c3.c:66) in function 'convolution3': changing partial unrolling into complete unrolling since the unrolling factor (=6) is no less than the loop trip count (=6).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5.1.1' (lenet_hls_conv3/lenet_hls_c3.c:81) in function 'convolution3': changing partial unrolling into complete unrolling since the unrolling factor (=10) is no less than the loop trip count (=10).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-7.1.1' (lenet_hls_conv3/lenet_hls_c3.c:110) in function 'convolution3': changing partial unrolling into complete unrolling since the unrolling factor (=5) is no less than the loop trip count (=5).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-8.1.1' (lenet_hls_conv3/lenet_hls_c3.c:120) in function 'convolution3': changing partial unrolling into complete unrolling since the unrolling factor (=5) is no less than the loop trip count (=5).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 100.910 ; gain = 50.879
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution3' (lenet_hls_conv3/lenet_hls_c3.c:83) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 100.949 ; gain = 50.918
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (lenet_hls_conv3/lenet_hls_c3.c:32) in function 'convolution3' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-1.1.1' (lenet_hls_conv3/lenet_hls_c3.c:35) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2.1.1' (lenet_hls_conv3/lenet_hls_c3.c:44) in function 'convolution3' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-2.1.1.1' (lenet_hls_conv3/lenet_hls_c3.c:46) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-4.1' (lenet_hls_conv3/lenet_hls_c3.c:60) in function 'convolution3' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-4.1.1.1.1.1' (lenet_hls_conv3/lenet_hls_c3.c:66) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-5.1' (lenet_hls_conv3/lenet_hls_c3.c:79) in function 'convolution3' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-5.1.1' (lenet_hls_conv3/lenet_hls_c3.c:81) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-6.1.1' (lenet_hls_conv3/lenet_hls_c3.c:93) in function 'convolution3' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-7.1' (lenet_hls_conv3/lenet_hls_c3.c:108) in function 'convolution3' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-7.1.1' (lenet_hls_conv3/lenet_hls_c3.c:110) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-8.1' (lenet_hls_conv3/lenet_hls_c3.c:118) in function 'convolution3' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-8.1.1' (lenet_hls_conv3/lenet_hls_c3.c:120) because its parent loop or function is pipelined.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (lenet_hls_conv3/lenet_hls_c3.c:54) in function 'convolution3': changing partial unrolling into complete unrolling since the unrolling factor (=16) is no less than the loop trip count (=16).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (lenet_hls_conv3/lenet_hls_c3.c:34) in function 'convolution3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' (lenet_hls_conv3/lenet_hls_c3.c:35) in function 'convolution3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1.1' (lenet_hls_conv3/lenet_hls_c3.c:46) in function 'convolution3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-3' (lenet_hls_conv3/lenet_hls_c3.c:54) in function 'convolution3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4.1.1' (lenet_hls_conv3/lenet_hls_c3.c:62) in function 'convolution3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4.1.1.1' (lenet_hls_conv3/lenet_hls_c3.c:64) in function 'convolution3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4.1.1.1.1' (lenet_hls_conv3/lenet_hls_c3.c:65) in function 'convolution3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-4.1.1.1.1.1' (lenet_hls_conv3/lenet_hls_c3.c:66) in function 'convolution3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-5.1.1' (lenet_hls_conv3/lenet_hls_c3.c:81) in function 'convolution3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6.1.1.1' (lenet_hls_conv3/lenet_hls_c3.c:96) in function 'convolution3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-6.1.1.1.1' (lenet_hls_conv3/lenet_hls_c3.c:97) in function 'convolution3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-7.1.1' (lenet_hls_conv3/lenet_hls_c3.c:110) in function 'convolution3' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-8.1.1' (lenet_hls_conv3/lenet_hls_c3.c:120) in function 'convolution3' completely.
+INFO: [XFORM 203-102] Partitioning array 'c3_i' (lenet_hls_conv3/lenet_hls_c3.c:18) in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'c3_w' (lenet_hls_conv3/lenet_hls_c3.c:19) in dimension 4 automatically.
+INFO: [XFORM 203-102] Partitioning array 'c3_o_a' (lenet_hls_conv3/lenet_hls_c3.c:21) in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'c3_o' (lenet_hls_conv3/lenet_hls_c3.c:24) in dimension 3 automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution3' (lenet_hls_conv3/lenet_hls_c3.c:83) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 130.078 ; gain = 80.047
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (lenet_hls_conv3/lenet_hls_c3.c:43:7) in function 'convolution3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (lenet_hls_conv3/lenet_hls_c3.c:42:6) in function 'convolution3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-3' (lenet_hls_conv3/lenet_hls_c3.c:59:6) in function 'convolution3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-4' (lenet_hls_conv3/lenet_hls_c3.c:78:6) in function 'convolution3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-5.1' (lenet_hls_conv3/lenet_hls_c3.c:92:7) in function 'convolution3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-5' (lenet_hls_conv3/lenet_hls_c3.c:91:6) in function 'convolution3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-6' (lenet_hls_conv3/lenet_hls_c3.c:107:6) in function 'convolution3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-7' (lenet_hls_conv3/lenet_hls_c3.c:117:6) in function 'convolution3'.
+INFO: [XFORM 203-811] Inferring bus burst read of length 5 on port 'DATA_B' (lenet_hls_conv3/lenet_hls_c3.c:48:2).
+INFO: [XFORM 203-811] Inferring bus burst read of length 16 on port 'DATA_C' (lenet_hls_conv3/lenet_hls_c3.c:56:2).
+INFO: [XFORM 203-811] Inferring bus burst write of length 5 on port 'DATA_D' (lenet_hls_conv3/lenet_hls_c3.c:122:2).
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 160.785 ; gain = 110.754
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'convolution3' ...
+WARNING: [SYN 201-107] Renaming port name 'convolution3/input' to 'convolution3/input_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'convolution3/output' to 'convolution3/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'convolution3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between bus request on port 'DATA_A' (lenet_hls_conv3/lenet_hls_c3.c:37) and bus request on port 'DATA_A' (lenet_hls_conv3/lenet_hls_c3.c:37).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between bus request on port 'DATA_A' (lenet_hls_conv3/lenet_hls_c3.c:37) and bus request on port 'DATA_A' (lenet_hls_conv3/lenet_hls_c3.c:37).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between bus request on port 'DATA_A' (lenet_hls_conv3/lenet_hls_c3.c:37) and bus request on port 'DATA_A' (lenet_hls_conv3/lenet_hls_c3.c:37).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between bus request on port 'DATA_A' (lenet_hls_conv3/lenet_hls_c3.c:37) and bus request on port 'DATA_A' (lenet_hls_conv3/lenet_hls_c3.c:37).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 130, distance = 1, offset = 1)
+   between bus request on port 'DATA_A' (lenet_hls_conv3/lenet_hls_c3.c:37) and bus request on port 'DATA_A' (lenet_hls_conv3/lenet_hls_c3.c:37).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 193, distance = 1, offset = 1)
+   between bus request on port 'DATA_A' (lenet_hls_conv3/lenet_hls_c3.c:37) and bus request on port 'DATA_A' (lenet_hls_conv3/lenet_hls_c3.c:37).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 195, distance = 1, offset = 1)
+   between bus request on port 'DATA_A' (lenet_hls_conv3/lenet_hls_c3.c:37) and bus request on port 'DATA_A' (lenet_hls_conv3/lenet_hls_c3.c:37).
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 196, Depth: 205.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between bus read on port 'DATA_B' (lenet_hls_conv3/lenet_hls_c3.c:48) and bus read on port 'DATA_B' (lenet_hls_conv3/lenet_hls_c3.c:48).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between bus read on port 'DATA_B' (lenet_hls_conv3/lenet_hls_c3.c:48) and bus read on port 'DATA_B' (lenet_hls_conv3/lenet_hls_c3.c:48).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between bus read on port 'DATA_B' (lenet_hls_conv3/lenet_hls_c3.c:48) and bus read on port 'DATA_B' (lenet_hls_conv3/lenet_hls_c3.c:48).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between bus read on port 'DATA_B' (lenet_hls_conv3/lenet_hls_c3.c:48) and bus read on port 'DATA_B' (lenet_hls_conv3/lenet_hls_c3.c:48).
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 5, Depth: 16.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('c3_w_0_load_2', lenet_hls_conv3/lenet_hls_c3.c:68) on array 'c3_w[0]', lenet_hls_conv3/lenet_hls_c3.c:19 due to limited memory ports.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 18, Depth: 765.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 4'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation (lenet_hls_conv3/lenet_hls_c3.c:83) of variable 'input', lenet_hls_conv3/lenet_hls_c3.c:4->lenet_hls_conv3/lenet_hls_c3.c:83 on array 'c3_o_b', lenet_hls_conv3/lenet_hls_c3.c:22 due to limited memory ports.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 5, Depth: 9.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 5'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('c3_o_b_load_2', lenet_hls_conv3/lenet_hls_c3.c:98) on array 'c3_o_b', lenet_hls_conv3/lenet_hls_c3.c:22 due to limited memory ports.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 2, Depth: 13.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 6'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('input', lenet_hls_conv3/lenet_hls_c3.c:112) on array 'c3_o_c', lenet_hls_conv3/lenet_hls_c3.c:23 due to limited memory ports.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 3, Depth: 7.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 7'.
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between bus write on port 'DATA_D' (lenet_hls_conv3/lenet_hls_c3.c:122) and bus write on port 'DATA_D' (lenet_hls_conv3/lenet_hls_c3.c:122).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between bus write on port 'DATA_D' (lenet_hls_conv3/lenet_hls_c3.c:122) and bus write on port 'DATA_D' (lenet_hls_conv3/lenet_hls_c3.c:122).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between bus write on port 'DATA_D' (lenet_hls_conv3/lenet_hls_c3.c:122) and bus write on port 'DATA_D' (lenet_hls_conv3/lenet_hls_c3.c:122).
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between bus write on port 'DATA_D' (lenet_hls_conv3/lenet_hls_c3.c:122) and bus write on port 'DATA_D' (lenet_hls_conv3/lenet_hls_c3.c:122).
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 5, Depth: 13.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 142.666 seconds; current allocated memory: 139.670 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 29.968 seconds; current allocated memory: 197.076 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolution3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolution3/DATA_A' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolution3/DATA_B' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolution3/DATA_C' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolution3/DATA_D' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolution3/input_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolution3/weights' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolution3/bias' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolution3/output_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'convolution3' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'input_r', 'weights', 'bias' and 'output_r' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'convolution3_c3_i_10' to 'convolution3_c3_ibkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution3_c3_i_11' to 'convolution3_c3_icud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution3_c3_i_12' to 'convolution3_c3_idEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution3_c3_i_13' to 'convolution3_c3_ieOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution3_c3_o_a_0' to 'convolution3_c3_ofYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution3_c3_o_a_1' to 'convolution3_c3_og8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution3_c3_o_a_2' to 'convolution3_c3_ohbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution3_c3_o_a_3' to 'convolution3_c3_oibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution3_c3_o_a_4' to 'convolution3_c3_ojbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution3_c3_o_a_5' to 'convolution3_c3_okbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution3_c3_o_a_6' to 'convolution3_c3_olbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution3_c3_o_a_7' to 'convolution3_c3_omb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution3_c3_o_a_8' to 'convolution3_c3_oncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution3_c3_o_a_9' to 'convolution3_c3_oocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution3_fadd_32ns_32ns_32_5_full_dsp' to 'convolution3_faddpcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution3_fmul_32ns_32ns_32_4_max_dsp' to 'convolution3_fmulqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolution3_fcmp_32ns_32ns_1_1' to 'convolution3_fcmprcU' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'convolution3' is 99456 from HDL expression: ((1'b1 == ap_CS_fsm_pp2_stage4) & (ap_block_pp2_stage4_flag00011001 == 1'b0))
+INFO: [RTGEN 206-100] Generating core module 'convolution3_faddpcA': 84 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'convolution3_fcmprcU': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'convolution3_fmulqcK': 84 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution3'.
+INFO: [HLS 200-111]  Elapsed time: 116.751 seconds; current allocated memory: 273.642 MB.
+INFO: [RTMG 210-278] Implementing memory 'convolution3_c3_i_0_ram' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'convolution3_c3_w_0_ram' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'convolution3_c3_b_ram' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'convolution3_c3_ofYi_ram' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'convolution3_c3_o_b_ram' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'convolution3_c3_o_c_ram' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'convolution3_c3_o_0_ram' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:05:02 ; elapsed = 00:05:50 . Memory (MB): peak = 694.914 ; gain = 644.883
+INFO: [SYSC 207-301] Generating SystemC RTL for convolution3.
+INFO: [VHDL 208-304] Generating VHDL RTL for convolution3.
+INFO: [VLOG 209-307] Generating Verilog RTL for convolution3.
+INFO: [HLS 200-112] Total elapsed time: 350.667 seconds; peak allocated memory: 273.642 MB.

@@ -5,8 +5,8 @@
 ############################################################
 open_project lenet_hls_conv5
 set_top convolution5
-add_files lenet_hls_conv5/lenet_hls_c5.c
 add_files lenet_hls_conv5/lenet_hls_c5.h
+add_files lenet_hls_conv5/lenet_hls_c5.c
 add_files -tb lenet_hls_conv5/lenet_hls_tb_c5.c
 open_solution "lenet_hls_conv5_soln"
 set_part {xc7z020clg484-1} -tool vivado

@@ -101,7 +101,7 @@ int main() {
 		for(j = 0; j < 6; j++) {
 			for(k = 0; k < 5; k++) {
 				for(l = 0; l < 5; l++) {
-						_w[i][j][k][l] = (float)(rand()%100)/100.0 - 0.5;
+					_w[i][j][k][l] = (float)(rand()%100)/100.0 - 0.5;
 				}
 			}
 		}

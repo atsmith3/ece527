@@ -3,6 +3,9 @@
   <errorLogs>
     <logs>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="lenet_hls_conv1" solutionName="lenet_hls_conv1_soln" date="2018-11-08T22:18:39.858-0600"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="lenet_hls_conv1" solutionName="lenet_hls_conv1_soln" date="2018-11-08T22:18:09.480-0600"/>
+        <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="lenet_hls_conv1" solutionName="lenet_hls_conv1_soln" date="2018-11-08T22:17:11.775-0600"/>
         <logs message="ERROR: [SIM 211-100] CSim file generation failed: compilation error(s)." projectName="lenet_hls_conv1" solutionName="lenet_hls_conv1_soln" date="2018-11-08T17:42:11.641-0600"/>
       </csimLog>
     </logs>

@@ -61,11 +61,11 @@ int convolution3(float input[6][14][14], float weights[16][6][5][5], float bias[
 #pragma HLS pipeline II=1
 			for(w = 0; w < 10; w++) {
 				sum = 0;
-				for(i = h, m = 0; i < (h+5); i++, m++) {
-					for(j = w, n = 0; j < (w+5); j++, n++) {
+				for(i = 0, m = 0; i < 5; i++, m++) {
+					for(j = 0, n = 0; j < 5; j++, n++) {
 						for (ci = 0; ci < 6; ci++) {
 #pragma HLS unroll FACTOR=6
-							sum += c3_w[co][ci][m][n] * c3_i[ci][i][j];
+							sum += c3_w[co][ci][m][n] * c3_i[ci][h+i][w+j];
 						}
 					}
 				}
@@ -93,9 +93,9 @@ int convolution3(float input[6][14][14], float weights[16][6][5][5], float bias[
 			for(w = 0; w < 5; w++) {
 #pragma HLS pipeline
 				max_value=-1000000000000.0;
-				for(i = h*2; i < h*2+2; i++) {
-					for(j = w*2;j < w*2+2; j++) {
-						max_value = (max_value > c3_o_b[c][i][j]) ? max_value:c3_o_b[c][i][j];
+				for(i = 0; i < 2; i++) {
+					for(j = 0;j < 2; j++) {
+						max_value = (max_value > c3_o_b[c][h*2 + i][w*2 + j]) ? max_value:c3_o_b[c][h*2 + i][w*2 + j];
 					}
 				}
 				c3_o_c[c][h][w] = max_value;
